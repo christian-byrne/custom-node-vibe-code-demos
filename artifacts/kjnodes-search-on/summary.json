@@ -1,0 +1,38 @@
+{
+  "run_id": "kjnodes-causal-high-search-on-1",
+  "pair_id": "kjnodes-causal-high-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "ecosystem_contract"
+  },
+  "search_value": "no_measured_benefit",
+  "api_style": "legacy",
+  "compatibility": {
+    "local": "pass",
+    "cloud": "fail"
+  },
+  "metrics": {
+    "elapsed_seconds": 367.84,
+    "retries": 0,
+    "tool_calls": 35,
+    "failed_tool_calls": 3,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Search ran and returned the pinned reference, but the generated node did not adopt NORMALIZED_AMPLITUDE; invocation was not adaptation.",
+  "evidence_gaps": [
+    "textual second-turn diff missing",
+    "external LLM trace missing",
+    "real UI recording missing; retained canvas images are reconstructions",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-KJNodes",
+    "repository": "github.com/kijai/ComfyUI-KJNodes",
+    "commit": "d7641533d6634eb05f8570c980fce8fc8528dc7b",
+    "reference_path": "nodes/audioscheduler_nodes.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

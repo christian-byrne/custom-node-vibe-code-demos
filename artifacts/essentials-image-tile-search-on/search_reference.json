@@ -1,0 +1,44 @@
+{
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "required_query": "repo:^github.com/cubiq/ComfyUI_essentials$ class ImageTile|class ImageUntile",
+  "agent_attempts": [
+    {
+      "attempt": "whole_attempt_1_turn_1",
+      "status": "error",
+      "error_code": "bad_args",
+      "before_first_package_write": true
+    },
+    {
+      "attempt": "whole_attempt_2_turn_1",
+      "status": "error",
+      "error_code": "bad_args",
+      "before_first_package_write": true
+    },
+    {
+      "attempt": "whole_attempt_2_turn_2",
+      "status": "error",
+      "error_code": "bad_args",
+      "before_first_package_write": true
+    }
+  ],
+  "agent_result": {
+    "commit": null,
+    "path": null,
+    "lines": null,
+    "grounded": false,
+    "package_written": false
+  },
+  "interpretation": "argument-protocol failure, not an evidenced zero-match response and not evidence against the pinned source",
+  "operator_reference": {
+    "repository": "github.com/cubiq/ComfyUI_essentials",
+    "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+    "path": "image.py",
+    "classes": [
+      "ImageTile",
+      "ImageUntile"
+    ],
+    "scope": "operator freeze only; not Agent grounding",
+    "installed_or_copied": false
+  }
+}

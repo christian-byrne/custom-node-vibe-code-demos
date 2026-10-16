@@ -1,0 +1,22 @@
+{
+  "output_files": [],
+  "schema_version": 1,
+  "turns": [
+    {
+      "error": "ffmpeg executable not found on PATH. DemoVideoCombiner requires the system-installed ffmpeg; it does not bundle one.",
+      "invocation": "failed",
+      "package_validation": "pass",
+      "restart_and_discovery": "pass",
+      "turn": 1,
+      "workflow_validation": "pass"
+    },
+    {
+      "error": "ffmpeg executable not found on PATH. DemoVideoCombiner requires the system-installed ffmpeg; it does not bundle one.",
+      "invocation": "failed",
+      "package_validation": "pass",
+      "restart_and_discovery": "pass",
+      "turn": 2,
+      "workflow_validation": "pass"
+    }
+  ]
+}

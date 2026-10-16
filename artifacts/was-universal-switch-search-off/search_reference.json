@@ -1,0 +1,9 @@
+{
+  "arm": "search_off",
+  "search_available": false,
+  "search_calls": 0,
+  "result": "control arm; search_code absent",
+  "reference_adopted": false,
+  "ecosystem_snapshot_commit": "49a1098630dedff9e0ef85e8e6c4d9a4ac85f8a1",
+  "note": "The package's REFERENCES.md explicitly records that no WAS source was read or adopted."
+}

@@ -1,0 +1,23 @@
+{
+  "output_files": [],
+  "schema_version": 1,
+  "turns": [
+    {
+      "error": "DemoVideoCombiner requires an installed ffmpeg binary on PATH; none was found.",
+      "invocation": "failed",
+      "package_validation": "pass",
+      "restart_and_discovery": "pass",
+      "turn": 1,
+      "workflow_validation": "pass"
+    },
+    {
+      "error": "12-minute turn deadline expired while requesting the supported ComfyUI restart.",
+      "invocation": "not_reached",
+      "package_edit": "completed",
+      "package_validation": "not_reached",
+      "restart_and_discovery": "not_reached",
+      "turn": 2,
+      "workflow_validation": "not_reached"
+    }
+  ]
+}

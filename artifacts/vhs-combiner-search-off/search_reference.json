@@ -1,0 +1,7 @@
+{
+  "note": "The control withheld every public code-search route.",
+  "protocol_satisfied": true,
+  "schema_version": 1,
+  "search_calls": [],
+  "selector": "disabled"
+}

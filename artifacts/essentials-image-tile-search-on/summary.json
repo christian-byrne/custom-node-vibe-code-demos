@@ -1,0 +1,39 @@
+{
+  "run_id": "essentials-image-tile-search-on",
+  "pair_id": "essentials-image-tile-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "search_argument_protocol"
+  },
+  "search_value": "search_invoked_bad_args_no_grounding",
+  "api_style": "missing",
+  "compatibility": {
+    "local": "not assessable: no package was generated",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 2286,
+    "retries": 1,
+    "tool_calls": 14,
+    "failed_tool_calls": 4,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "All three exact-query search attempts failed with bad_args before any package write; no source detail reached the Agent and no treatment artifact existed for behavioral scoring.",
+  "evidence_gaps": [
+    "all exact-query search_code calls returned bad_args, so no commit, path, lines, or concrete implementation detail reached the Agent",
+    "no package, validator, restart, discovery, tensor invocation, second-turn diff, workflow, or browser proof exists",
+    "the public source identity is operator-only context and not treatment grounding",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI Essentials",
+    "repository": "github.com/cubiq/ComfyUI_essentials",
+    "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+    "reference_path": "image.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

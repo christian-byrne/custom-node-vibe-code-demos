@@ -1,0 +1,40 @@
+{
+  "run_id": "was-universal-switch-search-on",
+  "pair_id": "was-universal-switch-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "behavioral_failure_with_agent_timeout",
+    "failure_stage": "lazy_autogrow_execution"
+  },
+  "search_value": "zero_results_plus_write_gate_overhead",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "static, discovery, and browser shape pass; workflow semantics fail",
+    "cloud": "static validator fail; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 2160,
+    "retries": 1,
+    "tool_calls": 80,
+    "failed_tool_calls": 13,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Search returned no grounding; the treatment artifact registered but returned None for selection and fallback and emitted an engine IndexError for the diagnostic case.",
+  "evidence_gaps": [
+    "all Agent turns timed out",
+    "Agent did not reach workflow invocation or browser proof",
+    "runtime and browser artifacts are post-run operator diagnostics",
+    "required WAS query returned zero matches",
+    "raw private trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "WAS-inspired universal switch (WAS not installed)",
+    "repository": "github.com/WASasquatch/was-node-suite-comfyui",
+    "commit": "49a1098630dedff9e0ef85e8e6c4d9a4ac85f8a1",
+    "reference_path": "zero-result query; no source path adopted"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

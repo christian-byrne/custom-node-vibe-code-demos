@@ -1,0 +1,593 @@
+{
+  "config": {},
+  "extra": {},
+  "groups": [],
+  "last_link_id": 11,
+  "last_node_id": 2361342834496327,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      7,
+      1,
+      "IMAGE"
+    ],
+    [
+      7,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      8,
+      1,
+      "IMAGE"
+    ],
+    [
+      8,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      9,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      5,
+      0,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      3581623377448051,
+      11,
+      0,
+      2361342834496327,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-00.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        160
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-01.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        320
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-02.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        480
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-03.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 5,
+      "inputs": [],
+      "mode": 0,
+      "order": 4,
+      "outputs": [
+        {
+          "links": [
+            5
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        640
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-04.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 6,
+      "inputs": [],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [
+            6
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        800
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame-05.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 7,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 2,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 6,
+      "outputs": [
+        {
+          "links": [
+            7
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        420,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "size": [
+        210,
+        78
+      ],
+      "type": "ImageBatch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 8,
+      "inputs": [
+        {
+          "link": 7,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 3,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 7,
+      "outputs": [
+        {
+          "links": [
+            8
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        680,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "size": [
+        210,
+        78
+      ],
+      "type": "ImageBatch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 9,
+      "inputs": [
+        {
+          "link": 8,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 4,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [
+        {
+          "links": [
+            9
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        940,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "size": [
+        210,
+        78
+      ],
+      "type": "ImageBatch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 10,
+      "inputs": [
+        {
+          "link": 9,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 5,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 9,
+      "outputs": [
+        {
+          "links": [
+            10
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1200,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "size": [
+        210,
+        78
+      ],
+      "type": "ImageBatch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 11,
+      "inputs": [
+        {
+          "link": 10,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 6,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 10,
+      "outputs": [
+        {
+          "links": [
+            11,
+            3581623377448051
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1460,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "size": [
+        210,
+        78
+      ],
+      "type": "ImageBatch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 12,
+      "inputs": [
+        {
+          "link": 11,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 11,
+      "outputs": [],
+      "pos": [
+        1800,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "size": [
+        210,
+        246
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 2361342834496327,
+      "inputs": [
+        {
+          "link": 3581623377448051,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "video_reference",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        2070,
+        260
+      ],
+      "properties": {},
+      "size": [
+        270,
+        118
+      ],
+      "type": "DemoVideoCombiner",
+      "widgets_values": [
+        4,
+        "DemoVideoCombiner_fixture",
+        true
+      ]
+    }
+  ],
+  "version": 0.4
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "video-latent-crossfade-search-off",
+  "pair_id": "video-latent-crossfade-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "behavioral_success_post_run",
+    "failure_stage": "agent_deadline_before_runtime"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "post-run syntax, validator, restart, discovery, 9/9 tensor cases, and real-browser save/reload pass on the unchanged package",
+    "cloud": "static validator fail/advisory only; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1452,
+    "retries": 1,
+    "tool_calls": 62,
+    "failed_tool_calls": 4,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The control produced a behaviorally correct local artifact, but the Agent itself timed out before restart, invocation, or browser proof.",
+  "evidence_gaps": [
+    "both Agent turns ended at the bounded deadline before restart or runtime proof",
+    "runtime and browser scores are post-run operator diagnostics on the unchanged package",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-Video-Nodes",
+    "repository": "github.com/TensorVizion/ComfyUI-Video-Nodes",
+    "commit": "e363c83f6622e2d95c0d7d87619ebaa503f9a974",
+    "reference_path": "nodes/video_transition_node.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

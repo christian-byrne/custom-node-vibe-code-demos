@@ -1,0 +1,23 @@
+{
+  "arm": "search_on",
+  "tool_available": true,
+  "required_query": "repo:^github.com/TensorVizion/ComfyUI-Video-Nodes$ crossfade easing",
+  "required_query_bytes": 67,
+  "required_query_sha256": "821386c5f50276fb7994029a35c2d643b75a4f5782db4db925cecf1a2d1a86c7",
+  "query_issued_before_first_write": true,
+  "query_calls": 2,
+  "query_call_results": ["bad_args", "bad_args"],
+  "first_package_write": null,
+  "reference_returned": false,
+  "reference_adopted": false,
+  "treatment_result": "exact_query_issued_but_argument_protocol_failed",
+  "operator_diagnostic_not_treatment": {
+    "repository": "github.com/TensorVizion/ComfyUI-Video-Nodes",
+    "commit": "e363c83f6622e2d95c0d7d87619ebaa503f9a974",
+    "path": "nodes/video_transition_node.py",
+    "lines": "21-26 and 39-40",
+    "detail": "The public IMAGE implementation defines linear and cubic smooth easing, then blends fa*(1-alpha)+fb*alpha. It does not establish the LATENT shape or metadata contract.",
+    "url": "https://github.com/TensorVizion/ComfyUI-Video-Nodes/blob/e363c83f6622e2d95c0d7d87619ebaa503f9a974/nodes/video_transition_node.py#L21-L40"
+  },
+  "note": "The Agent itself received no commit, path, lines, or zero-match result. Invocation is retained, but no search-grounding or adoption credit is awarded."
+}

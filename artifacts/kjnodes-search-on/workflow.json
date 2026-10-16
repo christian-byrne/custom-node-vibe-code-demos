@@ -1,0 +1,136 @@
+{
+  "workflow_id": "54ac0e9c-653b-4d24-bd73-e4f377b72c8e",
+  "draft_version": 3,
+  "updated_by": "local-user",
+  "graph": {
+    "last_link_id": 0,
+    "last_node_id": 3944151826498077,
+    "links": [
+      [
+        1061045181045938,
+        2695050166447761,
+        0,
+        3944151826498077,
+        0,
+        "IMAGE"
+      ],
+      [
+        971822878616379,
+        3944151826498077,
+        0,
+        1455587265930520,
+        0,
+        "IMAGE"
+      ]
+    ],
+    "nodes": [
+      {
+        "flags": {},
+        "id": 2695050166447761,
+        "inputs": [],
+        "mode": 0,
+        "order": 0,
+        "outputs": [
+          {
+            "links": [
+              1061045181045938
+            ],
+            "name": "IMAGE",
+            "type": "IMAGE"
+          },
+          {
+            "links": [],
+            "name": "MASK",
+            "type": "MASK"
+          }
+        ],
+        "pos": [
+          40,
+          60
+        ],
+        "properties": {},
+        "size": [
+          270,
+          328
+        ],
+        "type": "LoadImage",
+        "widgets_values": [
+          "example.png"
+        ]
+      },
+      {
+        "flags": {},
+        "id": 3944151826498077,
+        "inputs": [
+          {
+            "link": 1061045181045938,
+            "name": "image",
+            "type": "IMAGE"
+          }
+        ],
+        "mode": 0,
+        "order": 0,
+        "outputs": [
+          {
+            "links": [
+              971822878616379
+            ],
+            "name": "images",
+            "type": "IMAGE"
+          }
+        ],
+        "pos": [
+          390,
+          60
+        ],
+        "properties": {},
+        "size": [
+          400,
+          332
+        ],
+        "type": "AmplitudeTransform_ImageFromAmplitude",
+        "widgets_values": [
+          "0.0, 0.5, 1.0",
+          0.6,
+          0.25,
+          0.12,
+          true
+        ]
+      },
+      {
+        "flags": {},
+        "id": 1455587265930520,
+        "inputs": [
+          {
+            "link": 971822878616379,
+            "name": "images",
+            "type": "IMAGE"
+          }
+        ],
+        "mode": 0,
+        "order": 0,
+        "outputs": [
+          {
+            "links": [],
+            "name": "images",
+            "type": "IMAGE"
+          }
+        ],
+        "pos": [
+          870,
+          179
+        ],
+        "properties": {},
+        "size": [
+          270,
+          94
+        ],
+        "type": "SaveImage",
+        "widgets_values": [
+          "amp_demo"
+        ]
+      }
+    ],
+    "version": 0.4
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "was-universal-switch-search-off",
+  "pair_id": "was-universal-switch-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "post_run_behavioral_success_with_agent_timeout",
+    "failure_stage": "agent_turn_deadline_before_invocation"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "post-run static, discovery, workflow, fallback, laziness, and browser pass",
+    "cloud": "static validator fail; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 5160,
+    "retries": 1,
+    "tool_calls": 107,
+    "failed_tool_calls": 8,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The control Agent timed out, but its final repaired package passed every requested behavior in clearly labeled post-run diagnostics.",
+  "evidence_gaps": [
+    "all Agent turns timed out",
+    "Agent did not reach workflow invocation or browser proof",
+    "runtime and browser artifacts are post-run operator diagnostics",
+    "raw private trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "WAS-inspired universal switch (WAS not installed)",
+    "repository": "github.com/WASasquatch/was-node-suite-comfyui",
+    "commit": "49a1098630dedff9e0ef85e8e6c4d9a4ac85f8a1",
+    "reference_path": "zero-result query; no source path adopted"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

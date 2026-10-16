@@ -1,0 +1,41 @@
+{
+  "run_id": "essentials-image-tile-search-off",
+  "pair_id": "essentials-image-tile-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "class_id_contract"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "post-run syntax, validator, restart, tensor/error matrix, and browser save/reload pass; exact-two-class-id contract fails (3 registered)",
+    "cloud": "static validator only; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1493,
+    "retries": 0,
+    "tool_calls": 51,
+    "failed_tool_calls": 3,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The control produced behaviorally correct tile/untile code under post-run scoring, but registered an extra self-test node, failing the frozen exactly-two-class-id gate.",
+  "evidence_gaps": [
+    "both Agent turns ended at the bounded deadline before restart or runtime proof",
+    "syntax, validator, restart, discovery, tensor invocation, and browser save/reload are post-run operator diagnostics on the unchanged package",
+    "three GridTiles_ class ids were registered; the frozen gate required exactly the two tile/untile ids",
+    "the browser added Split through visible search but added Merge through the served LiteGraph API before same-origin save/full-reload",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI Essentials",
+    "repository": "github.com/cubiq/ComfyUI_essentials",
+    "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+    "reference_path": "image.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

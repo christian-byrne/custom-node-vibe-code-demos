@@ -1,0 +1,13 @@
+{
+  "status": "not_run",
+  "failure_stage": "search_argument_protocol",
+  "whole_attempts": 2,
+  "turns_in_terminal_attempt": 2,
+  "package_generated": false,
+  "validator": "missing",
+  "restart": "missing",
+  "object_info": "missing",
+  "tensor_invocation": "missing",
+  "browser": "missing",
+  "reason": "Both whole attempts invoked search_code before any write and received bad_args. The terminal first turn then hit its tool-policy deadline; the fixed second turn found no first revision and authored nothing."
+}

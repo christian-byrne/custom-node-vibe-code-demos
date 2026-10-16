@@ -1,0 +1,38 @@
+{
+  "run_id": "rgthree-seed-persistence-search-off",
+  "pair_id": "rgthree-seed-persistence-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "behavioral_success_with_agent_timeout",
+    "failure_stage": "agent_turn_deadline"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "post-run static/discovery/backend/browser pass; Agent terminal turns timed out before runtime proof",
+    "cloud": "static validator fail/unknown; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 2160,
+    "retries": 1,
+    "tool_calls": 38,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The final control package passed the frozen real-browser persistence and sequencing score, but the Agent itself did not reach runtime proof before its bounded deadlines.",
+  "evidence_gaps": [
+    "the terminal Agent turns did not reach restart, discovery, invocation, or browser proof; those checks are labeled post-run operator diagnostics",
+    "the preserved first attempt used an incorrect custom-node root and an inapplicable Manager restart route",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "rgthree-inspired seed widget (rgthree not installed)",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "5f940ddfbb83ff9c667f32ae7d0c3ad0bb8cc9ee",
+    "reference_path": "web/seed.js"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "arm": "search_off",
+  "agent_turns": {
+    "setup_attempt": "terminal credential refusal before a model round or package write; retained and consumed the one retry",
+    "turn_1": "deadline after package authoring and static checks; no Agent-side restart, rediscovery, invocation, or browser proof",
+    "turn_2": "deadline after easing edits and validation/correction calls; no Agent-side restart, rediscovery, invocation, or browser proof"
+  },
+  "post_run_operator_diagnostics_on_unchanged_tree": {
+    "syntax": "pass",
+    "validator_local": "pass",
+    "validator_cloud": "fail/advisory; live Cloud unassessed",
+    "full_process_restart": "pass",
+    "object_info_class_id": "LatentVideoCrossfadeJoin",
+    "object_info_match_count": 1,
+    "selftest": "pass: 9/9 cases",
+    "n2_smoothstep_frames": [0.0, 10.0, 40.740742, 89.259262, 120.0, 130.0],
+    "n2_linear_frames": [0.0, 10.0, 46.666668, 83.333336, 120.0, 130.0],
+    "n1_smoothstep_frames": [0.0, 10.0, 20.0, 65.0, 110.0, 120.0, 130.0],
+    "n1_linear_frames": [0.0, 10.0, 20.0, 65.0, 110.0, 120.0, 130.0],
+    "metadata_preserved": true,
+    "bounded_error_cases": ["rank_mismatch", "dim_mismatch_H", "impossible_N_too_big", "impossible_N_zero", "invalid_easing"],
+    "browser_save_reload": "pass: real Chromium, one served workflow node, widget order [crossfade_frames,easing], linear persisted"
+  },
+  "unchanged_package_tree": true,
+  "agent_runtime_completion_claimed": false
+}

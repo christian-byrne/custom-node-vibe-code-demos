@@ -1,0 +1,40 @@
+{
+  "arm": "search_on",
+  "code_search_experiment": "enabled",
+  "preregistered_query": {
+    "repository": "rgthree/rgthree-comfy",
+    "terms": "seedWidget serializeValue",
+    "issued_by_agent_at": "2026-10-16T01:47:46.234285556Z",
+    "before_first_successful_package_write": true,
+    "result": {
+      "match_count": 0,
+      "limit_hit": false,
+      "results": []
+    }
+  },
+  "expected_reference": {
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "5f940ddfbb83ff9c667f32ae7d0c3ad0bb8cc9ee",
+    "path": "web/seed.js",
+    "returned_by_search": false
+  },
+  "first_successful_package_write_at": "2026-10-16T01:53:42.933073064Z",
+  "treatment_exposed": true,
+  "usable_rgthree_reference_returned": false,
+  "reference_used": false,
+  "unrelated_guard_queries": [
+    {
+      "repository": "kijai/ComfyUI-KJNodes",
+      "terms": "ImageTransformByNormalizedAmplitude",
+      "turn": 1,
+      "purpose_observed": "satisfied the enabled-arm package-write gate after five code_search_required write errors"
+    },
+    {
+      "repository": "kijai/ComfyUI-KJNodes",
+      "terms": "ImageTransformByNormalizedAmplitude",
+      "turn": 2,
+      "purpose_observed": "satisfied the enabled-arm edit gate after one code_search_required edit error"
+    }
+  ],
+  "causal_interpretation": "The preregistered query was issued before the first package write, so assignment was valid. It returned no source, however, and the later successful queries were unrelated to rgthree. No positive search-grounding or search-benefit claim is admitted."
+}

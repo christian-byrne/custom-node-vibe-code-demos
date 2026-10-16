@@ -1,0 +1,17 @@
+{
+  "arm": "search_on",
+  "agent_turns": {
+    "turn_1": "issued the exact frozen query; search_code returned bad_args; no package write; deadline",
+    "turn_2": "a package write was refused with code_search_required; the exact frozen query again returned bad_args; no package write; deadline"
+  },
+  "package_generated": false,
+  "syntax": "missing",
+  "validator": "missing",
+  "restart": "missing",
+  "object_info": "missing",
+  "tensor_invocation": "missing",
+  "second_turn_diff": "missing",
+  "browser_save_reload": "missing",
+  "retry": "not used: both frozen turns independently reproduced the same exact-query argument failure with no artifact change",
+  "product_reproducer": "The exact-query/guard incompatibility is already owned by merged cloud PR #13588's experiment-only surface; no new product carrier was authorized or created."
+}

@@ -1,0 +1,37 @@
+{
+  "evidence_kind": "post-run operator diagnostic",
+  "agent_reached_invocation": false,
+  "selector_2": {
+    "status": "fail",
+    "expected": 22,
+    "observed": null,
+    "evaluated_branches": [],
+    "history": "history-selected.json"
+  },
+  "invalid_without_fallback": {
+    "status": "fail",
+    "expected": "bounded switch diagnostic",
+    "observed": "IndexError: list index out of range in execution cache_update",
+    "history": "history-invalid-false.json"
+  },
+  "invalid_with_fallback": {
+    "status": "fail",
+    "expected": 51,
+    "observed": null,
+    "evaluated_branches": [],
+    "history": "history-invalid-true.json"
+  },
+  "pure_decision_probe": {
+    "selected_2": ["value1", "selected", "selected connected slot 2 of 2"],
+    "invalid_no_fallback": [null, "error", "selector 3 outside valid range [1,2] and fallback_to_first_connected=False"],
+    "invalid_with_fallback": ["value0", "fallback", "selector 3 outside [1,2]; fallback_to_first_connected=True -> lowest-numbered connected input (slot 1)"]
+  },
+  "browser": {
+    "class_created": true,
+    "widget_order": ["select", "fallback_to_first_connected"],
+    "dynamic_slots_before": 2,
+    "dynamic_slots_after_connect": 3,
+    "dynamic_slots_after_disconnect": 2,
+    "page_errors": []
+  }
+}

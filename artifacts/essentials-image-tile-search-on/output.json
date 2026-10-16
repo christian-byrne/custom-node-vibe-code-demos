@@ -1,0 +1,18 @@
+{
+  "arm": "search_on",
+  "outcome": "informative_failure",
+  "failure_stage": "search_argument_protocol",
+  "whole_attempts": 2,
+  "turns_in_terminal_attempt": 2,
+  "exact_query_attempts": 3,
+  "result": "Every search_code call returned bad_args; no source result reached the Agent and no package was written.",
+  "missing_stages": [
+    "generated code",
+    "validate",
+    "discover",
+    "invoke",
+    "edit",
+    "output"
+  ],
+  "product_diagnosis_owner": "localvibe-54; this lane records recurrence only"
+}

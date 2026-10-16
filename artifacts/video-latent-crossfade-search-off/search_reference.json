@@ -1,0 +1,10 @@
+{
+  "arm": "search_off",
+  "tool_available": false,
+  "required_query": "repo:^github.com/TensorVizion/ComfyUI-Video-Nodes$ crossfade easing",
+  "query_issued": false,
+  "reference_returned": false,
+  "reference_adopted": false,
+  "treatment_result": "control_no_search",
+  "note": "The disabled selector withheld search_code. The generated package names no ecosystem source and was scored without a provenance penalty."
+}

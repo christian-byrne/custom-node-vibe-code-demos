@@ -1,0 +1,39 @@
+{
+  "agent_run": {
+    "attempt_1": "Timed out at the supported restart call because the original harness loaded a different custom_nodes root and exposed an inapplicable Manager route. The preserved attempt consumed the arm retry.",
+    "terminal_turn_1": "Timed out after package generation; no Agent-side restart, discovery, validation, invocation, or browser proof.",
+    "terminal_turn_2": "Timed out after the step revision; no Agent-side restart, discovery, validation, invocation, or browser proof."
+  },
+  "post_run_operator_diagnostic": {
+    "scope": "Same frozen Core/frontend/package environment after the Agent stopped; no package edits.",
+    "static_validator": "local pass; Cloud static fail/unknown; live Cloud not assessed",
+    "discovery": {
+      "class_id": "PersistentSeedSequence_Seed",
+      "api_style": "V3"
+    },
+    "browser": {
+      "kind": "real Chromium through the served ComfyUI frontend",
+      "viewport": "1440x1000",
+      "increment_step_3": {
+        "outputs": [123, 126],
+        "current_seed_after_two_queues": 129,
+        "last_used_after_two_queues": 126
+      },
+      "save_reload": {
+        "widget_order": ["seed", "mode", "step", "last_seed"],
+        "current_seed": 129,
+        "mode": "increment",
+        "step": 3,
+        "last_used": 126,
+        "preserved": true
+      },
+      "decrement_step_3": {
+        "output": 123,
+        "next_current_seed": 120,
+        "last_used": 123
+      },
+      "page_errors": []
+    }
+  },
+  "classification": "behavioral pass established by explicitly labeled post-run operator diagnostics; the Agent itself did not reach the runtime proof"
+}

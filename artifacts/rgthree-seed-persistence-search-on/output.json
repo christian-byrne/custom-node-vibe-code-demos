@@ -1,0 +1,44 @@
+{
+  "agent_run": {
+    "turn_1": "Issued the preregistered query, generated the package, used the supported restart fallback, rediscovered the class, applied the draft, and graph-validated it; the bounded turn then timed out before invocation.",
+    "turn_2": {
+      "status": "complete",
+      "changes": "Added step last, restarted, rediscovered, rebuilt and validated the draft.",
+      "increment_invocation_text_output": 123,
+      "decrement_invocation_text_output": 123,
+      "limitation": "CLI invocations do not execute the browser afterQueued hook, so these establish backend pass-through only, not step sequencing."
+    }
+  },
+  "post_run_operator_diagnostic": {
+    "scope": "Same frozen Core/frontend/package environment after the Agent stopped; no package edits.",
+    "static_validator": "local pass; Cloud static fail/unknown; live Cloud not assessed",
+    "discovery": {
+      "class_id": "PersistentSeedSequence_Seed",
+      "api_style": "V3"
+    },
+    "browser": {
+      "kind": "real Chromium through the served ComfyUI frontend",
+      "viewport": "1440x1000",
+      "increment_step_3": {
+        "outputs": [123, 126],
+        "current_seed_after_two_queues": 129,
+        "last_used_after_two_queues": 126
+      },
+      "save_reload": {
+        "widget_order": ["seed", "mode", "last_seed", "step"],
+        "current_seed": 129,
+        "mode": "increment",
+        "step": 3,
+        "last_used": 126,
+        "preserved": true
+      },
+      "decrement_step_3": {
+        "output": 123,
+        "next_current_seed": 120,
+        "last_used": 123
+      },
+      "page_errors": []
+    }
+  },
+  "classification": "Agent-side backend execution plus post-run real-browser behavioral pass"
+}

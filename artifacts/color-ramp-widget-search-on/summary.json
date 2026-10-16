@@ -1,0 +1,39 @@
+{
+  "run_id": "color-ramp-widget-search-on",
+  "pair_id": "color-ramp-widget-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "search_argument_protocol"
+  },
+  "search_value": "search_invoked_bad_args_no_grounding",
+  "api_style": "missing",
+  "compatibility": {
+    "local": "not assessable: no package was generated",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1596,
+    "retries": 1,
+    "tool_calls": 13,
+    "failed_tool_calls": 3,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Both search-enabled whole attempts failed at search_code bad_args before any package write; no source detail reached the Agent and no artifact existed for behavioral scoring.",
+  "evidence_gaps": [
+    "both search_code calls returned bad_args, so no commit, path, lines, or concrete interaction detail reached the Agent",
+    "no package, validator, restart, discovery, tensor invocation, second-revision diff, or browser proof exists",
+    "the public source and Registry inspection was operator-only and not treatment grounding",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-Custom-Scripts",
+    "repository": "github.com/pythongosssss/ComfyUI-Custom-Scripts",
+    "commit": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+    "reference_path": "web/js/customColors.js"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

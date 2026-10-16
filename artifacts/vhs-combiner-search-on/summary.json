@@ -1,0 +1,40 @@
+{
+  "run_id": "vhs-combiner-search-on",
+  "pair_id": "vhs-combiner-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "search_protocol"
+  },
+  "search_value": "invalid_treatment_query",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "turn 1 validated/discovered then ffmpeg-blocked; turn 2 edit only, post-run static pass",
+    "cloud": "static validator fail; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1480,
+    "retries": 1,
+    "tool_calls": 106,
+    "failed_tool_calls": 28,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "No search effect is measurable: the Agent used the source's KJNodes anchor instead of the preregistered VideoHelperSuite query.",
+  "evidence_gaps": [
+    "required VideoHelperSuite search was not issued by the Agent; no causal treatment claim",
+    "turn-two revision was not restarted, rediscovered, graph-validated, or invoked before timeout",
+    "ffmpeg absent: no MP4, playable preview, probed duration, or observed frame order",
+    "real UI recording missing",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-VideoHelperSuite",
+    "repository": "github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
+    "commit": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "reference_path": "videohelpersuite/nodes.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

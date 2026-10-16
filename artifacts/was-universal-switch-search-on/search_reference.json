@@ -1,0 +1,11 @@
+{
+  "arm": "search_on",
+  "search_available": true,
+  "required_query_issued_before_first_package_write": true,
+  "query": "wildcard switch input",
+  "repo": "WASasquatch/was-node-suite-comfyui",
+  "result": "zero matches",
+  "reference_adopted": false,
+  "ecosystem_snapshot_commit": "49a1098630dedff9e0ef85e8e6c4d9a4ac85f8a1",
+  "note": "The permission card preserves the exact requested query/repository. No returned path or lines existed to adopt."
+}

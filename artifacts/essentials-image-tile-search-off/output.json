@@ -1,0 +1,65 @@
+{
+  "arm": "search_off",
+  "agent_turns": {
+    "turn_1": "deadline after package authoring and partial static checks; no Agent-side restart, discovery, invocation, or browser proof",
+    "turn_2": "deadline after the per-axis overlap/blend revision and static checks; no Agent-side restart, discovery, invocation, or browser proof"
+  },
+  "post_run_operator_diagnostics_on_unchanged_tree": {
+    "served_prompt_id": "bfcdc56b-96b6-4473-941d-a7758a39bfb9",
+    "served_execution_status": "success",
+    "selftest": "PASS",
+    "fixtures": [
+      "1x48x64x3 float32 BHWC coordinate image",
+      "2x48x64x3 float32 BHWC batch with distinct markers"
+    ],
+    "no_overlap": {
+      "tile_shapes": [
+        [
+          12,
+          16,
+          16,
+          3
+        ],
+        [
+          24,
+          16,
+          16,
+          3
+        ]
+      ],
+      "byte_exact": true
+    },
+    "overlap": {
+      "overlap_x": 4,
+      "overlap_y": 3,
+      "tile_extent_hw": [
+        18,
+        19
+      ],
+      "linear_max_abs_error": 5.96e-08,
+      "cosine_max_abs_error": 1.19e-07,
+      "tolerance": 1e-06
+    },
+    "batch_major_row_major_order": true,
+    "dtype_range_batch_identity_preserved": true,
+    "named_error_cases": [
+      "invalid rows",
+      "non-integral rows",
+      "invalid columns",
+      "non-integral columns",
+      "invalid image rank",
+      "negative overlap_x",
+      "negative overlap_y",
+      "overlap_x too large",
+      "overlap_y too large",
+      "tile count",
+      "tile dimensions",
+      "blend mode"
+    ],
+    "browser_save_reload": "pass for the two intended workflow nodes and selected linear blend",
+    "registered_class_contract": "fail: three GridTiles_ class ids discovered; required exactly two"
+  },
+  "served_selftest_report": "PASS\nfixtures: img1=(1, 48, 64, 3) dtype=torch.float32, img2=(2, 48, 64, 3) dtype=torch.float32\n[A] rows=3 columns=4 overlap_x=0 overlap_y=0 -> extent H=16 W=16\n  OK   [A/img1] metadata (w,h,batch)=(64, 48, 1) == (64, 48, 1)\n  OK   [A/img1] tiles shape (12, 16, 16, 3) == (12, 16, 16, 3)\n  OK   [A/img1] tiles are in source-batch-major, row-major order (stride_h=16, stride_w=16)\n  OK   [A/img1] tiles are 4-D BHWC\n  OK   [A/img1] dtype preserved (float32)\n  OK   [A/img1] value range preserved (min/max 0.0/1.0)\n  OK   [A/img1/linear] recon shape (1, 48, 64, 3) == (1, 48, 64, 3)\n  OK   [A/img1/linear] recon dtype float32\n  OK   [A/img1/linear] byte-exact reconstruction (fast path)\n  OK   [A/img1/cosine] recon shape (1, 48, 64, 3) == (1, 48, 64, 3)\n  OK   [A/img1/cosine] recon dtype float32\n  OK   [A/img1/cosine] byte-exact reconstruction (fast path)\n  OK   [A/img2] metadata (w,h,batch)=(64, 48, 2) == (64, 48, 2)\n  OK   [A/img2] tiles shape (24, 16, 16, 3) == (24, 16, 16, 3)\n  OK   [A/img2] tiles are in source-batch-major, row-major order (stride_h=16, stride_w=16)\n  OK   [A/img2] tiles are 4-D BHWC\n  OK   [A/img2] dtype preserved (float32)\n  OK   [A/img2] value range preserved (min/max 0.0/1.0)\n  OK   [A/img2/linear] recon shape (2, 48, 64, 3) == (2, 48, 64, 3)\n  OK   [A/img2/linear] recon dtype float32\n  OK   [A/img2/linear] byte-exact reconstruction (fast path)\n  OK   [A/img2/cosine] recon shape (2, 48, 64, 3) == (2, 48, 64, 3)\n  OK   [A/img2/cosine] recon dtype float32\n  OK   [A/img2/cosine] byte-exact reconstruction (fast path)\n  OK   [A/img2] per-image batch identity preserved\n  OK   [A/img2] source images have distinct markers\n[B] rows=3 columns=4 overlap_x=4 overlap_y=3 -> extent H=18 W=19 stride H=15 W=15\n  OK   [B/img1] metadata (w,h,batch)=(64, 48, 1) == (64, 48, 1)\n  OK   [B/img1] tiles shape (12, 18, 19, 3) == (12, 18, 19, 3)\n  OK   [B/img1] tiles are in source-batch-major, row-major order (stride_h=15, stride_w=15)\n  OK   [B/img1] tiles are 4-D BHWC\n  OK   [B/img1] dtype preserved (float32)\n  OK   [B/img1] value range preserved (min/max 0.0/1.0)\n  OK   [B/img1/linear] recon shape (1, 48, 64, 3) == (1, 48, 64, 3)\n  OK   [B/img1/linear] recon dtype float32\n  OK   [B/img1/linear] reconstruction matches original (max abs err 5.96e-08 <= 1e-06)\n  OK   [B/img1/cosine] recon shape (1, 48, 64, 3) == (1, 48, 64, 3)\n  OK   [B/img1/cosine] recon dtype float32\n  OK   [B/img1/cosine] reconstruction matches original (max abs err 1.19e-07 <= 1e-06)\n  OK   [B/img2] metadata (w,h,batch)=(64, 48, 2) == (64, 48, 2)\n  OK   [B/img2] tiles shape (24, 18, 19, 3) == (24, 18, 19, 3)\n  OK   [B/img2] tiles are in source-batch-major, row-major order (stride_h=15, stride_w=15)\n  OK   [B/img2] tiles are 4-D BHWC\n  OK   [B/img2] dtype preserved (float32)\n  OK   [B/img2] value range preserved (min/max 0.0/1.0)\n  OK   [B/img2/linear] recon shape (2, 48, 64, 3) == (2, 48, 64, 3)\n  OK   [B/img2/linear] recon dtype float32\n  OK   [B/img2/linear] reconstruction matches original (max abs err 5.96e-08 <= 1e-06)\n  OK   [B/img2/cosine] recon shape (2, 48, 64, 3) == (2, 48, 64, 3)\n  OK   [B/img2/cosine] recon dtype float32\n  OK   [B/img2/cosine] reconstruction matches original (max abs err 1.19e-07 <= 1e-06)\n  OK   [blend/linear] overlap band matches hand-derived weights (max abs err 5.96e-08)\n  OK   [blend/cosine] overlap band matches hand-derived weights (max abs err 5.96e-08)\n  OK   [blend] linear vs cosine differ in band (linear=[0.32, 0.44, 0.56, 0.68], cosine=[0.2573, 0.4073, 0.5927, 0.7427])\nerror cases:\n  OK   invalid rows (rows=0): raised InvalidGridError: rows/height: tile count must be an integer >= 1, got 0\n  OK   invalid rows (rows=5, non-integral extent): raised NonIntegralExtentError: rows/height: no positive integral tile extent exists for dimension=48, count=5, overlap=0 ((dim + overlap*(count-1)) = 48 is not divisible by 5)\n  OK   invalid columns (columns=0): raised InvalidGridError: columns/width: tile count must be an integer >= 1, got 0\n  OK   invalid columns (columns=3, non-integral extent): raised NonIntegralExtentError: columns/width: no positive integral tile extent exists for dimension=64, count=3, overlap=0 ((dim + overlap*(count-1)) = 64 is not divisible by 3)\n  OK   invalid image dimensions (3-D tensor): raised InvalidImageError: image: expected a 4-D BHWC tensor, got 3-D shape (48, 64, 3)\n  OK   invalid overlap_x (overlap_x=-1): raised InvalidOverlapError: columns/width: overlap must be a non-negative integer, got -1\n  OK   invalid overlap_y (overlap_y=-1): raised InvalidOverlapError: rows/height: overlap must be a non-negative integer, got -1\n  OK   invalid overlap_x (too large, stride<1): raised InvalidOverlapError: columns/width: overlap=64 is too large for extent=64 (stride=0 must be >= 1 when count>1)\n  OK   invalid overlap_y (too large, stride<1): raised InvalidOverlapError: rows/height: overlap=48 is too large for extent=48 (stride=0 must be >= 1 when count>1)\n  OK   invalid tile count (one tile short): raised TileCountError: expected 12 tiles (source_batch_size=1 * rows=3 * columns=4), got 11\n  OK   invalid tile dimensions (wrong extent): raised TileDimensionError: expected tiles of extent (H=16, W=16), got (H=15, W=16)\n  OK   invalid blend mode (blend='bogus'): raised InvalidBlendError: blend must be one of ('linear', 'cosine'), got 'bogus'",
+  "unchanged_package_tree": true,
+  "agent_runtime_completion_claimed": false
+}

@@ -1,0 +1,36 @@
+{
+  "evidence_kind": "post-run operator diagnostic",
+  "agent_reached_invocation": false,
+  "selector_2": {
+    "status": "pass",
+    "output": 22,
+    "evaluated_branches": ["B"],
+    "unevaluated_branches": ["A"],
+    "history": "history-selected.json"
+  },
+  "invalid_without_fallback": {
+    "status": "pass",
+    "diagnostic": "UniversalSwitch: selector 3 is out of range; valid range is 1..2 (2 connected input slot(s)). Enable 'fallback_to_first_connected' to forward slot 1 instead.",
+    "history": "history-invalid-false.json"
+  },
+  "invalid_with_fallback": {
+    "status": "pass",
+    "output": 51,
+    "evaluated_branches": ["H"],
+    "unevaluated_branches": ["I"],
+    "history": "history-invalid-true.json"
+  },
+  "pure_decision_probe": {
+    "selected_2": ["selected", 1, 1],
+    "invalid_no_fallback": ["error", null, null],
+    "invalid_with_fallback": ["fallback", 0, 0]
+  },
+  "browser": {
+    "class_created": true,
+    "widget_order": ["select", "fallback_to_first_connected"],
+    "dynamic_slots_before": 2,
+    "dynamic_slots_after_connect": 3,
+    "dynamic_slots_after_disconnect": 2,
+    "page_errors": []
+  }
+}

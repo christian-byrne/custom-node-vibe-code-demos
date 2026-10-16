@@ -1,0 +1,35 @@
+{
+  "actual_calls": [
+    {
+      "query": "ImageTransformByNormalizedAmplitude",
+      "repository": "github.com/kijai/ComfyUI-KJNodes",
+      "result_commit": "17195fcfa8a05f601b766a0f09c9733284f47416",
+      "status": "success",
+      "turn": 1
+    },
+    {
+      "query": "ImageTransformByNormalizedAmplitude",
+      "repository": "github.com/kijai/ComfyUI-KJNodes",
+      "result_commit": "17195fcfa8a05f601b766a0f09c9733284f47416",
+      "status": "success",
+      "turn": 2
+    }
+  ],
+  "note": "The frozen source enforced its KJNodes experiment anchor before package writes; the Agent never issued the preregistered VideoHelperSuite query. No treatment effect is claimed.",
+  "operator_diagnostic_after_run": {
+    "first_result_path": "videohelpersuite/nodes.py",
+    "query": "VideoCombine",
+    "repository": "github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
+    "result_commit": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "status": "success",
+    "treatment_attribution": "none"
+  },
+  "protocol_satisfied": false,
+  "required_by_job": {
+    "pinned_commit": "4d907beed701d6936a5c19f1f99ea46ff33f3bdc",
+    "query": "VideoCombine",
+    "repository": "github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+  },
+  "schema_version": 1,
+  "selector": "enabled"
+}

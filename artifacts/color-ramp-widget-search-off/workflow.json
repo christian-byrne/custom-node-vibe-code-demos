@@ -1,0 +1,37 @@
+{
+  "config": {},
+  "extra": {"ds": {"offset": [-78, -122], "scale": 1}},
+  "groups": [],
+  "id": "acfaf070-75f8-414d-a1d9-0ccb35cda1a1",
+  "last_link_id": 0,
+  "last_node_id": 1,
+  "links": [],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [
+        {"link": null, "localized_name": "image", "name": "image", "type": "IMAGE"},
+        {"link": null, "localized_name": "ramp", "name": "ramp", "type": "STRING", "widget": {"name": "ramp"}},
+        {"link": null, "localized_name": "interpolation", "name": "interpolation", "type": "COMBO", "widget": {"name": "interpolation"}}
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [{"links": null, "localized_name": "image", "name": "image", "type": "IMAGE"}],
+      "pos": [687.23115234375, 582],
+      "properties": {"Node name for S&R": "ColorRampRemap_ApplyRamp"},
+      "size": [221.5376953125, 112],
+      "type": "ColorRampRemap_ApplyRamp",
+      "widgets_values": [
+        "{\"stops\":[{\"pos\":0,\"color\":\"#000000\"},{\"pos\":0.4,\"color\":\"#00ff00\"},{\"pos\":0.9961078433408183,\"color\":\"#ff00ff\"}]}",
+        "linear"
+      ],
+      "widgets_values_named": {
+        "interpolation": "linear",
+        "ramp": "{\"stops\":[{\"pos\":0,\"color\":\"#000000\"},{\"pos\":0.4,\"color\":\"#00ff00\"},{\"pos\":0.9961078433408183,\"color\":\"#ff00ff\"}]}"
+      }
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}

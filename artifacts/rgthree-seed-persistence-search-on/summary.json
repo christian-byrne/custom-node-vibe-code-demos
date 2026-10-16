@@ -1,0 +1,39 @@
+{
+  "run_id": "rgthree-seed-persistence-search-on",
+  "pair_id": "rgthree-seed-persistence-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "behavioral_success",
+    "failure_stage": "search_zero_result"
+  },
+  "search_value": "valid_assignment_zero_rgthree_results_no_measured_benefit",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "Agent static/discovery/backend pass plus post-run real-browser persistence and sequencing pass",
+    "cloud": "static validator fail/unknown; live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1096.32,
+    "retries": 0,
+    "tool_calls": 80,
+    "failed_tool_calls": 9,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The valid preregistered query returned no rgthree source; the package passed the same frozen browser score, so no positive search-grounding or search-benefit claim is supported.",
+  "evidence_gaps": [
+    "the exact preregistered rgthree query returned zero matches, so no expected commit/path/line grounding reached the Agent",
+    "turn one timed out after graph validation and before invocation",
+    "browser sequencing and reload checks are explicitly labeled post-run operator diagnostics",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "rgthree-inspired seed widget (rgthree not installed)",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "5f940ddfbb83ff9c667f32ae7d0c3ad0bb8cc9ee",
+    "reference_path": "web/seed.js"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

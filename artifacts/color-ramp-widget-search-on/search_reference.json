@@ -1,0 +1,20 @@
+{
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "required_query": "repo:^github.com/pythongosssss/ComfyUI-Custom-Scripts$ \"color picker\"",
+  "attempts": [
+    {"whole_attempt": 1, "before_first_package_write": true, "tool": "search_code", "result": "bad_args", "package_writes": 0},
+    {"whole_attempt": 2, "before_first_package_write": true, "tool": "search_code", "result": "bad_args", "package_writes": 0}
+  ],
+  "exposure_verdict": "invalid: the search tool was invoked before writes but returned bad_args; no commit, path, lines, or concrete interaction detail reached the Agent",
+  "grounding_reached_agent": false,
+  "operator_source_check": {
+    "treatment_grounding": false,
+    "repository": "github.com/pythongosssss/ComfyUI-Custom-Scripts",
+    "resolved_head": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+    "path": "web/js/customColors.js",
+    "sha256": "c08da76d8afa840221b61fb9ba1692a018c1f41cc15b4dbe1bc8723905037a62",
+    "registry": {"id": "comfyui-custom-scripts", "version_sampled": "1.2.5"}
+  },
+  "adaptation": "none: no search result reached either treatment attempt"
+}

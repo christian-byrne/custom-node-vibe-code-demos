@@ -1,0 +1,8 @@
+{
+  "arm": "search_off",
+  "code_search_experiment": "disabled",
+  "agent_search_calls": 0,
+  "treatment_exposed": false,
+  "reference_used": false,
+  "note": "Control arm: public code search was disabled. rgthree was neither installed nor copied."
+}
