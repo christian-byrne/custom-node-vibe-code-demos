@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Demo Farm comparison eligibility",
+  "type": "object",
+  "required": ["pair_id", "comparison_eligible", "source_context"],
+  "properties": {
+    "pair_id": {"type": "string", "minLength": 1},
+    "comparison_eligible": {"type": "boolean"},
+    "source_context": {
+      "type": "object",
+      "required": ["reached_agent", "before_first_successful_package_write", "snippet"],
+      "properties": {
+        "reached_agent": {"type": "boolean"},
+        "before_first_successful_package_write": {"type": "boolean"},
+        "snippet": {
+          "type": ["object", "null"],
+          "required": ["repository", "commit", "file", "start_line", "end_line", "text"],
+          "properties": {
+            "repository": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+            "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+            "file": {"type": "string", "minLength": 1},
+            "start_line": {"type": "integer", "minimum": 1},
+            "end_line": {"type": "integer", "minimum": 1},
+            "text": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}
