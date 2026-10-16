@@ -1,0 +1,10 @@
+{
+  "pair_id": "kjnodes-causal-high-pair-1",
+  "comparison_eligible": false,
+  "source_context": {
+    "reached_agent": false,
+    "before_first_successful_package_write": false,
+    "snippet": null,
+    "diagnostic_reason": "The retained payload contained only the class declaration preview, not implementation text."
+  }
+}
