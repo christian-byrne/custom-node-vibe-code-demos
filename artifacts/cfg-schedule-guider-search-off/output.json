@@ -1,0 +1,18 @@
+{
+  "status": "informative_failure",
+  "failure_stage": "agent_turn_deadline_before_validation",
+  "whole_attempts": 2,
+  "retries": 1,
+  "turn_1": "error in both attempts at the 12-minute bound",
+  "turn_2": "not_applicable_by_route because no turn-1 attempt completed",
+  "package_generated": true,
+  "generated_revisions": 2,
+  "agent_validation": "missing",
+  "post_run_validation": "both packages compile and pass comfy node validate; attempt 1 also passes 21 unittest cases",
+  "restart": "missing",
+  "object_info": "missing",
+  "guider_invocation": "missing",
+  "workflow": "missing",
+  "browser": "missing",
+  "full_diffusion": "not attempted; no checkpoint was present or allowed"
+}

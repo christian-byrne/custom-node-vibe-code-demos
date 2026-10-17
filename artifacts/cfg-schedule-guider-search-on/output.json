@@ -1,0 +1,17 @@
+{
+  "status": "informative_failure",
+  "failure_stage": "agent_turn_deadline_before_package_write",
+  "whole_attempts": 2,
+  "retries": 1,
+  "turn_1": "error in both attempts at the 12-minute bound",
+  "turn_2": "not_applicable_by_route because no turn-1 attempt completed",
+  "search": "two successful repository-scoped calls, both zero-result",
+  "package_generated": false,
+  "validator": "not_applicable_by_route",
+  "restart": "not_applicable_by_route",
+  "object_info": "not_applicable_by_route",
+  "guider_invocation": "not_applicable_by_route",
+  "workflow": "not_applicable_by_route",
+  "browser": "not_applicable_by_route",
+  "full_diffusion": "not attempted; no checkpoint was present or allowed"
+}

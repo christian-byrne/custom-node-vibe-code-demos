@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "calls": [
+    {
+      "whole_attempt": 1,
+      "repository_argument": "github.com/crystian/ComfyUI-Crystools",
+      "plain_query": "Resource Monitor",
+      "query_bytes": 16,
+      "query_sha256": "d5982d352f46ef815d107dc779055241d56eec7d5456db3f6dfc6cb262e9283a",
+      "filters_inside_query": false,
+      "status": "ok",
+      "match_count": 0,
+      "duration_ms": 1449,
+      "protocol_valid": true,
+      "terminal_answer": "model turn deadline after search"
+    },
+    {
+      "whole_attempt": 2,
+      "repository_argument": "kijai/ComfyUI-KJNodes",
+      "plain_query": "ImageTransformByNormalizedAmplitude",
+      "query_bytes": 35,
+      "query_sha256": "8e3c4c784ec25cf39dab4236f53022fc61d4138c410c3db84c414220fdcc00c1",
+      "filters_inside_query": false,
+      "status": "ok",
+      "match_count": 4,
+      "duration_ms": 936,
+      "protocol_valid": false,
+      "invalid_reason": "unrelated repository and query violated the frozen candidate route",
+      "terminal_answer": "model turn deadline after search"
+    }
+  ],
+  "grounding_reached_agent": false,
+  "grounding_credit": "none: the valid frozen search returned zero results; the retry's results were unrelated and excluded",
+  "registry_catalog_route": "No authoritative exact-pack Registry record reached the treatment answer.",
+  "operator_frozen_reference": {
+    "supplied_to_agent": false,
+    "registry_id": "ComfyUI-Crystools",
+    "latest_version": "1.27.4",
+    "repository": "https://github.com/crystian/ComfyUI-Crystools",
+    "registry_status": "active",
+    "source_head": "2f18256c5b5063937106f29a8e0a7db3ae3869b7",
+    "reference_path": "general/monitor.py"
+  },
+  "exposure_verdict": "Informative failure: the first attempt satisfied the separate-repository/plain-query treatment contract but returned zero matches and timed out; the only retry drifted to an unrelated repository, then also timed out."
+}

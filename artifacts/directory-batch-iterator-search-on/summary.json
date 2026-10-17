@@ -1,0 +1,39 @@
+{
+  "run_id": "directory-batch-iterator-search-on",
+  "pair_id": "directory-batch-iterator-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "agent_deadline_without_package"
+  },
+  "search_value": "successful_search_calls_no_adoptable_artifact",
+  "api_style": "missing",
+  "compatibility": {
+    "local": "not assessable: no package was generated",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 2180,
+    "retries": 1,
+    "tool_calls": 61,
+    "failed_tool_calls": 8,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "All three treatment turns invoked the required repository-scoped search successfully before any write, but every turn timed out without a package; search supplied no behaviorally verifiable adoption and did not help this run.",
+  "evidence_gaps": [
+    "three successful search calls are visible in redacted metadata, but raw results are private and no concrete adoption can be verified",
+    "no package, validator, restart, object_info discovery, invocation, turn-two diff, or browser proof exists",
+    "the lack of a treatment artifact makes the behavioral pair comparison invalid for a causal search-quality conclusion",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "WWAA-CustomNodes",
+    "repository": "github.com/hgabha/WWAA-CustomNodes",
+    "commit": "ced3173e822d237e6499efb55c6d29685b140ddc",
+    "reference_path": "nodes/image_nodes.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

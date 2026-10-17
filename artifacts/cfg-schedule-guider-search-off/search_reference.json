@@ -1,0 +1,23 @@
+{
+  "arm": "search_off",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=disabled",
+  "required_repository": "github.com/mfg637/ComfyUI-ScheduledGuider-Ext",
+  "required_plain_query": "CFG guider sampling step",
+  "whole_attempts": [
+    {
+      "attempt": 1,
+      "search_calls": 0,
+      "route_result": "experiment_route_disabled",
+      "first_package_write_at": "2026-10-17T01:12:31.227925151Z"
+    },
+    {
+      "attempt": 2,
+      "search_calls": 0,
+      "route_result": "experiment_route_disabled",
+      "first_package_write_at": "2026-10-17T01:26:35.441936141Z"
+    }
+  ],
+  "grounding_reached_agent": false,
+  "adaptation": "none",
+  "verdict": "control arm; code search was disabled and no ecosystem source reached the Agent"
+}

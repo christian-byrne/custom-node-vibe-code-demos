@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "search_enabled": false,
+  "required_query": "Image Comparer",
+  "repository": "github.com/rgthree/rgthree-comfy",
+  "attempts": [
+    {
+      "label": "turn1_attempt1",
+      "route_attempted_at": "2026-10-17T03:06:58.010212028Z",
+      "status": "error",
+      "error_code": "experiment_route_disabled",
+      "before_first_package_write": true,
+      "package_produced": false
+    },
+    {
+      "label": "turn1_retry",
+      "status": "not_called",
+      "package_produced": false
+    }
+  ],
+  "source_grounding_reached_agent": false,
+  "adopted_reference_detail": null,
+  "grounding_credit": false,
+  "classification": "control_no_search",
+  "privacy_note": "Raw private model/tool arguments and results are not committed. The frozen prompt records the exact public query and repository."
+}

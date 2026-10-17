@@ -1,0 +1,40 @@
+{
+  "run_id": "existing-node-routing-search-off",
+  "pair_id": "existing-node-routing-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted_control",
+    "failure_stage": null
+  },
+  "search_value": "control_disabled_search_bounded_unknown",
+  "api_style": "read-only CLI discovery; no graph API mutation",
+  "compatibility": {
+    "local": "read-only local discovery completed; exact pack compatibility remains UNKNOWN",
+    "cloud": "live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 214.64,
+    "retries": 1,
+    "tool_calls": 10,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "partial: successful messages reported 8531 tokens; setup-attempt usage and cost UNKNOWN"
+  },
+  "verdict": "The control completed both turns safely, preserved an honest bounded UNKNOWN when its supported catalog routes could not identify the exact pack, and correctly separated graph-level image references from source retrieval.",
+  "evidence_gaps": [
+    "the Agent did not obtain an authoritative Registry/catalog record for this exact pack",
+    "the frozen operator Registry record was not supplied to the model and is not arm grounding",
+    "no repository-source evidence reached the control",
+    "live Cloud compatibility was not assessed",
+    "setup-attempt token usage and all cost are unknown",
+    "raw private model/tool arguments and results are not committed"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-Crystools",
+    "repository": "github.com/crystian/ComfyUI-Crystools",
+    "commit": "2f18256c5b5063937106f29a8e0a7db3ae3869b7",
+    "reference_path": "general/monitor.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

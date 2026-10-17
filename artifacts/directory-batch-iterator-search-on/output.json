@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {"label": "turn1_attempt1", "terminal_status": "error", "bounded_deadline_seconds": 720, "package_produced": false},
+    {"label": "turn1_retry", "terminal_status": "error", "bounded_deadline_seconds": 720, "package_produced": false},
+    {"label": "turn2_retry", "terminal_status": "error", "bounded_deadline_seconds": 720, "package_produced": false}
+  ],
+  "search_calls_succeeded": 3,
+  "generated_package": false,
+  "validator": "missing",
+  "restart": "missing",
+  "object_info_discovery": "missing",
+  "invocation": "missing",
+  "browser_save_reload": "missing",
+  "result": "informative_failure_no_artifact"
+}

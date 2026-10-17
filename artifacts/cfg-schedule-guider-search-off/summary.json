@@ -1,0 +1,42 @@
+{
+  "run_id": "cfg-schedule-guider-search-off",
+  "pair_id": "cfg-schedule-guider-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "agent_turn_deadline_before_validation"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "two late packages compile and pass comfy node validate post-run; attempt 1 passes 21 unittest cases; no restart, discovery, invocation, or browser proof",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1480,
+    "retries": 1,
+    "tool_calls": 59,
+    "failed_tool_calls": 4,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Both control attempts timed out after late writes; unchanged bytes pass limited post-run checks, but the Agent completed neither turn 1 nor any runtime stage.",
+  "evidence_gaps": [
+    "both turn-1 attempts ended at the bounded deadline and turn 2 was not sent",
+    "post-run compile, CLI validation, and the first attempt's 21 unittest results are operator diagnostics on unchanged bytes",
+    "the terminal attempt's pytest suite was not run because pytest is absent from every frozen Python environment",
+    "no supported restart, object_info discovery, guider invocation, workflow save, full reload, or visible browser state exists",
+    "no model weights were present, so no full diffusion run was attempted",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-ScheduledGuider-Ext",
+    "repository": "github.com/mfg637/ComfyUI-ScheduledGuider-Ext",
+    "commit": "10492201ad8c3d2aeaa2fae74a92f2dc0df31581",
+    "reference_path": "guiders/SheduledGuider.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

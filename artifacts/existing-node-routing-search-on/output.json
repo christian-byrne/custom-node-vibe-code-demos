@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "informative_failure",
+  "failure_stage": "post_search_model_timeout_and_retry_route_drift",
+  "workflow_mutated": false,
+  "pack_installed_or_changed": false,
+  "generated_code": false,
+  "final_object_info_matches_baseline": true,
+  "turns": [
+    {
+      "turn": 1,
+      "whole_attempts": 2,
+      "status": "error_after_both_attempts",
+      "answer_excerpt": "Sorry — something went wrong on my end and I couldn't finish that. Please try again.",
+      "assessment": "first attempt ran the correct frozen search and received zero matches; retry ran an unrelated search; both reached the 12-minute deadline without a substantive answer"
+    },
+    {
+      "turn": 2,
+      "status": "complete",
+      "answer_excerpt": "Registry / catalog evidence — not obtained... repository source may demonstrate that a thing by that name exists in a repo; only the Registry/catalog can prove current pack identity, version, status, and installability.",
+      "assessment": "honest bounded follow-up; preserved unknowns and distinguished graph-level reference semantics, but cannot repair the failed first turn"
+    }
+  ],
+  "route_stages": {
+    "prompt": "evidence",
+    "search/reference": "evidence",
+    "generated code": "not_applicable_by_route",
+    "validate": "not_applicable_by_route",
+    "discover": "not_applicable_by_route",
+    "invoke": "not_applicable_by_route",
+    "edit": "not_applicable_by_route",
+    "output": "evidence"
+  }
+}

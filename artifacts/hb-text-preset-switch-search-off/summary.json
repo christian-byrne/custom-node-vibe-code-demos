@@ -1,0 +1,40 @@
+{
+  "run_id": "hb-text-preset-switch-search-off",
+  "pair_id": "hb-text-preset-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "behavioral_success_post_run_with_agent_error",
+    "failure_stage": "external_credit_after_second_turn_edit"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "passes post-run syntax, CLI validation, restart/discovery, exact CPU assertions, and real-browser save/full-reload/reopen on the unchanged final package",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 805,
+    "retries": 0,
+    "tool_calls": 46,
+    "failed_tool_calls": 10,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The Agent produced both revisions but its second turn ended on external no_funds after the edit and restart; the unchanged control package passes every post-run local and real-browser persistence gate.",
+  "evidence_gaps": [
+    "the Agent second turn ended on external no_funds after editing and restart, before a final response",
+    "Agent graph add/apply calls failed; canvas mutation and all served-browser proof are post-run operator diagnostics",
+    "the treatment arm failed before search or generation, so comparison validity is false and no causal search claim is allowed",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "comfyui-hb-party",
+    "repository": "github.com/HassanEclipse/comfyui-hb-party",
+    "commit": "bf6ec00e7f1c280f65d97ae521d6197112afc3a0",
+    "reference_path": "web/js/hb_text_preset_node.js"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

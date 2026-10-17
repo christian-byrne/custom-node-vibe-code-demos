@@ -1,0 +1,30 @@
+{
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "required_repository": "github.com/mfg637/ComfyUI-ScheduledGuider-Ext",
+  "required_plain_query": "CFG guider sampling step",
+  "query_sha256_from_redacted_tool_arguments": "1a9c71697644d542",
+  "whole_attempts": [
+    {
+      "attempt": 1,
+      "search_started_at": "2026-10-17T01:30:51.895870096Z",
+      "search_finished_at": "2026-10-17T01:30:52.791406887Z",
+      "tool_status": "success",
+      "match_count": 0,
+      "package_writes": 0
+    },
+    {
+      "attempt": 2,
+      "search_started_at": "2026-10-17T01:42:28.671040449Z",
+      "search_finished_at": "2026-10-17T01:42:29.464246076Z",
+      "tool_status": "success",
+      "match_count": 0,
+      "package_writes": 0
+    }
+  ],
+  "repository_and_query_were_separate_arguments": true,
+  "search_preceded_any_write": true,
+  "grounding_reached_agent": false,
+  "adaptation": "none: both repository-scoped searches returned zero results",
+  "verdict": "search ran correctly but returned no usable source and did not help this arm"
+}

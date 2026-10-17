@@ -1,0 +1,41 @@
+{
+  "run_id": "hb-text-preset-switch-search-on",
+  "pair_id": "hb-text-preset-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_external_credit_failure_no_artifact",
+    "failure_stage": "staging_no_funds_before_search"
+  },
+  "search_value": "treatment_unexercised_no_funds",
+  "api_style": "V3 requested; no package produced",
+  "compatibility": {
+    "local": "not assessable because the treatment failed before search or package generation",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 28,
+    "retries": 0,
+    "tool_calls": 0,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The enabled arm failed on an external staging-account no_funds response before its first tool call, so no search, package, or behavioral treatment artifact exists.",
+  "evidence_gaps": [
+    "no preregistered or unrelated search call occurred",
+    "no usable source reached the Agent and grounding credit is zero",
+    "no generated package, validation, restart, discovery, CPU invocation, second turn, or browser evidence",
+    "comparison validity is false and no causal search claim is allowed",
+    "live Cloud compatibility was not assessed",
+    "raw private model trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "comfyui-hb-party",
+    "repository": "github.com/HassanEclipse/comfyui-hb-party",
+    "commit": "bf6ec00e7f1c280f65d97ae521d6197112afc3a0",
+    "reference_path": "web/js/hb_text_preset_node.js"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

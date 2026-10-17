@@ -1,0 +1,40 @@
+{
+  "run_id": "rgthree-image-comparer-search-off",
+  "pair_id": "rgthree-image-comparer-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "agent_deadline_without_package"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3 requested; no package produced",
+  "compatibility": {
+    "local": "not assessable: neither permitted attempt produced a package",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1475,
+    "retries": 1,
+    "tool_calls": 49,
+    "failed_tool_calls": 8,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Both control attempts hit the 12-minute deadline without a package; the disabled search route stayed disabled and every validation/runtime/UI stage is missing.",
+  "evidence_gaps": [
+    "no generated package",
+    "no Agent-completed or operator post-run validation",
+    "no restart or object_info discovery",
+    "no CPU invocation or tensor-contract evidence",
+    "no served-browser interaction or screenshot",
+    "no second-turn diff or workflow persistence evidence"
+  ],
+  "ecosystem": {
+    "pack": "rgthree-comfy",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "d7297b42f0fa78bec1c0411478f887423c249502",
+    "reference_path": "src_web/comfyui/image_comparer.ts"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

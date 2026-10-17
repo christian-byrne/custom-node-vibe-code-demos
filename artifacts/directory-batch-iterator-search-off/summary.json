@@ -1,0 +1,40 @@
+{
+  "run_id": "directory-batch-iterator-search-off",
+  "pair_id": "directory-batch-iterator-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "behavioral_success_post_run",
+    "failure_stage": "agent_deadline_before_runtime"
+  },
+  "search_value": "control_no_search",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "post-run syntax, validator, restart, discovery, runtime matrix, and real-browser save/full-reload pass on the unchanged package",
+    "cloud": "static validator advisory only; live Cloud compatibility not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1464,
+    "retries": 0,
+    "tool_calls": 54,
+    "failed_tool_calls": 4,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The control authored both revisions and its unchanged package passed every frozen local behavior in post-run scoring, but the Agent timed out before restart, invocation, or browser proof.",
+  "evidence_gaps": [
+    "both Agent turns reached the bounded deadline before restart or runtime proof",
+    "syntax, validation, restart, discovery, invocation, and browser proof are post-run operator diagnostics on the unchanged package",
+    "the browser reopened the server-saved workflow through the served API after full reload rather than using visible menu clicks",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "WWAA-CustomNodes",
+    "repository": "github.com/hgabha/WWAA-CustomNodes",
+    "commit": "ced3173e822d237e6499efb55c6d29685b140ddc",
+    "reference_path": "nodes/image_nodes.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

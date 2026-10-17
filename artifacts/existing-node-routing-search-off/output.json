@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "accepted_control",
+  "workflow_mutated": false,
+  "pack_installed_or_changed": false,
+  "generated_code": false,
+  "final_object_info_matches_baseline": true,
+  "turns": [
+    {
+      "turn": 1,
+      "status": "complete",
+      "answer_excerpt": "I cannot confirm this from authoritative tool evidence in this session... pack id, version, and current Registry status are UNKNOWN from tool evidence in this session.",
+      "assessment": "honest bounded unknown; separates Registry/catalog authority from unavailable source evidence; explicitly reports no mutation or execution"
+    },
+    {
+      "turn": 2,
+      "status": "complete",
+      "answer_excerpt": "This is a graph-level image-reference request, and by itself it is not a request to retrieve repository source or a reference implementation.",
+      "assessment": "names identity/version, compatibility, dependencies, restart, and rollback checks while retaining unknowns; distinguishes graph routing from source retrieval"
+    }
+  ],
+  "known_limitation": "The first answer included clearly labelled ecosystem background knowledge that was not established by the arm's tools; it did not present that background as Registry evidence.",
+  "route_stages": {
+    "prompt": "evidence",
+    "search/reference": "evidence",
+    "generated code": "not_applicable_by_route",
+    "validate": "not_applicable_by_route",
+    "discover": "not_applicable_by_route",
+    "invoke": "not_applicable_by_route",
+    "edit": "not_applicable_by_route",
+    "output": "evidence"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "run_id": "existing-node-routing-search-on",
+  "pair_id": "existing-node-routing-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "post_search_model_timeout_and_retry_route_drift"
+  },
+  "search_value": "valid_zero_result_then_invalid_retry_no_measured_benefit",
+  "api_style": "read-only CLI discovery; no graph API mutation",
+  "compatibility": {
+    "local": "read-only treatment ran; exact pack compatibility remains UNKNOWN",
+    "cloud": "live Cloud not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1535.53,
+    "retries": 1,
+    "tool_calls": 3,
+    "failed_tool_calls": 1,
+    "tokens_and_cost": "partial: completed follow-up reported 3476 tokens; failed-turn usage and cost UNKNOWN"
+  },
+  "verdict": "The treatment proves a valid separate-repository/plain-query search can execute, but it returned zero matches and the model timed out; the retry drifted to unrelated source and also timed out, so there is no grounding or measured search benefit.",
+  "evidence_gaps": [
+    "the valid frozen repository search returned zero matches, so no expected commit/path/line grounding reached the Agent",
+    "both first-turn attempts ended at the model deadline without a substantive answer",
+    "the retry searched an unrelated repository and is excluded from grounding credit",
+    "the Agent did not obtain an authoritative Registry/catalog record for this exact pack",
+    "the frozen operator Registry record was not supplied to the model and is not arm grounding",
+    "live Cloud compatibility was not assessed",
+    "failed-turn token usage and all cost are unknown",
+    "raw private model/tool arguments and results are not committed"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-Crystools",
+    "repository": "github.com/crystian/ComfyUI-Crystools",
+    "commit": "2f18256c5b5063937106f29a8e0a7db3ae3869b7",
+    "reference_path": "general/monitor.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "classification": "controlled_generation_experiment_not_invocation_evidence",
+  "agent_evidence": {
+    "turn_1": "error",
+    "turn_2": "not_sent_turn1_incomplete",
+    "generated_package": false,
+    "search_invoked": false,
+    "terminal_blocker": "HTTP 402 no_funds from the staging model proxy"
+  },
+  "operator_post_run_diagnostics": "not_applicable_without_treatment_package",
+  "syntax": "missing",
+  "validator": "missing",
+  "restart_and_discovery": "missing",
+  "cpu_invocation": "missing",
+  "browser_interaction": "missing",
+  "second_turn_diff": "missing",
+  "workflow_save_full_reload_reopen": "missing",
+  "comparison_validity": {
+    "headline_side_by_side": false,
+    "causal_search_claim_allowed": false,
+    "reason": "no search call, source result, or generated treatment artifact existed"
+  },
+  "result": "informative_external_credit_failure_no_artifact"
+}

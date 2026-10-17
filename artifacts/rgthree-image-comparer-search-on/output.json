@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "classification": "controlled_generation_experiment_not_invocation_evidence",
+  "attempts": [
+    {
+      "label": "turn1_attempt1",
+      "started_at": "2026-10-17T03:31:09Z",
+      "ended_at": "2026-10-17T03:43:20Z",
+      "terminal_status": "error",
+      "bounded_deadline_seconds": 720,
+      "search_succeeded": true,
+      "package_produced": false
+    },
+    {
+      "label": "turn1_retry",
+      "started_at": "2026-10-17T03:43:20Z",
+      "ended_at": "2026-10-17T03:55:42Z",
+      "terminal_status": "error",
+      "bounded_deadline_seconds": 720,
+      "search_succeeded": true,
+      "package_produced": false
+    }
+  ],
+  "turn_2": "not_sent_because_no_first_revision_existed",
+  "generated_package": false,
+  "agent_completed_validation": false,
+  "operator_post_run_diagnostics": "not_applicable_without_package",
+  "validator": "missing",
+  "restart": "missing",
+  "object_info_discovery": "missing",
+  "invocation": "missing",
+  "browser_interaction": "missing",
+  "workflow_save_reload": "missing",
+  "result": "informative_failure_no_artifact"
+}

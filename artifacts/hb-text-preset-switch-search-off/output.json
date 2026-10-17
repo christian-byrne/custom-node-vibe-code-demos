@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "classification": "controlled_generation_experiment_not_invocation_evidence",
+  "agent_evidence": {
+    "turn_1": "complete",
+    "turn_2": "error_after_successful_edit_and_supported_restart",
+    "generated_package": true,
+    "genuine_second_turn_edit": true,
+    "agent_completed_cpu_invocations": true,
+    "agent_completed_canvas_mutation": false,
+    "terminal_blocker": "HTTP 402 no_funds from the staging model proxy"
+  },
+  "operator_post_run_diagnostics": {
+    "package_unchanged": true,
+    "syntax": "pass",
+    "validator": "pass",
+    "restart_and_unique_discovery": "pass",
+    "cpu_invocations": {
+      "Beta": ["2", 2, true],
+      "invalid_numeric": ["not-a-number", 0, false],
+      "status": "pass"
+    },
+    "real_served_browser": "pass",
+    "workflow_save_full_reload_reopen": "pass",
+    "persisted_selected_label": "Beta",
+    "persisted_ordered_entries": [["Moss", "30"], ["Alpha", "1"], ["Beta", "2"], ["Beta copy", "2"]]
+  },
+  "reference_detail_adoption": {
+    "behaviorally_similar_details": ["workflow-local ordered JSON state", "configure-time combo rebuild", "stable serialized widget order"],
+    "credited_to_search": false,
+    "reason": "search was disabled in this arm"
+  },
+  "comparison_validity": {
+    "headline_side_by_side": false,
+    "causal_search_claim_allowed": false,
+    "reason": "the paired treatment failed before search or generation because the staging account had no credits"
+  },
+  "result": "behavioral_success_post_run_with_agent_terminal_error"
+}

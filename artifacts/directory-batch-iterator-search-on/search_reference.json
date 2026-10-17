@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "search_enabled": true,
+  "required_query": "WWAA_ImageLoader natural_sort_key current_index",
+  "repository": "github.com/hgabha/WWAA-CustomNodes",
+  "attempts": [
+    {
+      "label": "turn1_attempt1",
+      "search_started_at": "2026-10-16T23:28:02.229295658Z",
+      "status": "success",
+      "before_first_package_write": true,
+      "package_produced": false
+    },
+    {
+      "label": "turn1_retry",
+      "search_started_at": "2026-10-16T23:44:31.949325145Z",
+      "status": "success",
+      "before_first_package_write": true,
+      "package_produced": false
+    },
+    {
+      "label": "turn2_retry",
+      "search_started_at": "2026-10-16T23:53:22.772979961Z",
+      "status": "success",
+      "before_first_package_write": true,
+      "package_produced": false
+    }
+  ],
+  "source_grounding_reached_agent": "not publicly verifiable from redacted tool metadata",
+  "adopted_reference_detail": null,
+  "grounding_credit": false,
+  "classification": "successful_search_calls_but_no_artifact_or_adoption",
+  "privacy_note": "Raw search inputs and results are not committed. The frozen prompt records the exact public query and repository."
+}

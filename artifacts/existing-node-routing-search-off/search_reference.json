@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "arm": "search_off",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=disabled",
+  "source_search": {
+    "attempted": true,
+    "result": "experiment_route_disabled",
+    "grounding_reached_agent": false
+  },
+  "registry_catalog_route": {
+    "result": "bounded_unknown",
+    "details": [
+      "comfy node registry-list returned a live but non-filterable sample",
+      "the sample did not contain ComfyUI-Crystools and therefore did not establish absence",
+      "ComfyUI-Manager cm-cli was not installed in the isolated Core"
+    ]
+  },
+  "operator_frozen_reference": {
+    "supplied_to_agent": false,
+    "registry_id": "ComfyUI-Crystools",
+    "registry_name": "ComfyUI-Crystools",
+    "latest_version": "1.27.4",
+    "repository": "https://github.com/crystian/ComfyUI-Crystools",
+    "registry_status": "active",
+    "version_status": "active",
+    "deprecated": false,
+    "supported_comfyui_version": "UNKNOWN: Registry field was empty",
+    "dependencies": ["deepdiff", "torch", "numpy", "Pillow", "pynvml", "py-cpuinfo"],
+    "registry_response_sha256": "c4c4a55073a70a92808159e7108ce507b0276223be191e1e6ec1b2cb499d3004",
+    "frozen_artifact_sha256": "bc36f4acfe20d735d3c8f0ff1f132b7dcb522db5db8c8a9b4e6e3c988689ee2e"
+  },
+  "exposure_verdict": "The control had no repository-source evidence and correctly kept pack identity, version, Registry status, compatibility, and installability UNKNOWN from its own tool evidence."
+}

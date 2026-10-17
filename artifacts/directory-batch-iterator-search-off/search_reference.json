@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "search_enabled": false,
+  "required_query": "WWAA_ImageLoader natural_sort_key current_index",
+  "repository": "github.com/hgabha/WWAA-CustomNodes",
+  "search_calls": 0,
+  "source_grounding_reached_agent": false,
+  "adopted_reference_detail": null,
+  "classification": "control_no_search"
+}

@@ -1,0 +1,41 @@
+{
+  "run_id": "cfg-schedule-guider-search-on",
+  "pair_id": "cfg-schedule-guider-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "agent_turn_deadline_before_package_write"
+  },
+  "search_value": "zero_result_repository_scoped_search_no_grounding",
+  "api_style": "V3",
+  "compatibility": {
+    "local": "no package existed for validation or runtime assessment",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 1462,
+    "retries": 1,
+    "tool_calls": 37,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Both treatment attempts searched correctly but received zero matches and timed out without a package; search did not help this run.",
+  "evidence_gaps": [
+    "both turn-1 attempts ended at the bounded deadline without package writes and turn 2 was not sent",
+    "both successful repository-scoped searches returned zero matches, so no pinned source detail reached the Agent",
+    "no package, validator, restart, object_info discovery, guider invocation, workflow, turn-two diff, or browser proof exists",
+    "the absent treatment artifact prevents a behavioral quality comparison and a causal search conclusion",
+    "the public source freeze was operator-only sampling evidence and not treatment grounding",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-ScheduledGuider-Ext",
+    "repository": "github.com/mfg637/ComfyUI-ScheduledGuider-Ext",
+    "commit": "10492201ad8c3d2aeaa2fae74a92f2dc0df31581",
+    "reference_path": "guiders/SheduledGuider.py"
+  },
+  "trace": {
+    "kind": "redacted_agent_tool_ledger"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "arm": "search_off",
+  "selector_state": "disabled",
+  "preregistered_repository": "github.com/HassanEclipse/comfyui-hb-party",
+  "preregistered_query": "Text Preset Switch",
+  "agent_search_calls": 0,
+  "agent_search_results": 0,
+  "usable_preregistered_source_reached_agent": false,
+  "grounding_credit": false,
+  "operator_preflight_search": {
+    "performed": true,
+    "purpose": "availability and frozen-reference inspection only",
+    "excluded_from_treatment_grounding": true
+  },
+  "reference_pack_installed_copied_enabled_executed_mutated_or_published": false,
+  "comparison_validity": "invalid_for_causal_search_comparison_because_treatment_never_reached_search"
+}

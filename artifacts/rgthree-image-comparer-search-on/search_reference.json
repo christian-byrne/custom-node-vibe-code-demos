@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "search_enabled": true,
+  "required_query": "Image Comparer",
+  "repository": "github.com/rgthree/rgthree-comfy",
+  "attempts": [
+    {
+      "label": "turn1_attempt1",
+      "search_started_at": "2026-10-17T03:32:01.728487339Z",
+      "search_finished_at": "2026-10-17T03:32:02.694380056Z",
+      "status": "success",
+      "before_first_package_write": true,
+      "package_produced": false
+    },
+    {
+      "label": "turn1_retry",
+      "search_started_at": "2026-10-17T03:44:01.801817485Z",
+      "search_finished_at": "2026-10-17T03:44:02.591754811Z",
+      "status": "success",
+      "before_first_package_write": true,
+      "package_produced": false
+    }
+  ],
+  "source_grounding_reached_agent": "not publicly verifiable from redacted tool metadata",
+  "adopted_reference_detail": null,
+  "behaviorally_verified_reference_detail": null,
+  "grounding_credit": false,
+  "classification": "successful_search_calls_but_no_artifact_or_adoption",
+  "privacy_note": "Raw search arguments and results are not committed. The byte-frozen prompt names the exact repository separately from the plain query."
+}
