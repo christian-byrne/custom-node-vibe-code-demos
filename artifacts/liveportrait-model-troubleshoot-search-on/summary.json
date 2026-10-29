@@ -1,0 +1,41 @@
+{
+  "run_id": "liveportrait-model-troubleshoot-search-on",
+  "pair_id": "liveportrait-model-troubleshoot-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "search/reference"
+  },
+  "search_value": "treatment_integrity_failed_fixed_anchor_only",
+  "api_style": "answer-only troubleshooting; no graph edit, no package",
+  "compatibility": {
+    "local": "answer checked against local state after each turn: models/liveportrait stayed empty; download refused by the experiment gate before any request",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 131.0,
+    "retries": 0,
+    "tool_calls": 7,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "The answer was as correct as the control's: same repo, five files and folder, no install claim, no authoring. But the arm tried a model download nobody asked for. The experiment gate blocked it and demanded its fixed, unrelated KJNodes query, which the Agent then ran. It told the user the download 'requires an approval'. No LivePortrait source reached it, so search did not help and the pair is diagnostic.",
+  "evidence_gaps": [
+    "treatment integrity failed: the only search was the experiment gate's fixed KJNodes anchor; no LivePortrait source reached the Agent",
+    "generated code, validate, discover, invoke and edit are not_applicable_by_route: a troubleshoot answer authors and edits nothing",
+    "the third-party pack is a stub; the provenance story does not say which LivePortrait pack the user had, so scoring is against the pinned kijai pack only",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-LivePortraitKJ (stub fixture; real pack not installed or executed)",
+    "repository": "github.com/kijai/ComfyUI-LivePortraitKJ",
+    "commit": "4d9dc6205b793ffd0fb319816136d9b8c0dbfdff",
+    "reference_path": "nodes.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

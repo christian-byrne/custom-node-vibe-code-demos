@@ -1,0 +1,41 @@
+{
+  "run_id": "rgthree-seed-persistence-v2-search-off",
+  "pair_id": "rgthree-seed-persistence-v2-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "not_applicable_search_disabled",
+  "api_style": "V3 comfy_api.latest node + browser extension (afterQueued-style advance via queuePrompt override)",
+  "compatibility": {
+    "local": "post-run: validator local pass; one stable collision-free class; real-browser rubric pass for both packages",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 786.0,
+    "retries": 1,
+    "tool_calls": 55,
+    "failed_tool_calls": 3,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Met the rubric. The Agent generated, restarted through the card, rediscovered, validated and ran both revisions. Post-run real-browser scoring of its unchanged packages shows 123 then 124, last-used kept separately and read-only, save/reload preserving every widget; step 3 gives 123 then 126 and decrement 123 then next seed 120. No search; no rgthree detail used. Attempt 1 (harness-confounded) left a package defeated by the frontend's auto control_after_generate=randomize.",
+  "evidence_gaps": [
+    "the Agent did not drive a browser; behaviour is post-run operator evidence",
+    "Agent-side run output text was not retrievable (get_output download_no_outputs); job completion only",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "browser behaviour is a post-run operator score; the Agent has no browser tool and no screen recording was made",
+    "denied third-party-gate calls are not persisted in the Agent tool ledger; attempt-1 denials rest on the Agent's account and the gate source"
+  ],
+  "ecosystem": {
+    "pack": "rgthree-comfy (reference only; not installed or copied)",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "d7297b42f0fa78bec1c0411478f887423c249502",
+    "reference_path": "src_web/comfyui/seed.ts"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

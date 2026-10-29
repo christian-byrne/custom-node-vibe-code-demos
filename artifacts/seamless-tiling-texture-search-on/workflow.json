@@ -1,0 +1,342 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 1,
+  "last_node_id": 4349194198705564,
+  "links": [
+    [
+      14569629052932,
+      1,
+      0,
+      4349194198705564,
+      0,
+      "IMAGE"
+    ],
+    [
+      532094354399638,
+      4349194198705564,
+      0,
+      3214534499358073,
+      1,
+      "IMAGE"
+    ],
+    [
+      681397195118049,
+      608221161101531,
+      0,
+      4007951613939563,
+      0,
+      "IMAGE"
+    ],
+    [
+      1175589135368879,
+      608221161101531,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      2222163191057028,
+      1,
+      0,
+      3214534499358073,
+      0,
+      "IMAGE"
+    ],
+    [
+      2768519680840460,
+      3214534499358073,
+      0,
+      608221161101531,
+      0,
+      "IMAGE"
+    ],
+    [
+      2882469418371450,
+      3980144511106456,
+      0,
+      608221161101531,
+      1,
+      "IMAGE"
+    ],
+    [
+      3361360610256362,
+      3214534499358073,
+      0,
+      3980144511106456,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            14569629052932,
+            2222163191057028
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "texture.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1175589135368879,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [],
+      "pos": [
+        420,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 608221161101531,
+      "inputs": [
+        {
+          "link": 2768519680840460,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 2882469418371450,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            681397195118049,
+            1175589135368879
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1805,
+        80
+      ],
+      "properties": {},
+      "size": [
+        270,
+        186
+      ],
+      "type": "ImageStitch",
+      "widgets_values": [
+        "down",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3214534499358073,
+      "inputs": [
+        {
+          "link": 2222163191057028,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 532094354399638,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2768519680840460,
+            3361360610256362
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1105,
+        80
+      ],
+      "properties": {},
+      "size": [
+        270,
+        186
+      ],
+      "type": "ImageStitch",
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3980144511106456,
+      "inputs": [
+        {
+          "link": 3361360610256362,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2882469418371450
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1455,
+        126
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "ImageFlip",
+      "widgets_values": [
+        "x-axis: vertically"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4007951613939563,
+      "inputs": [
+        {
+          "link": 681397195118049,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2155,
+        126
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4349194198705564,
+      "inputs": [
+        {
+          "link": 14569629052932,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            532094354399638
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        755,
+        80
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "ImageFlip",
+      "widgets_values": [
+        "y-axis: horizontally"
+      ]
+    }
+  ],
+  "version": 0.4
+}

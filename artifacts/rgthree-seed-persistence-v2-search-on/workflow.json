@@ -1,0 +1,49 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4010128601763256,
+  "links": [],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 4010128601763256,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "seed",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        288.79999999999995,
+        166
+      ],
+      "type": "PersistentSeedSequence_Seed",
+      "widgets_values": [
+        123,
+        "fixed",
+        "increment",
+        123
+      ]
+    }
+  ],
+  "version": 0.4
+}

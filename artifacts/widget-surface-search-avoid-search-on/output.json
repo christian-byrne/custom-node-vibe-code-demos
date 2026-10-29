@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "use-existing-node: Core ResolutionSelector added and wired by graph operations; no package write, no authoring attempt, no Registry install",
+  "package_written": false,
+  "new_object_info_classes": [],
+  "final_object_info_matches_baseline": true,
+  "graph_state": {
+    "source": "Agent persisted draft (GET /agent/draft) after each turn; turn-two draft byte-identical to turn one",
+    "draft_versions": [
+      2,
+      2
+    ],
+    "selector_node_id": 1727650762736274,
+    "selector_widgets_values": [
+      "1:1 (Square)",
+      1,
+      64,
+      null
+    ],
+    "selector_links": [
+      {
+        "from_output": 1,
+        "to_node": 4,
+        "to_input": 1,
+        "type": "INT"
+      },
+      {
+        "from_output": 0,
+        "to_node": 4,
+        "to_input": 0,
+        "type": "INT"
+      }
+    ],
+    "empty_latent_inputs_driven": [
+      "width",
+      "height"
+    ],
+    "requested_controls": {
+      "aspect_ratio": "aspect_ratio combo, 8 ratios",
+      "snap_to_64": "multiple=64",
+      "total_pixels": "megapixels=1.0 (existing widget on the same node)"
+    }
+  },
+  "operator_core_execution": {
+    "note": "operator diagnostic: the real Core ResolutionSelector.execute at the persisted multiple=64; every one of 24 ratio x {1.0, 2.0, 2.5} MP outputs is a multiple of 64",
+    "sample_outputs": {
+      "1.0": {
+        "1:1": [
+          1024,
+          1024
+        ],
+        "16:9": [
+          1344,
+          768
+        ],
+        "9:16": [
+          768,
+          1344
+        ],
+        "21:9": [
+          1536,
+          640
+        ],
+        "3:2": [
+          1280,
+          832
+        ]
+      },
+      "2.0": {
+        "1:1": [
+          1472,
+          1472
+        ],
+        "16:9": [
+          1920,
+          1088
+        ],
+        "21:9": [
+          2240,
+          960
+        ]
+      },
+      "2.5": {
+        "1:1": [
+          1600,
+          1600
+        ],
+        "16:9": [
+          2176,
+          1216
+        ]
+      }
+    }
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "status": "complete",
+      "answer_excerpt": "I added a **Resolution Selector (#1727650762736274)** feeding the **Empty Latent Image (#4)** ... set its `multiple` to 64 for SDXL and `megapixels` to 1.0",
+      "assessment": "accurate: persisted draft v2 holds ResolutionSelector [1:1, 1.0 MP, 64] with width/height links into EmptyLatentImage #4; also honestly flagged the absent checkpoint file"
+    },
+    {
+      "turn": 2,
+      "status": "complete",
+      "answer_excerpt": "The **Resolution Selector (#1727650762736274)** I added has a `megapixels` widget \u2014 that's your total-pixels control ... e.g. `2.0` for ~1448x1448-equivalent",
+      "assessment": "route correct and no false edit claimed (draft unchanged, offered to set a value); the same illustrative imprecision as the control: 2.0 MP at 1:1 snaps to 1472x1472 in Core, not ~1448"
+    }
+  ],
+  "honesty": "no false success or graph-state claim; turn two correctly identified the existing megapixels widget as the total-pixels control and made no edit; one illustrative example value (~1448 at 2.0 MP) is not what the node produces (1472)",
+  "widget_promotion_gap_14499": "not exercised: the fixture has no subgraph and neither arm needed widget promotion",
+  "route_stages": {
+    "prompt": "evidence",
+    "search/reference": "not_applicable_by_route",
+    "generated code": "not_applicable_by_route",
+    "validate": "not_applicable_by_route",
+    "discover": "not_applicable_by_route",
+    "invoke": "not_applicable_by_route",
+    "edit": "evidence",
+    "output": "evidence"
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 3,
+  "last_node_id": 2381246877288666,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      331496945994790,
+      2,
+      0,
+      2381246877288666,
+      0,
+      "IMAGE"
+    ],
+    [
+      3486622723866450,
+      2381246877288666,
+      0,
+      3,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "first.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            331496945994790
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        440
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "second.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "images_a",
+          "type": "IMAGE"
+        },
+        {
+          "link": 3486622723866450,
+          "name": "images_b",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "images_c",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "images_d",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "image",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        420,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "Image Batch"
+      },
+      "size": [
+        315,
+        100
+      ],
+      "type": "Image Batch",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 3,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [],
+      "pos": [
+        800,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "batch"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2381246877288666,
+      "inputs": [
+        {
+          "link": 331496945994790,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3486622723866450
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        755,
+        570
+      ],
+      "properties": {},
+      "size": [
+        270,
+        166
+      ],
+      "type": "ImageScale",
+      "widgets_values": [
+        "lanczos",
+        512,
+        512,
+        "center"
+      ]
+    }
+  ],
+  "version": 0.4
+}

@@ -1,0 +1,40 @@
+{
+  "scored_attempt": 2,
+  "agent_run": {
+    "turn_1": "error at the 12-minute bound (724 s): search_code bad_args (repo filter inside query) then search_limit; KJNodes anchor ok; 19 third-party Allow cards answered allow; wrote the package to staging, installed into Core custom_nodes, restart card answered, rediscovered PersistentSeedSequence_Seed, added the node; never validated or invoked",
+    "turn_2": "not sent (turn 1 incomplete)",
+    "search": "own first call carried repo but embedded repo:^github\\.com/rgthree/rgthree-comfy$ in query (identified by its 63-byte sha256 prefix 03cf31ed); no rgthree content reached the Agent"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core/frontend; turn-1 package bytes as the Agent left them; one load only",
+    "discovery": {
+      "class_id": "PersistentSeedSequence_Seed",
+      "stable_across_restart": true,
+      "collision_free": true
+    },
+    "static_validator": "local pass, 0 errors",
+    "turn1_package": {
+      "outputs": [
+        123,
+        123
+      ],
+      "after_reload": {
+        "current_seed": 123,
+        "mode": "increment",
+        "last_used_seed": 123,
+        "last_used_read_only": false
+      },
+      "pass": false,
+      "cause": "extension looks up widget 'seed' but the Python input is 'current_seed'; lookup returns nothing, afterQueued never attached"
+    },
+    "turn2_package": "not scorable: no turn-2 revision",
+    "page_errors": []
+  },
+  "attempt_1": {
+    "treatment": "valid delivery: scoped call repo=rgthree/rgthree-comfy query=SPECIAL_SEED_INCREMENT at 09:14:45Z, before any write; returned web/comfyui/seed.js and src_web/comfyui/seed.ts at d7297b42 with SPECIAL_SEED_DECREMENT",
+    "harness_defect": "runner sent no ask_kinds: ConfirmThirdParty nil, every post-search mutating call denied approval_required; zero package writes",
+    "adopted_detail": "named SPECIAL_SEED_INCREMENT = -2 correctly; chose an explicit mode combo instead of sentinel seeds; no package to verify"
+  },
+  "search_helped": "unmeasured",
+  "classification": "failed; treatment not delivered in the scored attempt; post-run behaviour fails"
+}

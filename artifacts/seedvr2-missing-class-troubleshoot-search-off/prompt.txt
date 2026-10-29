@@ -1,0 +1,1 @@
+Fix these three nodes for me: SeedVR2, SeedVR2BlockSwap and SeedVR2ExtraArgs.

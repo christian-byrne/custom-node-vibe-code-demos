@@ -1,0 +1,189 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 1,
+  "last_node_id": 2018512477937230,
+  "links": [
+    [
+      1143049386416230,
+      2018512477937230,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      1622709273459761,
+      1,
+      0,
+      2018512477937230,
+      0,
+      "IMAGE"
+    ],
+    [
+      4456770122996189,
+      2,
+      0,
+      2018512477937230,
+      1,
+      "MASK"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1622709273459761
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "photo.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            4456770122996189
+          ],
+          "name": "MASK",
+          "slot_index": 0,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        440
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageMask"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImageMask",
+      "widgets_values": [
+        "region_mask.png",
+        "red",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 1143049386416230,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [],
+      "pos": [
+        420,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 2018512477937230,
+      "inputs": [
+        {
+          "link": 1622709273459761,
+          "name": "image",
+          "type": "IMAGE"
+        },
+        {
+          "link": 4456770122996189,
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1143049386416230
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        755,
+        80
+      ],
+      "properties": {},
+      "size": [
+        400,
+        376
+      ],
+      "type": "FluxProFillNode",
+      "widgets_values": [
+        "",
+        false,
+        60,
+        50,
+        0,
+        "fixed"
+      ]
+    }
+  ],
+  "version": 0.4
+}

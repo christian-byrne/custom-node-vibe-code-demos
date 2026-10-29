@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "arm": "search_off",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=disabled",
+  "search_expected": false,
+  "preregistered_query": null,
+  "treatment_live": "no code-search canary at startup; disabled selector",
+  "search_code_calls": 0,
+  "repo_argument": null,
+  "query_argument": null,
+  "grounding_reached_agent": false,
+  "exposure_verdict": "Control: search unavailable and not needed; the route was chosen from the local node catalog."
+}

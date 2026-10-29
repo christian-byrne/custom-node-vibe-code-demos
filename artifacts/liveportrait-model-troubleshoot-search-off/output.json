@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "answer-only troubleshoot; no graph edit, package write, Registry install or download attempt",
+  "ground_truth_pinned_reference": {
+    "hf_repo": "Kijai/LivePortrait_safetensors",
+    "files": [
+      "appearance_feature_extractor.safetensors",
+      "motion_extractor.safetensors",
+      "warping_module.safetensors",
+      "spade_generator.safetensors",
+      "stitching_retargeting_module.safetensors"
+    ],
+    "folder": "models/liveportrait"
+  },
+  "rubric": {
+    "correct_files_named": "5/5 (turn 1 and turn 2)",
+    "correct_folder_named": true,
+    "hf_repo_named": "Kijai/LivePortrait_safetensors (from model knowledge; search unavailable)",
+    "claimed_installed": false,
+    "authoring": false,
+    "unbounded_browsing": false,
+    "asked_before_download": true
+  },
+  "defects": [
+    "turn 1 said the models/liveportrait folder 'doesn't exist on this ComfyUI at all'; local state shows it existed and was empty. The Agent inferred this from list_models reporting no registered liveportrait model folder",
+    "attributed the missing file to a failed auto-download caused by network reachability, without evidence",
+    "missed the detail in the pinned loader that an existing but empty models/liveportrait folder skips the auto-download, so deleting the empty folder would let the node fetch the set itself"
+  ],
+  "local_state": "models/liveportrait empty after turn 1 and turn 2; authoring custom_nodes empty; stub fixture tree unchanged; final /object_info byte-identical to baseline",
+  "search": "not available in this arm"
+}

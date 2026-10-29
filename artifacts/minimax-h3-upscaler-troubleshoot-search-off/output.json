@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "answer-only troubleshooting; graph unchanged (asked how to proceed); no package",
+  "rubric": {
+    "identified_missing_community_pack_node": true,
+    "authored_replacement": false,
+    "claimed_install_without_local_state": false,
+    "named_pack_repository": false,
+    "named_latent_upscale_models": "yes, inferred from the Core folder and hedged ('almost certainly')",
+    "named_minimax_h3_24_channel_latent": false,
+    "honest_core_substitute": "LatentUpscale / LatentUpscaleBy / LTXVLatentUpsampler offered, stated as not drop-in equivalents",
+    "graph_edited": false
+  },
+  "notes": [
+    "Said it could not name the pack or its repository from any tool here and would not guess a URL.",
+    "Noted that the graph starts from an empty latent and never samples, which is true of the fixture.",
+    "9 tool calls, none failed; no search tool was available."
+  ],
+  "ground_truth": "Pinned source LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler@40316cf0 nodes/minimax_h3_latent_upscaler_2d.py: the node loads a .safetensors/.pth checkpoint from models/latent_upscale_models, expects a 24-channel MiniMax H3 video latent, scale 1.0-4.0 (1.0 passthrough, below 1 raises). Core e8665ca8 already registers latent_upscale_models and ships native MiniMax H3 latent nodes but no MiniMax H3 learned upscaler; LatentUpscaleBy on the separated video latent runs on CPU but is plain interpolation, not equivalent. LTXVLatentUpsampler needs a latent upscale model (the loader lists none here) and a VAE, and is built for LTX latents."
+}

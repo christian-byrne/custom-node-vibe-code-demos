@@ -1,0 +1,246 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 4,
+  "last_node_id": 5,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      4,
+      1,
+      "block_swap_config"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      2,
+      "extra_args"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "frame.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "block_swap_config",
+          "slot_index": 0,
+          "type": "block_swap_config"
+        }
+      ],
+      "pos": [
+        40,
+        440
+      ],
+      "properties": {
+        "Node name for S&R": "SeedVR2BlockSwap"
+      },
+      "size": [
+        315,
+        154
+      ],
+      "type": "SeedVR2BlockSwap",
+      "widgets_values": [
+        16,
+        false
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "extra_args",
+          "slot_index": 0,
+          "type": "extra_args"
+        }
+      ],
+      "pos": [
+        40,
+        640
+      ],
+      "properties": {
+        "Node name for S&R": "SeedVR2ExtraArgs"
+      },
+      "size": [
+        315,
+        154
+      ],
+      "type": "SeedVR2ExtraArgs",
+      "widgets_values": [
+        false,
+        512,
+        64,
+        false,
+        false,
+        false,
+        "cuda:0"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "link": 2,
+          "name": "block_swap_config",
+          "type": "block_swap_config"
+        },
+        {
+          "link": 3,
+          "name": "extra_args",
+          "type": "extra_args"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "image",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        420,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "SeedVR2"
+      },
+      "size": [
+        315,
+        262
+      ],
+      "type": "SeedVR2",
+      "widgets_values": [
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        100,
+        "fixed",
+        1072,
+        5,
+        "wavelet",
+        0,
+        0
+      ]
+    },
+    {
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 4,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [],
+      "pos": [
+        800,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "upscaled"
+      ]
+    }
+  ],
+  "version": 0.4
+}

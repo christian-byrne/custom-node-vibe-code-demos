@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "use-existing-node: Core ImageScale (Upscale Image) inserted between the second LoadImage and Image Batch images_b by graph operations; no package, search or Registry install",
+  "graph_state": {
+    "source": "Agent persisted draft (GET /agent/draft) after each turn; turn-two draft identical to turn one",
+    "added_node": "ImageScale",
+    "widgets_values": [
+      "lanczos",
+      512,
+      512,
+      "center"
+    ],
+    "images_a": "fed directly by LoadImage first.png",
+    "images_b": "LoadImage second.png -> ImageScale -> images_b"
+  },
+  "rubric": {
+    "identified_mismatch_from_exception": true,
+    "resolved_with_existing_nodes": true,
+    "first_image_unchanged": true,
+    "source_search": 0,
+    "authoring": false,
+    "ignored_mismatch": false
+  },
+  "operator_post_run_execution": {
+    "status": "success",
+    "execution_errors": [],
+    "frames": [
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ]
+    ],
+    "first_frame_pixels_equal_first_png": true
+  },
+  "notes": [
+    "the Agent validated but did not execute the workflow; it said the graph was ready to run, and the operator post-run execution confirms that",
+    "it chose a center crop and offered letterbox/stretch alternatives; the rubric accepts any dimension-normalizing existing-node fix"
+  ]
+}

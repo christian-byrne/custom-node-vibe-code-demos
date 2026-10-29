@@ -1,0 +1,40 @@
+{
+  "run_id": "core-missing-input-search-avoid-search-off",
+  "pair_id": "core-missing-input-rewire-search-avoid-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "not_available_control",
+  "api_style": "graph operations on existing Core nodes; no package",
+  "compatibility": {
+    "local": "persisted final workflow executed post-run on the arm's own Core: success, one 256x256 image matching base*0.7 + resized overlay*0.3 within 0.5/255",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 44.1,
+    "retries": 0,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Read both missing inputs from the pasted validation log, connected overlay.png to Resize overlay and base.png to ImageBlend image1 by graph operations, and validated. Turn 2 set blend_factor to 0.3. No search, no authoring, no pack suggestion. The persisted workflow executes.",
+  "evidence_gaps": [
+    "generated code and discover are not_applicable_by_route: the correct route authors nothing",
+    "invoke is an operator post-run execution of the persisted workflow, not an Agent-initiated run",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "none required: Core nodes only",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "nodes.py (ImageScale), comfy_extras/nodes_post_processing.py (ImageBlend)"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

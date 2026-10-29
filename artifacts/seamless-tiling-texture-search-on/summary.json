@@ -1,0 +1,41 @@
+{
+  "run_id": "seamless-tiling-texture-search-on",
+  "pair_id": "seamless-tiling-texture-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "generated code"
+  },
+  "search_value": "available_not_called_treatment_unexercised",
+  "api_style": "turn 1 Core graph (mirror tile); turn 2 answer only, no package",
+  "compatibility": {
+    "local": "turn-one workflow run by the Agent; no turn-two output",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 356.0,
+    "retries": 0,
+    "tool_calls": 55,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Turn 1 matched the control pixel for pixel (Core 2x2 mirror tile, seamless). Turn 2 made no maps: it said a pixel-based route needs ffmpeg, which the control disproved on the same build, and offered a model download or a pack install. Search was available and never called, so no seamless-tiling source reached the Agent and the pair is diagnostic.",
+  "evidence_gaps": [
+    "treatment integrity failed: search_code was available and never called; the admitted padding_mode query was not issued and no seamless-tiling source reached the Agent",
+    "generated code, validate and discover are absent: the arm authored nothing in turn two",
+    "one search-on sample: whether search availability caused the different turn-two choice cannot be inferred from this pair",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state, persisted graph and output files"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-seamless-tiling (operator-pinned reference; not installed or executed)",
+    "repository": "github.com/spinagon/ComfyUI-seamless-tiling",
+    "commit": "9225ed5d2293c8cad25a11385ffe681e9b349f14",
+    "reference_path": "SeamlessTile.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

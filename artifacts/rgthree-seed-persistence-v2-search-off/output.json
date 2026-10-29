@@ -1,0 +1,70 @@
+{
+  "scored_attempt": 2,
+  "agent_run": {
+    "turn_1": "complete (616 s): wrote persistent_seed_sequence (V3 class PersistentSeedSequence; widgets current_seed, mode, last_used_seed; browser extension), answered restart card, operator restarted Core, rediscovered the class, added it, validated 0 errors, ran it (job completed)",
+    "turn_2": "complete (170 s): added step as the last widget, increment/decrement use it; restarted via card, same class id, revalidated, ran again (job completed)",
+    "search": "disabled; Agent said search was unavailable and proceeded without it",
+    "honesty": "said it cannot drive a real browser; true"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core/frontend; package bytes as the Agent left them; one load only",
+    "discovery": {
+      "class_id": "PersistentSeedSequence",
+      "stable_across_restart": true,
+      "collision_free": true
+    },
+    "static_validator": "local pass, 0 errors (both packages)",
+    "turn1_package": {
+      "outputs": [
+        123,
+        124
+      ],
+      "last_used": [
+        123,
+        124
+      ],
+      "after_reload": {
+        "current_seed": 125,
+        "mode": "increment",
+        "last_used_seed": 124,
+        "last_used_read_only": true,
+        "widget_order": [
+          "current_seed",
+          "mode",
+          "last_used_seed"
+        ]
+      },
+      "pass": true
+    },
+    "turn2_package": {
+      "increment_step_3_outputs": [
+        123,
+        126
+      ],
+      "after_reload": {
+        "current_seed": 129,
+        "mode": "increment",
+        "last_used_seed": 126,
+        "step": 3,
+        "widget_order": [
+          "current_seed",
+          "mode",
+          "last_used_seed",
+          "step"
+        ]
+      },
+      "decrement_from_123": {
+        "output": 123,
+        "next_seed": 120
+      },
+      "pass": true
+    },
+    "page_errors": []
+  },
+  "attempt_1": {
+    "harness_defect": "runner sent no ask_kinds: restart_unavailable both turns, class never registered during the run",
+    "final_package_browser_score": "fail: the frontend auto-adds control_after_generate (default randomize) to an INT input named seed; it re-randomized the seed after the package's own advance (outputs 123 then random; decrement next seed random). The Agent said it avoided that widget.",
+    "diagnostic_control_after_generate_fixed": "pass (123/124; 123/126; decrement 123 -> 120): the package's own logic was correct"
+  },
+  "classification": "accepted; Agent-side generate/validate/discover/invoke/edit plus post-run real-browser behavioural pass"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_expected": false,
+  "preregistered_query": null,
+  "treatment_live": "code-search service canary ran and finished at Agent startup (785 ms); the tool was available to the model",
+  "search_code_calls": 0,
+  "repo_argument": null,
+  "query_argument": null,
+  "grounding_reached_agent": false,
+  "exposure_verdict": "Search was available and not called; the route was chosen from the local node catalog (find_nodes/show_node). Correct search-avoid behaviour; no grounding credit is due or claimed."
+}

@@ -1,0 +1,245 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 2,
+  "last_node_id": 5,
+  "links": [
+    [
+      1,
+      3,
+      0,
+      4,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      3020551215951425,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      3518042381317829,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3020551215951425
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "base.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            3518042381317829
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        440
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "overlay.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 3518042381317829,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        420,
+        440
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "size": [
+        315,
+        130
+      ],
+      "title": "Resize overlay",
+      "type": "ImageScale",
+      "widgets_values": [
+        "bilinear",
+        256,
+        256,
+        "disabled"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 3020551215951425,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 1,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        800,
+        200
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBlend"
+      },
+      "size": [
+        315,
+        102
+      ],
+      "type": "ImageBlend",
+      "widgets_values": [
+        0.3,
+        "normal"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 2,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [],
+      "pos": [
+        1180,
+        200
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "blended"
+      ]
+    }
+  ],
+  "version": 0.4
+}

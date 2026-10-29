@@ -1,0 +1,3 @@
+My workflow stops at the Image Batch node with this error:
+
+ValueError: Image Batch: input image dimensions differ: images_a is 512x512, images_b is 640x480. All images in a batch must have the same width and height.

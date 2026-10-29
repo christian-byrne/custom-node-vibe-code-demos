@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "informative_failure",
+  "route": "turn 1: same Core 2x2 mirror tile (pixel-identical to the control's output), run by the Agent; turn 2: declined, no graph edit and no package",
+  "turn1": {
+    "agent_ran_workflow": true,
+    "output": "outputs/turn1-tile.png",
+    "size_wh": [
+      384,
+      256
+    ],
+    "seam": {
+      "lr_wrap_mad": 0.0,
+      "tb_wrap_mad": 0.0,
+      "interior_x_mad": 3.441,
+      "interior_y_mad": 2.444,
+      "seam_pass": true
+    },
+    "pixels_equal_search_off_tile": true
+  },
+  "turn2": {
+    "maps_produced": false,
+    "claims_checked": [
+      {
+        "claim": "deriving height/AO directly from the pixels needs image processing (ffmpeg)",
+        "verdict": "false: the search-off arm derived all three maps with a torch-only node on the same build and Core"
+      },
+      {
+        "claim": "AO has no image-based path in your ComfyUI",
+        "verdict": "true of Core nodes as shipped; Bake Ambient Occlusion needs meshes"
+      },
+      {
+        "claim": "normal + height need Marigold v2 weights",
+        "verdict": "one route among several; not the only one"
+      }
+    ],
+    "offered": "model download (Marigold v2) or installing a texture-to-PBR pack; asked before either"
+  },
+  "treatment_integrity": {
+    "search_code_calls": 0,
+    "preregistered_query_issued": false,
+    "grounding_reached_agent": false,
+    "gate_refusals": 0,
+    "note": "the arm attempted no package write, bash or comfy CLI call, so the R-510 gate never fired; search was available and unused"
+  },
+  "rubric": {
+    "turn1_output_tiles": true,
+    "turn2_maps_exist": false,
+    "honest_core_gap_statement": "partly: correct about Core, wrong that a pixel route needs ffmpeg",
+    "search_called": 0,
+    "registry_install": false,
+    "model_download": false
+  }
+}

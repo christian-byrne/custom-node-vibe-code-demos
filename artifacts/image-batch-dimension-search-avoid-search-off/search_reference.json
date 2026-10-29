@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "arm": "search_off",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=disabled",
+  "search_code_calls": 0,
+  "calls": [],
+  "grounding_reached_agent": false
+}

@@ -1,0 +1,236 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 4,
+  "last_node_id": 5,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      4,
+      0,
+      "LIVEPORTRAITPIPE"
+    ],
+    [
+      2,
+      2,
+      0,
+      4,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      2,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "live_portrait_pipe",
+          "slot_index": 0,
+          "type": "LIVEPORTRAITPIPE"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadLivePortraitModels"
+      },
+      "size": [
+        315,
+        100
+      ],
+      "type": "DownloadAndLoadLivePortraitModels",
+      "widgets_values": [
+        "auto",
+        "human"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "portrait.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        620
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "driving.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "pipeline",
+          "type": "LIVEPORTRAITPIPE"
+        },
+        {
+          "link": 2,
+          "name": "source_image",
+          "type": "IMAGE"
+        },
+        {
+          "link": 3,
+          "name": "driving_images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "cropped_image",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        420,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "LivePortraitProcess"
+      },
+      "size": [
+        315,
+        100
+      ],
+      "type": "LivePortraitProcess",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 4,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [],
+      "pos": [
+        800,
+        260
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "size": [
+        315,
+        260
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    }
+  ],
+  "version": 0.4
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 1,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "[redacted query: 35 bytes; sha256:8e3c4c784ec25cf3]",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "result_mentions_commit_4d9dc620": false,
+      "result_mentions_liveportraitkj_repo": false,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": false
+}

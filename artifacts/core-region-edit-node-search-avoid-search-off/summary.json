@@ -1,0 +1,40 @@
+{
+  "run_id": "core-region-edit-node-search-avoid-search-off",
+  "pair_id": "core-region-edit-node-search-avoid-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "control_no_search",
+  "api_style": "graph operations on an existing Core node; no package",
+  "compatibility": {
+    "local": "graph checked from the persisted draft; not executed (paid partner API node)",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 87.0,
+    "retries": 0,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Added Core's Flux.1 Fill Image node with graph operations and wired photo.png's image and the mask loader's mask into it on turn 1. Turn 2 confirmed the wiring and changed nothing. No search, no authoring, no install. It disclosed the node bills the user's Comfy account.",
+  "evidence_gaps": [
+    "generated code, validate and discover are not_applicable_by_route: the correct route authors nothing",
+    "invoke is missing by design: FluxProFillNode is a paid partner API node and no paid call was made",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state, persisted graph and output files"
+  ],
+  "ecosystem": {
+    "pack": "none required: Core partner node FluxProFillNode (Flux.1 Fill Image)",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "comfy_api_nodes (FluxProFillNode)"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

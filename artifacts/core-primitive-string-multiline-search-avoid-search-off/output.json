@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "graph operations on an existing Core node; no package",
+  "rubric": {
+    "used_existing_core_primitive_string_multiline": true,
+    "wired_to_string_a": true,
+    "agent_called_validate": false,
+    "turn2_edited_middle_line_only": true,
+    "source_search": 0,
+    "authoring": false,
+    "pack_suggestion": false
+  },
+  "notes": [
+    "The Agent did not call validate; the operator post-run execution of the persisted workflow succeeded and PreviewAny produced the expected turn-2 text.",
+    "Each graph operation appears as two ledger rows (the CLI call and its recorded op); the final graph has exactly one PrimitiveStringMultiline."
+  ]
+}

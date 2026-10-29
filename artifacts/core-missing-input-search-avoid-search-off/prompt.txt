@@ -1,0 +1,8 @@
+My workflow won't run. Can you fix it? It says:
+
+Failed to validate prompt for output 5:
+* ImageScale 3:
+  - Required input is missing: image
+* ImageBlend 4:
+  - Required input is missing: image1
+Output will be ignored

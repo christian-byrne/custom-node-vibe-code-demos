@@ -1,0 +1,40 @@
+{
+  "run_id": "minimax-h3-upscaler-troubleshoot-search-off",
+  "pair_id": "minimax-h3-upscaler-troubleshoot-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "not_available_control",
+  "api_style": "answer-only troubleshooting; graph unchanged; no package",
+  "compatibility": {
+    "local": "answer checked against local state: no pack, no model files, /object_info unchanged, graph unchanged",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 94.1,
+    "retries": 0,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Met the rubric. It said the node comes from a pack that is not installed, authored nothing and claimed no install. It offered Core latent upscalers as not drop-in equivalents. In turn 2 it put the weights in latent_upscale_models, inferred from Core's folder and hedged. It could not name the pack and did not mention the 24-channel MiniMax H3 latent.",
+  "evidence_gaps": [
+    "generated code, validate, discover, invoke and edit are not_applicable_by_route: the arm answered and asked before editing",
+    "the MiniMax-H3 upscaler pack is absent by design and was never executed; no weights exist locally",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "Comfyui_Minimax_h3_latent_Upscaler (absent by design; class id only in the starter workflow)",
+    "repository": "github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler",
+    "commit": "40316cf008b2fd8663263270669eb4da23f89d2c",
+    "reference_path": "nodes/minimax_h3_latent_upscaler_2d.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

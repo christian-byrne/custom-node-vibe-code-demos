@@ -1,0 +1,42 @@
+{
+  "run_id": "widget-surface-search-avoid-search-off",
+  "pair_id": "widget-surface-search-avoid-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "control_no_search",
+  "api_style": "graph operations on existing Core nodes; no package",
+  "compatibility": {
+    "local": "persisted workflow reopens in the served frontend with the selector wired; Core ResolutionSelector outputs verified as multiples of 64",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 230.31,
+    "retries": 1,
+    "tool_calls": 7,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Both turns satisfied without authoring: ResolutionSelector (multiple 64) drives Empty Latent Image, and turn two correctly named its existing megapixels widget as the total-pixels control. One illustrative resolution in turn two was not what the node produces.",
+  "evidence_gaps": [
+    "attempt 1 was an operator setup failure (no document host) and is excluded from arm evidence; the retry is preserved, so the arms have unequal retries",
+    "generated code, validate, discover and invoke are not_applicable_by_route: the correct route authors nothing",
+    "the workflow was not executed: the fixture ships no checkpoint, and scoring is on route and graph state",
+    "browser proof is a post-run operator check of the persisted workflow, not a recording of the Agent session",
+    "the ComfyUI_frontend#14499 subgraph widget-promotion gap was not exercised",
+    "live Cloud compatibility was not assessed",
+    "raw private model/tool trace not committed",
+    "tokens and cost unknown"
+  ],
+  "ecosystem": {
+    "pack": "none: ComfyUI core only (search-avoid control)",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "comfy_extras/nodes_resolution.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

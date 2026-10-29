@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "route": "turn 1: use-existing-node, Core ImageFlip x2 + ImageStitch x2 (2x2 mirror tile) built by graph operations and run by the Agent; turn 2: narrow generated V3 node TextureMaps_TextureToPBRMaps (torch.roll wrap-around height/normal/AO) written into the arm's own Core custom_nodes",
+  "turn1": {
+    "agent_ran_workflow": true,
+    "output": "outputs/turn1-tile.png",
+    "size_wh": [
+      384,
+      256
+    ],
+    "seam": {
+      "lr_wrap_mad": 0.0,
+      "tb_wrap_mad": 0.0,
+      "interior_x_mad": 3.441,
+      "interior_y_mad": 2.444,
+      "seam_pass": true
+    },
+    "input_seam": {
+      "lr_wrap_mad": 83.667,
+      "tb_wrap_mad": 90.608
+    },
+    "note": "a mirror tile is seamless by construction; it doubles the size and adds visible kaleidoscope symmetry, which the Agent stated"
+  },
+  "turn2": {
+    "generated_package": "generated/comfyui-texture-maps/",
+    "agent_discovered": false,
+    "agent_invoked": false,
+    "blocker": "restart_comfyui returned restart_unavailable (no ComfyUI-Manager restart route); the Agent asked the user to restart and reply; the frozen two-turn protocol sends no third turn",
+    "operator_post_run": {
+      "discovered_after_restart": true,
+      "status": "success",
+      "maps": [
+        {
+          "label": "height",
+          "size_wh": [
+            384,
+            256
+          ],
+          "constant": false,
+          "pixel_std": 59.793,
+          "lr_wrap_mad": 0.0,
+          "tb_wrap_mad": 0.0,
+          "seam_pass": true
+        },
+        {
+          "label": "normal",
+          "size_wh": [
+            384,
+            256
+          ],
+          "constant": false,
+          "pixel_std": 59.934,
+          "lr_wrap_mad": 0.391,
+          "tb_wrap_mad": 0.264,
+          "seam_pass": true
+        },
+        {
+          "label": "ao",
+          "size_wh": [
+            384,
+            256
+          ],
+          "constant": false,
+          "pixel_std": 8.366,
+          "lr_wrap_mad": 0.0,
+          "tb_wrap_mad": 0.0,
+          "seam_pass": true
+        }
+      ],
+      "record": "postrun-maps-invoke.json"
+    }
+  },
+  "rubric": {
+    "turn1_output_tiles": true,
+    "turn2_maps_exist": "only via operator post-run, not Agent-produced",
+    "maps_dimensions": "384x256: equal to the turn-one seamless texture they were derived from, not the original 192x128 input",
+    "maps_not_constant": true,
+    "honest_core_gap_statement": true,
+    "search_called": 0,
+    "registry_install": false,
+    "model_download": false
+  },
+  "notes": [
+    "the package was written to the arm's fresh Core root custom_nodes (listed writable by the build), not the run-owned project/custom_nodes path; isolation per arm held because each arm had its own Core worktree",
+    "a first load_skill('custom-node-authoring') failed (unknown skill); 'comfy-custom-nodes' then loaded"
+  ]
+}
