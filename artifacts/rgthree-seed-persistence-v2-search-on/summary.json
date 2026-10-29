@@ -1,0 +1,41 @@
+{
+  "run_id": "rgthree-seed-persistence-v2-search-on",
+  "pair_id": "rgthree-seed-persistence-v2-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "failed",
+    "failure_stage": "search/reference"
+  },
+  "search_value": "scoped_preregistered_call_bad_args_embedded_repo_filter_then_search_limit_no_source",
+  "api_style": "V3 comfy_api.latest node + browser extension (afterQueued)",
+  "compatibility": {
+    "local": "post-run: validator local pass; one stable collision-free class; real-browser rubric fails (seed never advances)",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 723.9,
+    "retries": 1,
+    "tool_calls": 31,
+    "failed_tool_calls": 4,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Failed. Its own first search put a repo: filter in the query, was refused, and spent the turn's only search; no rgthree source reached it. Turn 1 ran out of time after installing and adding the node, so turn 2 never ran. Its turn-1 package registers but never advances the seed: the extension looks for a widget named seed while the node names it current_seed. In attempt 1 the pinned source did reach it, but a harness defect blocked every write.",
+  "evidence_gaps": [
+    "no turn-2 revision exists; turn-2 rubric unscorable",
+    "Agent never validated or invoked in the scored attempt",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "browser behaviour is a post-run operator score; the Agent has no browser tool and no screen recording was made",
+    "denied third-party-gate calls are not persisted in the Agent tool ledger; attempt-1 denials rest on the Agent's account and the gate source"
+  ],
+  "ecosystem": {
+    "pack": "rgthree-comfy (reference only; not installed or copied)",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "d7297b42f0fa78bec1c0411478f887423c249502",
+    "reference_path": "src_web/comfyui/seed.ts"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "seedvr2-missing-class-troubleshoot-search-off",
+  "pair_id": "seedvr2-missing-class-troubleshoot-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "output"
+  },
+  "search_value": "not_available_control",
+  "api_style": "answer-only troubleshooting; graph unchanged (asked which route before editing); no package",
+  "compatibility": {
+    "local": "answer checked against local state: no pack, no models, health network none; /object_info unchanged; graph unchanged",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 264.3,
+    "retries": 0,
+    "tool_calls": 22,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Turn 1 met the rubric: it named the missing third-party pack (numz ComfyUI-SeedVR2_VideoUpscaler), authored nothing, claimed no install, and offered Core's built-in multi-node SeedVR2 pipeline as an honest substitute that still needs model files. Turn 2 got the search-helpable detail wrong: it said installing the pack later makes the same three nodes register and run as-is. The pack's current head no longer has them. It did not name the current equivalents or the BlockSwap-into-DiT-loader merge.",
+  "evidence_gaps": [
+    "generated code, validate, discover, invoke and edit are not_applicable_by_route: the arm answered and asked before editing; it authored and edited nothing",
+    "the SeedVR2 pack is absent by design and was never executed; the user's installed pack version is unknown, so legacy names are pinned to the public repository's history only",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-SeedVR2_VideoUpscaler (absent by design; legacy class ids only in the starter workflow)",
+    "repository": "github.com/numz/ComfyUI-SeedVR2_VideoUpscaler",
+    "commit": "4490bd1f482e026674543386bb2a4d176da245b9",
+    "reference_path": "src/interfaces/__init__.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

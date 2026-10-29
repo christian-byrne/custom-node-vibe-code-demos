@@ -1,0 +1,40 @@
+{
+  "run_id": "image-batch-dimension-search-avoid-search-on",
+  "pair_id": "image-batch-dimension-mismatch-search-avoid-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "available_not_called_correct_search_avoid",
+  "api_style": "graph operations on existing Core nodes; no package",
+  "compatibility": {
+    "local": "persisted final workflow executed post-run on the arm's own Core: success, two 512x512 frames",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 96.0,
+    "retries": 0,
+    "tool_calls": 14,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Same route as the control: Core Upscale Image on the second input to 512x512, first image untouched, no search and no authoring. The persisted workflow executes, and the first frame is pixel-identical to first.png.",
+  "evidence_gaps": [
+    "generated code and validate are not_applicable_by_route: the correct route authors nothing",
+    "invoke is an operator post-run execution of the persisted workflow, not an Agent-initiated run",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "none required: stub 'Image Batch' standing in for a WAS Node Suite install; fix uses Core nodes",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "nodes.py (ImageScale)"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

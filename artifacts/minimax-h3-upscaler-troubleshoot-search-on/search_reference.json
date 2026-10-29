@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 1,
+  "calls": [
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": null,
+      "query_argument": "[redacted query: 29 bytes; sha256:bb6212cbf8732037]",
+      "other_argument_keys": [],
+      "result_bytes": 8714,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": false,
+      "result_mentions_commit_40316cf0": true,
+      "result_mentions_minimax_repo": true,
+      "result_mentions_contract_details": [
+        "latent_upscale_models"
+      ],
+      "global_call_index": 3,
+      "result_contains_preregistered_detail": true,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": true,
+  "first_grounding_call_index": 3
+}

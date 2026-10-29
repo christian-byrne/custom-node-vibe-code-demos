@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "accepted_with_answer_error",
+  "route": "answer-only troubleshooting; graph unchanged (asked how to proceed); one search in turn 2; no package",
+  "rubric": {
+    "identified_missing_community_pack_node": true,
+    "authored_replacement": false,
+    "claimed_install_without_local_state": false,
+    "named_pack_repository": "LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler, file nodes/minimax_h3_latent_upscaler_2d.py (from the search result)",
+    "named_latent_upscale_models": "yes, attributed to a downloader index found by the search",
+    "named_minimax_h3_24_channel_latent": false,
+    "honest_core_substitute": "no: turn 1 offered LTXVLatentUpsampler as an 'available equivalent' 'so the graph runs here'; it needs a latent upscale model (none present) and a VAE, and is built for LTX latents",
+    "graph_edited": false
+  },
+  "comparison_validity": {
+    "valid": true,
+    "headline_side_by_side": true,
+    "causal_search_claim_allowed": false,
+    "reason": "search_code ran once in turn 2 with the preregistered query bytes (sha256 prefix bb6212cbf8732037) and no repo argument; its result reached the Agent before the turn-2 answer, and the answer used the returned repository and file that the search-off arm said it could not name. The pinned file's hit carried only class-name lines; the latent_upscale_models detail came from jnxmx/ComfyUI_HuggingFace_Downloader model_discovery.py@c939f068, not the pinned source. One sample; turn 1 preceded any search.",
+    "schema_note": "the run-manifest schema has no comparison_validity field, so this verdict cannot move the pair into the comparison view; the pair is shown under Diagnostics"
+  },
+  "notes": [
+    "The single search omitted the repo argument, so it ran across all indexed repositories (10 returned: the pinned pack, forks and projects mentioning the class).",
+    "The model-free preflight passed --repo and saw a snippet containing latent_upscale_models; the Agent's unscoped call returned no snippet for the pinned file.",
+    "Said the search also surfaced XPU-specific forks; one result is an XPU patch project, so that matches the result.",
+    "6 tool calls, none failed."
+  ],
+  "ground_truth": "Pinned source LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler@40316cf0 nodes/minimax_h3_latent_upscaler_2d.py: the node loads a .safetensors/.pth checkpoint from models/latent_upscale_models, expects a 24-channel MiniMax H3 video latent, scale 1.0-4.0 (1.0 passthrough, below 1 raises). Core e8665ca8 already registers latent_upscale_models and ships native MiniMax H3 latent nodes but no MiniMax H3 learned upscaler; LatentUpscaleBy on the separated video latent runs on CPU but is plain interpolation, not equivalent. LTXVLatentUpsampler needs a latent upscale model (the loader lists none here) and a VAE, and is built for LTX latents."
+}

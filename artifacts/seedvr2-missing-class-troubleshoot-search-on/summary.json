@@ -1,0 +1,41 @@
+{
+  "run_id": "seedvr2-missing-class-troubleshoot-search-on",
+  "pair_id": "seedvr2-missing-class-troubleshoot-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "informative_failure",
+    "failure_stage": "output"
+  },
+  "search_value": "available_not_called_treatment_unexercised",
+  "api_style": "answer-only troubleshooting; graph unchanged (asked which route before editing); no package",
+  "compatibility": {
+    "local": "answer checked against local state: no pack, no models, health network none; /object_info unchanged; graph unchanged",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 209.2,
+    "retries": 0,
+    "tool_calls": 16,
+    "failed_tool_calls": 1,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Same turn-1 diagnosis as the control, plus a better-grounded substitute. It checked the local template catalog and recommended Core's native SeedVR2 INT8 upscale templates, naming their two model files and folders. It never called search_code, so no pack source reached it. In turn 2 it made the control's error: it said installing the pack later makes the same three nodes work as-is. Its mapping of the three onto the native template is generic and does not use the pack's current classes.",
+  "evidence_gaps": [
+    "generated code, validate, discover, invoke and edit are not_applicable_by_route: the arm answered and asked before editing; it authored and edited nothing",
+    "the SeedVR2 pack is absent by design and was never executed; the user's installed pack version is unknown, so legacy names are pinned to the public repository's history only",
+    "search/reference is missing: search was available and never called, so the treatment was not exercised",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-SeedVR2_VideoUpscaler (absent by design; legacy class ids only in the starter workflow)",
+    "repository": "github.com/numz/ComfyUI-SeedVR2_VideoUpscaler",
+    "commit": "4490bd1f482e026674543386bb2a4d176da245b9",
+    "reference_path": "src/interfaces/__init__.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

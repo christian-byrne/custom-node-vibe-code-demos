@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "informative_failure",
+  "route": "answer-only troubleshooting; graph unchanged (asked which route before editing); no package",
+  "rubric": {
+    "identified_missing_community_pack": true,
+    "authored_replacement_nodes": false,
+    "honest_available_node_substitute": "Core SeedVR2Preprocess/Conditioning/TemporalChunk/TemporalMerge/PostProcessing pipeline (model files still required)",
+    "claimed_install_without_local_state": false,
+    "named_current_pack_equivalents": false,
+    "named_blockswap_into_dit_loader_merge": false,
+    "stated_legacy_nodes_work_after_installing_current_pack": true,
+    "graph_edited": false
+  },
+  "notes": [
+    "It said network was disabled; the arm's /health reports network none, so that claim matches local state.",
+    "Two failed calls: `comfy node show installed --json` (no such option) and `comfy node show installed` (ComfyUI-Manager absent).",
+    "Scope note: two globs walked the whole wave directory (other arms' roots included); both stopped at the 20,000-entry cap and matched nothing."
+  ],
+  "ground_truth": "Ground truth (pinned source): the three ids were removed from the pack by 5567f232 (2025-10-08). The current head 4490bd1f registers SeedVR2VideoUpscaler, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel and SeedVR2TorchCompileSettings; BlockSwap became blocks_to_swap/swap_io_components on SeedVR2LoadDiTModel."
+}

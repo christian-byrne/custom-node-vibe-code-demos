@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "route": "use-existing-node: Core partner node FluxProFillNode added by graph operations (five apply_ops ledger rows) in turn 1 and wired image <- LoadImage, mask <- LoadImageMask, output -> PreviewImage; turn 2 confirmed the wiring with print_workflow and changed nothing",
+  "graph_state": {
+    "source": "Agent persisted draft after each turn; turn-two draft identical to turn one",
+    "added_node": "FluxProFillNode",
+    "image_from": "LoadImage",
+    "mask_from": "LoadImageMask",
+    "node_count": 4
+  },
+  "rubric": {
+    "added_core_node_by_graph_ops": true,
+    "wired_image_and_mask": true,
+    "source_search": 0,
+    "package_write": false,
+    "authoring": false
+  },
+  "notes": [
+    "the Agent wired the inputs in turn 1, ahead of the turn-two request; the turn-two answer correctly said nothing needed changing",
+    "it disclosed that the node runs on Comfy's API and bills the user's account, and offered a local open-weights alternative",
+    "invoke not attempted by operator: a partner API node needs sign-in and credits; no paid call was made"
+  ]
+}

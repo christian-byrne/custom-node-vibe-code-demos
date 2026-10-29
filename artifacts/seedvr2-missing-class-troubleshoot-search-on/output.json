@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "informative_failure",
+  "route": "answer-only troubleshooting; graph unchanged (asked which route before editing); no package",
+  "rubric": {
+    "identified_missing_community_pack": true,
+    "authored_replacement_nodes": false,
+    "honest_available_node_substitute": "Core native SeedVR2 INT8 upscale templates (utility_seedvr2_{3b,7b}_int8_upscale_image) via template check; model files not present",
+    "claimed_install_without_local_state": false,
+    "named_current_pack_equivalents": false,
+    "named_blockswap_into_dit_loader_merge": false,
+    "stated_legacy_nodes_work_after_installing_current_pack": true,
+    "graph_edited": false
+  },
+  "notes": [
+    "search_code was available and never called; the admitted (numz/ComfyUI-SeedVR2_VideoUpscaler, SeedVR2Extension) query was not issued.",
+    "One failed call: a read-only `comfy node list --json` was refused with code_search_required (R-510 fixed KJNodes anchor gate). The Agent did not run the anchor query and continued without it.",
+    "Template file names and the Hugging Face repo it quoted come from the local template check output; not independently verified."
+  ],
+  "ground_truth": "Ground truth (pinned source): the three ids were removed from the pack by 5567f232 (2025-10-08). The current head 4490bd1f registers SeedVR2VideoUpscaler, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel and SeedVR2TorchCompileSettings; BlockSwap became blocks_to_swap/swap_io_components on SeedVR2LoadDiTModel."
+}

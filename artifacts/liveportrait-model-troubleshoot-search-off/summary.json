@@ -1,0 +1,40 @@
+{
+  "run_id": "liveportrait-model-troubleshoot-search-off",
+  "pair_id": "liveportrait-model-troubleshoot-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "not_available_control",
+  "api_style": "answer-only troubleshooting; no graph edit, no package",
+  "compatibility": {
+    "local": "answer checked against local state after each turn: models/liveportrait stayed empty; no package or node change",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 94.0,
+    "retries": 0,
+    "tool_calls": 2,
+    "failed_tool_calls": 1,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Named the Hugging Face repo Kijai/LivePortrait_safetensors, all five required files and the models/liveportrait folder, asked before downloading, and claimed nothing was installed. It wrongly told the user that the folder did not exist (it existed, empty) and blamed a failed auto-download without evidence.",
+  "evidence_gaps": [
+    "generated code, validate, discover, invoke and edit are not_applicable_by_route: a troubleshoot answer authors and edits nothing",
+    "the third-party pack is a stub; the provenance story does not say which LivePortrait pack the user had, so scoring is against the pinned kijai pack only",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-LivePortraitKJ (stub fixture; real pack not installed or executed)",
+    "repository": "github.com/kijai/ComfyUI-LivePortraitKJ",
+    "commit": "4d9dc6205b793ffd0fb319816136d9b8c0dbfdff",
+    "reference_path": "nodes.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

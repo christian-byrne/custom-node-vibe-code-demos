@@ -1,0 +1,40 @@
+{
+  "run_id": "core-primitive-string-multiline-search-avoid-search-on",
+  "pair_id": "core-primitive-string-multiline-search-avoid-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "available_not_called_correct_search_avoid",
+  "api_style": "graph operations on an existing Core node; no package",
+  "compatibility": {
+    "local": "persisted final workflow executed post-run on the arm's own Core: success; PreviewAny text matches the expected turn-2 string",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 29.0,
+    "retries": 0,
+    "tool_calls": 10,
+    "failed_tool_calls": 0,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Added Core's Text (Multiline) node with the three lines, wired it to string_a, and in turn 2 changed only the middle line. Search was live and never called. It did not call validate; the persisted workflow executes and previews the expected text.",
+  "evidence_gaps": [
+    "generated code and discover are not_applicable_by_route: the correct route authors nothing",
+    "validate is missing: the Agent did not call validate; invoke is an operator post-run execution, not an Agent-initiated run",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state and persisted graph"
+  ],
+  "ecosystem": {
+    "pack": "none required: Core nodes only",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "comfy_extras/nodes_primitive.py (PrimitiveStringMultiline)"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

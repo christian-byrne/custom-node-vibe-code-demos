@@ -1,0 +1,4 @@
+Add a Text (Multiline) node (PrimitiveStringMultiline) with this outfit description and connect it to string_a of Concatenate Text:
+red silk qipao
+gold embroidery on the collar
+black heels

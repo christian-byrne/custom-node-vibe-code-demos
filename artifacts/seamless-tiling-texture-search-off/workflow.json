@@ -1,0 +1,375 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 1,
+  "last_node_id": 3181681047572745,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      478633532406130,
+      2579242019231216,
+      0,
+      2579059707544577,
+      1,
+      "IMAGE"
+    ],
+    [
+      1117003709428735,
+      2579059707544577,
+      0,
+      1365427256648153,
+      0,
+      "IMAGE"
+    ],
+    [
+      2380525904773559,
+      1365427256648153,
+      0,
+      1083919294892701,
+      0,
+      "IMAGE"
+    ],
+    [
+      2462288852957490,
+      3181681047572745,
+      0,
+      1365427256648153,
+      1,
+      "IMAGE"
+    ],
+    [
+      2513082051573196,
+      1015403248716786,
+      0,
+      2579059707544577,
+      0,
+      "IMAGE"
+    ],
+    [
+      3022945221936634,
+      2579059707544577,
+      0,
+      3181681047572745,
+      0,
+      "IMAGE"
+    ],
+    [
+      3904851269440374,
+      1015403248716786,
+      0,
+      2579242019231216,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "texture.png",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [],
+      "pos": [
+        420,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "size": [
+        315,
+        270
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 1015403248716786,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2513082051573196,
+            3904851269440374
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        815,
+        80
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "texture.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1083919294892701,
+      "inputs": [
+        {
+          "link": 2380525904773559,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2565,
+        197
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1365427256648153,
+      "inputs": [
+        {
+          "link": 1117003709428735,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 2462288852957490,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2380525904773559
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2215,
+        151
+      ],
+      "properties": {},
+      "size": [
+        270,
+        186
+      ],
+      "type": "ImageStitch",
+      "widgets_values": [
+        "down",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2579059707544577,
+      "inputs": [
+        {
+          "link": 2513082051573196,
+          "name": "image1",
+          "type": "IMAGE"
+        },
+        {
+          "link": 478633532406130,
+          "name": "image2",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1117003709428735,
+            3022945221936634
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1515,
+        151
+      ],
+      "properties": {},
+      "size": [
+        270,
+        186
+      ],
+      "type": "ImageStitch",
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2579242019231216,
+      "inputs": [
+        {
+          "link": 3904851269440374,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            478633532406130
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1165,
+        197
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "ImageFlip",
+      "widgets_values": [
+        "y-axis: horizontally"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3181681047572745,
+      "inputs": [
+        {
+          "link": 3022945221936634,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2462288852957490
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1865,
+        197
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "ImageFlip",
+      "widgets_values": [
+        "x-axis: vertically"
+      ]
+    }
+  ],
+  "version": 0.4
+}

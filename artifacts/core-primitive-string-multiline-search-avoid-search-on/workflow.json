@@ -1,0 +1,136 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 1,
+  "last_node_id": 3997471175742390,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      592703605463248,
+      3997471175742390,
+      0,
+      1,
+      0,
+      "STRING"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [
+        {
+          "grow_id": 592703605463248,
+          "link": 592703605463248,
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        420,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "size": [
+        400,
+        200
+      ],
+      "type": "StringConcatenate",
+      "widgets_values": [
+        "",
+        "studio lighting, full body shot",
+        ", "
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "source",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [],
+      "pos": [
+        880,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "size": [
+        320,
+        200
+      ],
+      "type": "PreviewAny",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 3997471175742390,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            592703605463248
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1280,
+        80
+      ],
+      "properties": {},
+      "size": [
+        400,
+        236
+      ],
+      "type": "PrimitiveStringMultiline",
+      "widgets_values": [
+        "red silk qipao\nsilver embroidery on the sleeves\nblack heels"
+      ]
+    }
+  ],
+  "version": 0.4
+}

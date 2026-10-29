@@ -1,0 +1,1 @@
+In this workflow, add an aspect-ratio selector to the existing image-size setup. When I pick a ratio, the width and height should snap to a multiple of 64, which suits this SDXL model.

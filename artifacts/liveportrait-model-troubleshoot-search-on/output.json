@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "informative_failure",
+  "route": "answer-only troubleshoot, after one refused model-download attempt; no graph edit, package write or Registry install",
+  "ground_truth_pinned_reference": {
+    "hf_repo": "Kijai/LivePortrait_safetensors",
+    "files": [
+      "appearance_feature_extractor.safetensors",
+      "motion_extractor.safetensors",
+      "warping_module.safetensors",
+      "spade_generator.safetensors",
+      "stitching_retargeting_module.safetensors"
+    ],
+    "folder": "models/liveportrait"
+  },
+  "rubric": {
+    "correct_files_named": "5/5 (turn 1 and turn 2)",
+    "correct_folder_named": true,
+    "hf_repo_named": "Kijai/LivePortrait_safetensors (not from search: the only search returned KJNodes source)",
+    "claimed_installed": false,
+    "authoring": false,
+    "unbounded_browsing": "bounded by the tool's 20,000-entry cap, but one glob walked the whole demo-farm wave directory above its own run, including other arms' roots; no match",
+    "asked_before_download": false
+  },
+  "treatment_integrity": {
+    "valid": false,
+    "reason": "the enabled arm's only search_code call was the experiment gate's fixed anchor (repo kijai/ComfyUI-KJNodes, 35-byte query ImageTransformByNormalizedAmplitude, verified by hash), issued because the gate refused a comfy model download with code_search_required; no LivePortrait source reached the Agent before its answer",
+    "preregistered_query_issued": false,
+    "pinned_detail_reached_agent": false
+  },
+  "search_helped": false,
+  "defects": [
+    "in turn 1 it ran comfy model download for appearance_feature_extractor.safetensors from Kijai/LivePortrait_safetensors although the user had only reported an error; the experiment gate refused it before any request",
+    "told the user the download 'requires an approval that isn't available in this turn'; the actual refusal was the code-search experiment gate",
+    "attributed the missing file to unreachable download host, without evidence",
+    "missed that an existing empty models/liveportrait folder skips the loader's auto-download"
+  ],
+  "confound": "at agent source 40a361b3 the enabled experiment arm refuses every comfy CLI call, bash call and package write until the fixed KJNodes anchor query succeeds (services/agent/internal/loop/codesearch.go requireExperimentCodeSearch; comfytool.go). On a troubleshoot case whose natural next action is a model download, the treatment therefore changes more than search availability",
+  "local_state": "models/liveportrait empty after turn 1 and turn 2; authoring custom_nodes empty; stub fixture tree unchanged; final /object_info byte-identical to baseline"
+}

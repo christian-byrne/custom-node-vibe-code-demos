@@ -1,0 +1,42 @@
+{
+  "run_id": "seamless-tiling-texture-search-off",
+  "pair_id": "seamless-tiling-texture-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "partial",
+    "failure_stage": "discover"
+  },
+  "search_value": "control_no_search",
+  "api_style": "turn 1 Core graph (mirror tile); turn 2 generated V3 node, never discovered by the Agent",
+  "compatibility": {
+    "local": "turn-one workflow run by the Agent; generated maps node discovered and executed only by an operator post-run after a Core restart",
+    "cloud": "not assessed"
+  },
+  "metrics": {
+    "elapsed_seconds": 419.0,
+    "retries": 0,
+    "tool_calls": 61,
+    "failed_tool_calls": 2,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Turn 1 tiled the texture with Core nodes (2x2 mirror) and ran it: wrap seams 0.0 vs 83.7/90.6 on the input. Turn 2 honestly found no Core image-to-PBR path and wrote a small torch node for height, normal and AO, but could not restart Core, so it asked the user to. An operator restart showed the node loads and produces three non-constant, seamless maps.",
+  "evidence_gaps": [
+    "search/reference is not_applicable_by_route: search was disabled in this arm",
+    "the Agent never validated, discovered or invoked its generated node: restart_unavailable, then it asked the user to restart; the frozen protocol sends no third turn",
+    "turn-two maps exist only through an operator post-run that built a minimal LoadImage -> node -> SaveImage prompt; that is not an Agent-built graph",
+    "maps are 384x256, matching the mirror-tiled texture, not the original 192x128 input",
+    "raw private model/tool trace not committed (redacted ledger and final answer text only)",
+    "tokens and cost unknown",
+    "live Cloud compatibility was not assessed",
+    "no browser recording: scoring is on answer text, local state, persisted graph and output files"
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI-seamless-tiling (operator-pinned reference; not installed or executed)",
+    "repository": "github.com/spinagon/ComfyUI-seamless-tiling",
+    "commit": "9225ed5d2293c8cad25a11385ffe681e9b349f14",
+    "reference_path": "SeamlessTile.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 3,
+  "last_node_id": 4,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "LATENT"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "LATENT"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "LATENT"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "LATENT",
+          "slot_index": 0,
+          "type": "LATENT"
+        }
+      ],
+      "pos": [
+        40,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyMiniMaxH3LatentAV"
+      },
+      "size": [
+        315,
+        130
+      ],
+      "type": "EmptyMiniMaxH3LatentAV",
+      "widgets_values": [
+        1344,
+        768,
+        124
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "av_latent",
+          "type": "LATENT"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "video_latent",
+          "slot_index": 0,
+          "type": "LATENT"
+        },
+        {
+          "links": [],
+          "name": "audio_latent",
+          "slot_index": 1,
+          "type": "LATENT"
+        }
+      ],
+      "pos": [
+        400,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVSeparateAVLatent"
+      },
+      "size": [
+        270,
+        66
+      ],
+      "type": "LTXVSeparateAVLatent",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 2,
+          "name": "latent",
+          "type": "LATENT"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "LATENT",
+          "slot_index": 0,
+          "type": "LATENT"
+        }
+      ],
+      "pos": [
+        720,
+        40
+      ],
+      "properties": {
+        "Node name for S&R": "MinimaxH3LatentUpscalerNode2D"
+      },
+      "size": [
+        315,
+        154
+      ],
+      "type": "MinimaxH3LatentUpscalerNode2D",
+      "widgets_values": [
+        "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
+        2,
+        "cuda",
+        "fp32"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 3,
+          "name": "samples",
+          "type": "LATENT"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [],
+      "pos": [
+        1080,
+        40
+      ],
+      "properties": {
+        "Node name for S&R": "SaveLatent"
+      },
+      "size": [
+        315,
+        58
+      ],
+      "type": "SaveLatent",
+      "widgets_values": [
+        "latents/upscaled"
+      ]
+    }
+  ],
+  "version": 0.4
+}
