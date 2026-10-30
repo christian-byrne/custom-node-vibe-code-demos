@@ -1,0 +1,88 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4362836668666614,
+  "links": [
+    [
+      3705261988995593,
+      4362836668666614,
+      0,
+      1582965127525998,
+      0,
+      "INT"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1582965127525998,
+      "inputs": [
+        {
+          "link": 3705261988995593,
+          "name": "source",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        710,
+        60
+      ],
+      "properties": {},
+      "size": [
+        165.9,
+        62
+      ],
+      "type": "PreviewAny",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 4362836668666614,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3705261988995593
+          ],
+          "name": "seed",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        270,
+        94
+      ],
+      "type": "PersistentSeedSequence_Seed",
+      "widgets_values": [
+        123
+      ]
+    }
+  ],
+  "version": 0.4
+}

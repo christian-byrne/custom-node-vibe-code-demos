@@ -1,0 +1,77 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (582 s): wrote persistent_seed_sequence (V3 class PersistentSeedSequence; widgets seed, mode, last_seed; browser extension), answered the restart card, operator restarted Core, rediscovered the class, added it, validated 0 errors, ran it (job completed)",
+    "turn_2": "complete (304 s): added step as the third of four widgets, increment/decrement use it; restarted via card, same class id, revalidated, ran again (job completed)",
+    "search": "disabled; the Agent said search was unavailable and proceeded without it, which the prompt permits",
+    "persistence_convention_named": "LiteGraph native widgets_values serialization, widgets recreated in fixed order at node creation so configure restores by index; attributed to ComfyUI's own frontend, not to rgthree",
+    "honesty": "said it cannot drive a real browser and offered to walk the operator through it; true"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core/frontend; package bytes as the Agent left them; exactly one copy loaded",
+    "discovery": {
+      "class_id": "PersistentSeedSequence",
+      "stable_across_restart": true,
+      "collision_free": true
+    },
+    "static_validator": "local pass, 0 errors (both packages); cloud_compatible fail, not a rubric item",
+    "frontend_control_after_generate": "null in both packages — the extension removes the auto-added widget, so the demofarm-20 randomize trap does not fire",
+    "turn1_package": {
+      "outputs": [
+        123,
+        124
+      ],
+      "last_used": [
+        123,
+        124
+      ],
+      "last_used_read_only": true,
+      "after_reload": {
+        "seed": 125,
+        "mode": "increment",
+        "last_seed": 124,
+        "widget_order": [
+          "seed",
+          "mode",
+          "last_seed"
+        ]
+      },
+      "decrement_from_123": {
+        "output": 123,
+        "next_seed": 122
+      },
+      "page_errors": [],
+      "pass": true
+    },
+    "turn2_package": {
+      "increment_step_3_outputs": [
+        123,
+        126
+      ],
+      "last_used": [
+        123,
+        126
+      ],
+      "after_reload": {
+        "seed": 129,
+        "mode": "increment",
+        "step": 3,
+        "last_seed": 126,
+        "widget_order": [
+          "seed",
+          "mode",
+          "step",
+          "last_seed"
+        ]
+      },
+      "decrement_from_123_step_3": {
+        "output": 123,
+        "next_seed": 120
+      },
+      "page_errors": [],
+      "pass": true
+    }
+  },
+  "classification": "accepted; Agent-side generate/validate/discover/invoke/edit plus post-run real-browser behavioural pass on both revisions"
+}

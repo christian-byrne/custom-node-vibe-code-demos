@@ -1,0 +1,85 @@
+{
+  "scored_attempt": 2,
+  "retry_used": true,
+  "agent_run": {
+    "turn_1": "complete (641 s): scoped rgthree search first, 3 writes and 1 edit refused with code_search_required until the fixed KJNodes anchor query succeeded, then wrote persistent_seed_sequence (V3 class PersistentSeedSequence_Seed), restarted via card, refreshed the catalog, rediscovered the class, added it, validated and ran it",
+    "turn_2": "complete (231 s): re-ran the same scoped rgthree search, added step, increment/decrement use it, revalidated, restarted, same class id, ran again",
+    "search": "delivered. Own first call at 05:39:59.758Z carried repo=rgthree/rgthree-comfy and query=SPECIAL_SEED_INCREMENT with nothing else in query; returned the pinned seed.js and seed.ts at 218d6347 with SPECIAL_SEED_INCREMENT = -2, SPECIAL_SEEDS and SPECIAL_SEED_DECREMENT in the previews, 343.6 s before the first successful package write. Re-run on turn 2 with the same result.",
+    "persistence_convention_named": "serialized LiteGraph widget values restored by index on configure, explicitly attributed to the rgthree web/comfyui/seed.js search result and re-verified on turn 2 — the same mechanism the disabled arm derived from Core's own frontend",
+    "rgthree_detail_not_adopted": "neither arm took rgthree's sentinel-seed design (SPECIAL_SEED_INCREMENT = -2, the SPECIAL_SEEDS list), which is what the returned source uniquely carries; both chose an explicit mode combo instead",
+    "cards": "25 answered: 23 third-party Allow, 2 restart"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core/frontend; package bytes as the Agent left them; exactly one copy loaded",
+    "discovery": {
+      "class_id": "PersistentSeedSequence_Seed",
+      "stable_across_restart": true,
+      "collision_free": true
+    },
+    "static_validator": "local pass, 0 errors (both packages); cloud_compatible fail, not a rubric item",
+    "frontend_control_after_generate": "null in both packages",
+    "turn1_package": {
+      "outputs": [
+        123,
+        124
+      ],
+      "last_used": [
+        123,
+        124
+      ],
+      "last_used_read_only": true,
+      "after_reload": {
+        "seed": 125,
+        "mode": "increment",
+        "last_seed": 124,
+        "widget_order": [
+          "seed",
+          "mode",
+          "last_seed"
+        ]
+      },
+      "decrement_from_123": {
+        "output": 123,
+        "next_seed": 122
+      },
+      "page_errors": [],
+      "pass": true
+    },
+    "turn2_package": {
+      "increment_step_3_outputs": [
+        123,
+        126
+      ],
+      "last_used": [
+        123,
+        126
+      ],
+      "after_reload": {
+        "seed": 129,
+        "mode": "increment",
+        "step": 3,
+        "last_seed": 126,
+        "widget_order": [
+          "seed",
+          "mode",
+          "step",
+          "last_seed"
+        ]
+      },
+      "decrement_from_123_step_3": {
+        "output": 123,
+        "next_seed": 120
+      },
+      "page_errors": [],
+      "pass": true
+    },
+    "difference_from_disabled_arm": "initialises last_seed to 123 at node creation where the disabled arm uses 0; before the first queue nothing has been used, so 123 is the less truthful initial display. The frozen rubric does not test the pre-queue value, so this is recorded, not scored."
+  },
+  "attempt_1": {
+    "treatment": "delivered: scoped call at 05:23:18.201Z, 467.7 s before its first successful package write, returning the pinned paths at 218d6347 with the preregistered detail",
+    "outcome": "turn 1 hit the 720 s bound at 05:35:02Z after add_node and before validate/run, so turn 2 was never sent and its package is not scored",
+    "why_retried": "the pair was already comparison-valid on this attempt; the retry was spent to obtain a scorable package so the comparison has something on both sides"
+  },
+  "search_helped": "no, and this is the corpus's first comparison-valid answer to that question. The grounding was real, cited and correct, and it was not load-bearing: both arms named the same persistence convention and both met the full rubric. The information was independently derivable from Core's own frontend, and the one rgthree-specific detail the search surfaced (the sentinel seeds) was adopted by neither arm.",
+  "classification": "accepted; treatment delivered and verified before generation, both turns complete, post-run real-browser behavioural pass on both revisions"
+}

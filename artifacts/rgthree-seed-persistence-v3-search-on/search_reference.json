@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 5,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "rgthree/rgthree-comfy",
+      "query_argument": "SPECIAL_SEED_INCREMENT",
+      "other_argument_keys": [],
+      "result_bytes": 2174,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-10-30 05:39:59.758348879 +0000 UTC m=+25.089558814",
+      "pinned_commit": "218d6347dac5b6499ae56dbfeb25cbb6dd203ac5",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_rgthree_repo": true,
+      "result_mentions_pinned_paths": [
+        "src_web/comfyui/seed.ts",
+        "web/comfyui/seed.js"
+      ],
+      "result_mentions_contract_details": [
+        "SPECIAL_SEED_DECREMENT",
+        "SPECIAL_SEED_RANDOM",
+        "SPECIAL_SEEDS"
+      ],
+      "global_call_index": 1,
+      "result_contains_preregistered_detail": true,
+      "error_code": null
+    },
+    {
+      "turn": "turn1",
+      "status": "error",
+      "repo_argument": null,
+      "query_argument": "[redacted query: 67 bytes; sha256:3c3195b916b29e81]",
+      "other_argument_keys": [],
+      "result_bytes": 240,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": false,
+      "started_at": "2026-10-30 05:40:12.851260076 +0000 UTC m=+38.182470011",
+      "pinned_commit": "218d6347dac5b6499ae56dbfeb25cbb6dd203ac5",
+      "result_mentions_pinned_commit": false,
+      "result_mentions_rgthree_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 2,
+      "result_contains_preregistered_detail": false,
+      "error_code": "search_limit"
+    },
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-10-30 05:45:23.314000227 +0000 UTC m=+348.645210152",
+      "pinned_commit": "218d6347dac5b6499ae56dbfeb25cbb6dd203ac5",
+      "result_mentions_pinned_commit": false,
+      "result_mentions_rgthree_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 11,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "rgthree/rgthree-comfy",
+      "query_argument": "SPECIAL_SEED_INCREMENT",
+      "other_argument_keys": [],
+      "result_bytes": 2174,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-10-30 05:50:42.191448928 +0000 UTC m=+667.522658863",
+      "pinned_commit": "218d6347dac5b6499ae56dbfeb25cbb6dd203ac5",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_rgthree_repo": true,
+      "result_mentions_pinned_paths": [
+        "src_web/comfyui/seed.ts",
+        "web/comfyui/seed.js"
+      ],
+      "result_mentions_contract_details": [
+        "SPECIAL_SEED_DECREMENT",
+        "SPECIAL_SEED_RANDOM",
+        "SPECIAL_SEEDS"
+      ],
+      "global_call_index": 41,
+      "result_contains_preregistered_detail": true,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-10-30 05:51:24.986644841 +0000 UTC m=+710.317854776",
+      "pinned_commit": "218d6347dac5b6499ae56dbfeb25cbb6dd203ac5",
+      "result_mentions_pinned_commit": false,
+      "result_mentions_rgthree_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 44,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": true,
+  "first_grounding_call_index": 1
+}
