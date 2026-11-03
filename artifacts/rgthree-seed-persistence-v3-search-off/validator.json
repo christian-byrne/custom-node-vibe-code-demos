@@ -1,0 +1,98 @@
+{
+  "package_path": "<wave>/demofarm-21-off/postrun-rubric2/custom_nodes/persistent_seed_sequence",
+  "local_valid": "pass",
+  "cloud_compatible": "fail",
+  "runtime_contract": "unknown",
+  "findings": [
+    {
+      "rule_id": "CLOUD-002",
+      "severity": "info",
+      "verdict_domain": "cloud",
+      "message": "nodes.py: no detected standard UI payload ({'ui': ...}) in a return value",
+      "evidence": "https://github.com/Comfy-Org/cloud/blob/c606c33cad0fd3df697606555d2efd8f49eafc5f/comfy-complete/cloud_disable_config.yaml"
+    },
+    {
+      "rule_id": "CLOUD-006",
+      "severity": "info",
+      "verdict_domain": "cloud",
+      "message": "nodes.py: large integer literal (18446744073709551615) may indicate an oversized output/buffer",
+      "evidence": "https://github.com/Comfy-Org/cloud/blob/c606c33cad0fd3df697606555d2efd8f49eafc5f/comfy-complete/supported_nodes.yaml#L5-L16"
+    },
+    {
+      "rule_id": "CLOUD-007",
+      "severity": "info",
+      "verdict_domain": "cloud",
+      "message": "third-party imports detected (dependency pin/license review needed): ['nodes']",
+      "evidence": "https://github.com/Comfy-Org/cloud/blob/c606c33cad0fd3df697606555d2efd8f49eafc5f/scripts/custom-node-automation/updater/validate-deps.sh"
+    },
+    {
+      "rule_id": "CLOUD-008",
+      "severity": "info",
+      "verdict_domain": "cloud",
+      "message": "registry slug / repository / commit identity not resolvable from local source alone (UNKNOWN)",
+      "evidence": "https://github.com/Comfy-Org/cloud/pull/12370"
+    },
+    {
+      "rule_id": "RUNTIME-001",
+      "severity": "info",
+      "verdict_domain": "runtime",
+      "message": "Model and VRAM lifecycle: repeated invocation does not grow retained device memory -- UNKNOWN from static analysis; only the lifecycle harness against a live Core can resolve this",
+      "evidence": "https://github.com/Comfy-Org/ComfyUI/blob/e8665ca8e4089ab917567cdb491308e1397663d4/comfy/model_management.py"
+    },
+    {
+      "rule_id": "RUNTIME-002",
+      "severity": "info",
+      "verdict_domain": "runtime",
+      "message": "An advertised external capability is actually usable in the target environment -- UNKNOWN from static analysis; only the lifecycle harness against a live Core can resolve this",
+      "evidence": "reports/local-demo-farm/runs/vhs-combiner-search-off/runtime-outcome.json"
+    },
+    {
+      "rule_id": "RUNTIME-003",
+      "severity": "info",
+      "verdict_domain": "runtime",
+      "message": "Cache behaviour matches the declared fingerprint -- UNKNOWN from static analysis; only the lifecycle harness against a live Core can resolve this",
+      "evidence": "https://github.com/Comfy-Org/ComfyUI/blob/e8665ca8e4089ab917567cdb491308e1397663d4/execution.py"
+    },
+    {
+      "rule_id": "RUNTIME-004",
+      "severity": "info",
+      "verdict_domain": "runtime",
+      "message": "Discovery is exactly the declared node id set after restart -- UNKNOWN from static analysis; only the lifecycle harness against a live Core can resolve this",
+      "evidence": "https://github.com/Comfy-Org/ComfyUI/blob/e8665ca8e4089ab917567cdb491308e1397663d4/nodes.py#L2334-L2342"
+    }
+  ],
+  "rules_covered": [
+    "CLOUD-001",
+    "CLOUD-002",
+    "CLOUD-003",
+    "CLOUD-004",
+    "CLOUD-005",
+    "CLOUD-006",
+    "CLOUD-007",
+    "CLOUD-008",
+    "LOCAL-001",
+    "LOCAL-002",
+    "LOCAL-003",
+    "LOCAL-004",
+    "LOCAL-005",
+    "LOCAL-006",
+    "LOCAL-007",
+    "LOCAL-010",
+    "LOCAL-011",
+    "LOCAL-012",
+    "LOCAL-013",
+    "LOCAL-014",
+    "LOCAL-015",
+    "LOCAL-016"
+  ],
+  "rules_deferred": {
+    "LOCAL-008": "runtime-harness: requires a live restart + /object_info snapshot (T5/T6 scope)",
+    "LOCAL-009": "harness-boundary: a process invariant this module upholds by construction (it never imports candidate code), not a per-pack static finding",
+    "CLOUD-009": "external-gates: requires live cloud preview/GPU/manual QA, not static evidence",
+    "RUNTIME-001": "runtime-only: a separate verdict domain, resolvable only by the lifecycle harness against a live Core (see runtime_contract)",
+    "RUNTIME-002": "runtime-only: a separate verdict domain, resolvable only by the lifecycle harness against a live Core (see runtime_contract)",
+    "RUNTIME-003": "runtime-only: a separate verdict domain, resolvable only by the lifecycle harness against a live Core (see runtime_contract)",
+    "RUNTIME-004": "runtime-only: a separate verdict domain, resolvable only by the lifecycle harness against a live Core (see runtime_contract)"
+  },
+  "parse_error": null
+}

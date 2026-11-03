@@ -1,0 +1,51 @@
+{
+  "PersistentSeedSequence": {
+    "input": {
+      "required": {
+        "seed": [
+          "INT",
+          {
+            "tooltip": "Current seed. The browser extension updates this value after each queue according to the selected mode.",
+            "default": 123,
+            "min": 0,
+            "max": 18446744073709551615,
+            "step": 1
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "seed"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "INT"
+    ],
+    "output_is_list": [
+      false
+    ],
+    "output_name": [
+      "seed"
+    ],
+    "output_tooltips": [
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "PersistentSeedSequence",
+    "display_name": "Persistent Seed Sequence",
+    "description": "Outputs the current seed as an integer. A browser extension advances the seed after each queue according to the selected mode (fixed / increment / decrement / randomize-after-queue) and shows the value that was just used as 'last_seed'.",
+    "python_module": "custom_nodes.persistent_seed_sequence",
+    "category": "utils/seed",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

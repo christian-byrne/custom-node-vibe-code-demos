@@ -6,6 +6,6 @@ The page is generated from schema-validated evidence. Failures and missing evide
 
 This export holds 23 matched pairs. Every file is produced deterministically by an exporter that enforces a field allowlist, a file allowlist, SHA-256 verification against the run manifests, a privacy reject gate, and a link-integrity check.
 
-Deterministic public-export digest: `83d9c9b619919533307f1264837f3c0cae07d1cc78c9699a28417e892b64a432`.
+Deterministic public-export digest: `91a2a3001a3f07102fad11cf4cd9dfb27a72da26e1be7782327fca63e41ace93`.
 
 https://christian-byrne.github.io/custom-node-vibe-code-demos/

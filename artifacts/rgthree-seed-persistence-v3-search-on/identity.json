@@ -1,0 +1,51 @@
+{
+  "PersistentSeedSequence_Seed": {
+    "input": {
+      "required": {
+        "seed": [
+          "INT",
+          {
+            "tooltip": "Current seed. Output once per queue, then advanced by the mode widget after the prompt is sent.",
+            "default": 123,
+            "min": 0,
+            "max": 18446744073709551615,
+            "control_after_generate": false
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "seed"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "INT"
+    ],
+    "output_is_list": [
+      false
+    ],
+    "output_name": [
+      "seed"
+    ],
+    "output_tooltips": [
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "PersistentSeedSequence_Seed",
+    "display_name": "Persistent Seed Sequence",
+    "description": "CPU-only seed source. Outputs the current seed as an integer, exactly once per queue. A browser extension then advances the seed according to the selected mode (fixed / increment / decrement / randomize-after-queue) and shows the value that was just used as a separate, read-only last-used seed. Selected mode, current seed, widget order and the last-used seed all persist across workflow save and reload.",
+    "python_module": "custom_nodes.persistent_seed_sequence",
+    "category": "persistent_seed_sequence",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}
