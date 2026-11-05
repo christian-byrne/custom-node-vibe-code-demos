@@ -1,0 +1,604 @@
+{
+  "config": {},
+  "extra": {},
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4278240877615469,
+  "links": [
+    [
+      696377917329444,
+      4278240877615469,
+      0,
+      1826736909976983,
+      3,
+      "IMAGE"
+    ],
+    [
+      968695007074244,
+      1017655678765269,
+      0,
+      1826736909976983,
+      1,
+      "IMAGE"
+    ],
+    [
+      1045689216454603,
+      1826736909976983,
+      0,
+      1206992556103584,
+      1,
+      "IMAGE"
+    ],
+    [
+      1624153847547370,
+      1206992556103584,
+      1,
+      2413855068971828,
+      0,
+      "IMAGE"
+    ],
+    [
+      1666616937627340,
+      1268131358288018,
+      0,
+      1826736909976983,
+      5,
+      "IMAGE"
+    ],
+    [
+      2284279041728850,
+      1206992556103584,
+      0,
+      3438969846474266,
+      0,
+      "IMAGE"
+    ],
+    [
+      2631979043935643,
+      1283930099073510,
+      0,
+      1705599272775706,
+      1,
+      "IMAGE"
+    ],
+    [
+      3524896181538122,
+      3548817089081882,
+      0,
+      1826736909976983,
+      2,
+      "IMAGE"
+    ],
+    [
+      3563930665265700,
+      2440010136762240,
+      0,
+      1705599272775706,
+      3,
+      "IMAGE"
+    ],
+    [
+      3942413142850717,
+      1705599272775706,
+      0,
+      1206992556103584,
+      0,
+      "IMAGE"
+    ],
+    [
+      4195086572239329,
+      3115781170612515,
+      0,
+      1826736909976983,
+      4,
+      "IMAGE"
+    ],
+    [
+      4298142499055598,
+      4054789913420348,
+      0,
+      1705599272775706,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1017655678765269,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            968695007074244
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        2448
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-b-03.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1206992556103584,
+      "inputs": [
+        {
+          "link": 3942413142850717,
+          "name": "image_a",
+          "type": "IMAGE"
+        },
+        {
+          "link": 1045689216454603,
+          "name": "image_b",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2284279041728850
+          ],
+          "name": "image_a",
+          "type": "IMAGE"
+        },
+        {
+          "links": [
+            1624153847547370
+          ],
+          "name": "image_b",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        610.7,
+        1349
+      ],
+      "properties": {},
+      "size": [
+        291.9,
+        138
+      ],
+      "type": "AgentAngularImageComparer",
+      "widgets_values": [
+        2,
+        3
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1268131358288018,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1666616937627340
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        1652
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-b-01.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1283930099073510,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2631979043935643
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        458
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-a-01.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1705599272775706,
+      "inputs": [
+        {
+          "link": null,
+          "name": "images",
+          "type": "COMFY_AUTOGROW_V3"
+        },
+        {
+          "grow_id": 2631979043935643,
+          "link": 2631979043935643,
+          "name": "images.image1",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 4298142499055598,
+          "link": 4298142499055598,
+          "name": "images.image2",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 3563930665265700,
+          "link": 3563930665265700,
+          "name": "images.image0",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3942413142850717
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        390,
+        591
+      ],
+      "properties": {},
+      "size": [
+        140.70000000000002,
+        62
+      ],
+      "type": "BatchImagesNode",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 1826736909976983,
+      "inputs": [
+        {
+          "link": null,
+          "name": "images",
+          "type": "COMFY_AUTOGROW_V3"
+        },
+        {
+          "grow_id": 968695007074244,
+          "link": 968695007074244,
+          "name": "images.image3",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 3524896181538122,
+          "link": 3524896181538122,
+          "name": "images.image2",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 696377917329444,
+          "link": 696377917329444,
+          "name": "images.image0",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 4195086572239329,
+          "link": 4195086572239329,
+          "name": "images.image4",
+          "type": "IMAGE"
+        },
+        {
+          "grow_id": 1666616937627340,
+          "link": 1666616937627340,
+          "name": "images.image1",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1045689216454603
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        390,
+        2183
+      ],
+      "properties": {},
+      "size": [
+        140.70000000000002,
+        62
+      ],
+      "type": "BatchImagesNode",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 2413855068971828,
+      "inputs": [
+        {
+          "link": 1624153847547370,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        982.6,
+        1519
+      ],
+      "properties": {},
+      "size": [
+        149.1,
+        62
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 2440010136762240,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3563930665265700
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-a-00.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3115781170612515,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            4195086572239329
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        2846
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-b-04.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3438969846474266,
+      "inputs": [
+        {
+          "link": 2284279041728850,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        982.6,
+        1387
+      ],
+      "properties": {},
+      "size": [
+        149.1,
+        62
+      ],
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 3548817089081882,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3524896181538122
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        2050
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-b-02.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4054789913420348,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            4298142499055598
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        856
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-a-02.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4278240877615469,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            696377917329444
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        40,
+        1254
+      ],
+      "properties": {},
+      "size": [
+        270,
+        328
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "comparer-b-00.png"
+      ]
+    }
+  ],
+  "version": 0.4
+}

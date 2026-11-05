@@ -1,0 +1,39 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (491 s): scoped search_code at call index 1, then its first write at index 4 and install_custom_node at 13 \u2014 it authored comfy_angular_image_comparer (V3 io.ComfyNode, web/comparer.js, CPU-only contract tests) from the reference it had just read, validator exit 0, answered the third-party Allow card for the search content and then the restart card, and the runner restarted Core",
+    "turn_2": "complete (609 s): re-ran the same scoped query (index 15), then made a JS-only persistence change adopting rgthree's serialize_widgets = true plus a value getter/setter that restores {split_angle_deg, playing} on configure; prior revision retained as .bak.disabled; validator exit 0; no restart needed because the change was frontend-only",
+    "search": "enabled; 2 scoped search_code calls, both repo=rgthree/rgthree-comfy, query=RgthreeImageComparerWidget, other_argument_keys empty, both returning the pinned commit, both pinned paths and the preregistered detail rgthree_comparer",
+    "persistence_mechanism_chosen": "rgthree's own pattern: node.serialize_widgets = true plus a serializing custom widget whose serializeValue() emits {split_angle_deg, playing} and whose value setter restores them on configure",
+    "honesty": "accurate: it named the adopted rgthree details precisely, said the fidelity was to be behaviourally verified, stated it had no shell or browser automation, and confirmed no rgthree code was installed, copied or executed"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core and frontend; package bytes exactly as the Agent left them; exactly one copy loaded",
+    "discovery": {
+      "class_id": "AgentAngularImageComparer",
+      "stable_across_restart": true,
+      "collision_free": true,
+      "note": "same class id as the disabled arm, authored independently from a different package directory name (comfy_angular_image_comparer against agent_angular_image_comparer); the turn-2 .bak.disabled backup was likewise skipped by Core"
+    },
+    "static_validator": "local pass, 0 errors on both the live package and the .bak.disabled backup; cloud_compatible pass",
+    "execution": "status success, drained; asymmetric batches honoured \u2014 3 a_images and 5 b_images from one node plus 3 preview images; page_errors empty",
+    "drags": "horizontal, vertical and oblique all produced pixel changes with the node stationary, with the same evidence gap as the other arm",
+    "persistence": {
+      "serialized": {
+        "split_angle_deg": 45,
+        "playing": true
+      },
+      "after_full_reload": {
+        "split_angle_deg": 45,
+        "playing": true
+      },
+      "survives_reload": true,
+      "oblique_angle_round_trip": true,
+      "paused_state_proven": false,
+      "verdict": "an oblique angle of 45 degrees is written into ordinary workflow JSON and restored exactly across a full reload, so vertical, horizontal and oblique are distinguishable as the prompt requires"
+    },
+    "pass": "full on every rubric item the scorer could exercise; the paused-state half was not exercised on either arm"
+  },
+  "classification": "accepted; Agent-side search/generate/validate/discover/invoke/edit all evidenced, with a post-run real-browser pass including the oblique-angle round-trip"
+}

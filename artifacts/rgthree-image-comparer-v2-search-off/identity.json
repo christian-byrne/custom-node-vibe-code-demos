@@ -1,0 +1,92 @@
+{
+  "AgentAngularImageComparer": {
+    "input": {
+      "required": {
+        "image_a": [
+          "IMAGE",
+          {
+            "tooltip": "First IMAGE batch (side A). BHWC, floating, [0,1]."
+          }
+        ],
+        "image_b": [
+          "IMAGE",
+          {
+            "tooltip": "Second IMAGE batch (side B). BHWC, floating, [0,1]."
+          }
+        ],
+        "fps_a": [
+          "FLOAT",
+          {
+            "tooltip": "Side A playback rate in frames/second (must be > 0).",
+            "default": 2.0,
+            "min": 0.01,
+            "max": 1000.0,
+            "step": 0.01
+          }
+        ],
+        "fps_b": [
+          "FLOAT",
+          {
+            "tooltip": "Side B playback rate in frames/second (must be > 0).",
+            "default": 3.0,
+            "min": 0.01,
+            "max": 1000.0,
+            "step": 0.01
+          }
+        ]
+      },
+      "hidden": {
+        "prompt": [
+          "PROMPT"
+        ],
+        "extra_pnginfo": [
+          "EXTRA_PNGINFO"
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "image_a",
+        "image_b",
+        "fps_a",
+        "fps_b"
+      ],
+      "hidden": [
+        "prompt",
+        "extra_pnginfo"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "IMAGE",
+      "IMAGE"
+    ],
+    "output_is_list": [
+      false,
+      false
+    ],
+    "output_name": [
+      "image_a",
+      "image_b"
+    ],
+    "output_tooltips": [
+      null,
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "AgentAngularImageComparer",
+    "display_name": "Angular Image Comparer (A/B)",
+    "description": "Compare two IMAGE batches on one shared playback clock with a draggable angular split (0-360 degrees) and a resolution-match toggle. Returns both batches unchanged as a deterministic passthrough.",
+    "python_module": "custom_nodes.agent_angular_image_comparer",
+    "category": "image/compare",
+    "output_node": true,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

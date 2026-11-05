@@ -4,8 +4,8 @@ Public summary cards comparing matched Comfy Agent custom-node runs with and wit
 
 The page is generated from schema-validated evidence. Failures and missing evidence remain visible. Detailed artifacts stay private until an explicit field-level public-export check passes.
 
-This export holds 23 matched pairs. Every file is produced deterministically by an exporter that enforces a field allowlist, a file allowlist, SHA-256 verification against the run manifests, a privacy reject gate, and a link-integrity check.
+This export holds 24 matched pairs. Every file is produced deterministically by an exporter that enforces a field allowlist, a file allowlist, SHA-256 verification against the run manifests, a privacy reject gate, and a link-integrity check.
 
-Deterministic public-export digest: `91a2a3001a3f07102fad11cf4cd9dfb27a72da26e1be7782327fca63e41ace93`.
+Deterministic public-export digest: `cf30a3bdf27a813049f70a60c43c33b100eac3d913d935c6ceff215e9a0b6824`.
 
 https://christian-byrne.github.io/custom-node-vibe-code-demos/

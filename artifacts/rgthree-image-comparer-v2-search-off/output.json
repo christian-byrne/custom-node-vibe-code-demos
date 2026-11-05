@@ -1,0 +1,39 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (1042 s): 25 reconnaissance calls before its first write at call index 26 \u2014 Core's own frontend sources via glob/grep/read plus four load_skill calls \u2014 then authored agent_angular_image_comparer (V3 io.ComfyNode, contract.py, web/comparer.js, CPU-only contract tests), validator exit 0, installed it, answered the restart card, and the runner restarted Core, which imported the package on its second start",
+    "turn_2": "complete (236 s): frontend-only persistence change via the custom-widget serialize lifecycle \u2014 options.serialize true, serializeValue() returning {angleDeg, playing} read from node.__acState, and a NEW onConfigure hook applying the restored value through applyPersistedState(); prior revision retained as agent_angular_image_comparer.bak.disabled; validator exit 0; restart card answered again",
+    "search": "disabled; the Agent reported no search_code tool in either turn, made zero search calls, and said its reference fidelity to rgthree was unverified rather than claiming grounding",
+    "persistence_mechanism_chosen": "serializeValue() plus a new onConfigure hook reading the restored widget value by name, attributed to the standard ComfyUI widget lifecycle rather than to rgthree",
+    "honesty": "accurate throughout: it stated it had no shell, no Node and no browser automation, so it could not run its own test suite or produce click-drag evidence, and it did not claim otherwise"
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core and frontend; package bytes exactly as the Agent left them; exactly one copy loaded",
+    "discovery": {
+      "class_id": "AgentAngularImageComparer",
+      "stable_across_restart": true,
+      "collision_free": true,
+      "note": "the turn-2 snapshot also contains agent_angular_image_comparer.bak.disabled; Core correctly skipped it, so discovery reported exactly one class before and after restart even with the backup present"
+    },
+    "static_validator": "local pass, 0 errors on both the live package and the .bak.disabled backup; cloud_compatible fail, not a rubric item",
+    "execution": "status success, drained; asymmetric batches honoured \u2014 3 a_images and 5 b_images from one node plus 3 preview images; page_errors empty",
+    "drags": "horizontal, vertical and oblique all produced pixel changes with the node stationary, but see the evidence gap: the package was playing, so that alone does not isolate the boundary movement",
+    "persistence": {
+      "serialized": {
+        "angleDeg": 0,
+        "playing": true
+      },
+      "after_full_reload": {
+        "angleDeg": 0,
+        "playing": true
+      },
+      "survives_reload": true,
+      "oblique_angle_round_trip": false,
+      "paused_state_proven": false,
+      "verdict": "the mechanism works \u2014 the value is written into ordinary workflow JSON and restored intact across a full reload \u2014 but the value written after an oblique drag is 0, so the prompt's requirement to distinguish an oblique angle is not met"
+    },
+    "pass": "partial: every stage has real evidence and the package is sound, but the second turn's stated persistence requirement is not satisfied for the angle"
+  },
+  "classification": "accepted; Agent-side generate/validate/discover/invoke/edit all evidenced, with a post-run real-browser pass on everything except the oblique-angle round-trip"
+}

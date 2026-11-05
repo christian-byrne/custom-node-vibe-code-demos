@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 2,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "rgthree/rgthree-comfy",
+      "query_argument": "RgthreeImageComparerWidget",
+      "other_argument_keys": [],
+      "result_bytes": 14786,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-05 00:55:10.84734264 +0000 UTC m=+17.308430103",
+      "pinned_commit": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_rgthree_repo": true,
+      "result_mentions_pinned_paths": [
+        "src_web/comfyui/image_comparer.ts",
+        "web/comfyui/image_comparer.js"
+      ],
+      "result_mentions_contract_details": [
+        "rgthree_comparer",
+        "RgthreeImageComparerWidget",
+        "RgthreeImageComparer",
+        "comparer_mode",
+        "serialize_widgets",
+        "addCustomWidget",
+        "imageIndex",
+        "setIsPointerDown",
+        "onExecuted"
+      ],
+      "global_call_index": 1,
+      "result_contains_preregistered_detail": true,
+      "error_code": null
+    },
+    {
+      "turn": "turn3",
+      "status": "ok",
+      "repo_argument": "rgthree/rgthree-comfy",
+      "query_argument": "RgthreeImageComparerWidget",
+      "other_argument_keys": [],
+      "result_bytes": 14786,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-05 01:03:46.690112973 +0000 UTC m=+533.151200416",
+      "pinned_commit": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_rgthree_repo": true,
+      "result_mentions_pinned_paths": [
+        "src_web/comfyui/image_comparer.ts",
+        "web/comfyui/image_comparer.js"
+      ],
+      "result_mentions_contract_details": [
+        "rgthree_comparer",
+        "RgthreeImageComparerWidget",
+        "RgthreeImageComparer",
+        "comparer_mode",
+        "serialize_widgets",
+        "addCustomWidget",
+        "imageIndex",
+        "setIsPointerDown",
+        "onExecuted"
+      ],
+      "global_call_index": 15,
+      "result_contains_preregistered_detail": true,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": true,
+  "first_grounding_call_index": 1
+}

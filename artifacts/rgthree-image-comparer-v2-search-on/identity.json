@@ -1,0 +1,61 @@
+{
+  "AgentAngularImageComparer": {
+    "input": {
+      "required": {
+        "image_a": [
+          "IMAGE"
+        ],
+        "image_b": [
+          "IMAGE"
+        ],
+        "fps_a": [
+          "FLOAT",
+          {
+            "default": 2.0,
+            "min": 0.01,
+            "max": 120.0,
+            "step": 0.01
+          }
+        ],
+        "fps_b": [
+          "FLOAT",
+          {
+            "default": 3.0,
+            "min": 0.01,
+            "max": 120.0,
+            "step": 0.01
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "image_a",
+        "image_b",
+        "fps_a",
+        "fps_b"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "IMAGE",
+      "IMAGE"
+    ],
+    "output_is_list": [
+      false,
+      false
+    ],
+    "output_name": [
+      "image_a",
+      "image_b"
+    ],
+    "name": "AgentAngularImageComparer",
+    "display_name": "Angular Image Comparer (Agent)",
+    "description": "",
+    "python_module": "custom_nodes.comfy_angular_image_comparer",
+    "category": "image/compare",
+    "output_node": true,
+    "has_intermediate_output": false,
+    "search_aliases": []
+  }
+}

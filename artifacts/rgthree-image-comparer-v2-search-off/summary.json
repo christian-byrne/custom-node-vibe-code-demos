@@ -1,0 +1,40 @@
+{
+  "run_id": "rgthree-image-comparer-v2-search-off",
+  "pair_id": "rgthree-image-comparer-v2-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "Not available, as the treatment intends. The Agent reported no search_code tool, proceeded from the contract as the prompt permits, and explicitly declined to claim an rgthree detail it could not retrieve. It paid for that in reconnaissance: 25 tool calls before its first write (index 26), reading Core's own frontend sources with glob/grep/read and four load_skill calls, against the enabled arm's first write at index 4. Its turn 1 took 1042 s to the enabled arm's 491 s.",
+  "api_style": "V3 io.ComfyNode with comfy_entrypoint; a served frontend extension via app.registerExtension and a LiteGraph custom widget with draw/mouse handlers; DOM and framework imports kept out of the Python node; a runtime-free contract.py holding validation and the shared-clock frame_index formula.",
+  "compatibility": {
+    "local": "post-run: validator local pass with 0 errors on both revisions and on the .bak.disabled backup; one stable collision-free class id across restart; real asymmetric CPU execution; zero page errors; rubric pass except the oblique-angle round-trip, which serialises 0",
+    "cloud": "cloud_compatible fail; not a rubric item"
+  },
+  "metrics": {
+    "elapsed_seconds": 1277.6,
+    "retries": 0,
+    "tool_calls": 50,
+    "failed_tool_calls": 1,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Accepted on attempt 1 with no retry. Both turns complete, one stable collision-free class id AgentAngularImageComparer before and after restart, real asymmetric CPU execution (3 A frames against 5 B frames, status success, 3 preview images), zero page errors, local validator 0 errors. It FAILS one explicit second-turn requirement: the prompt asks that the saved angle round-trip precisely enough to distinguish vertical, horizontal and an oblique value, and after the oblique drag its saved workflow serialises {\"angleDeg\": 0, \"playing\": true} \u2014 the horizontal value, not an oblique one \u2014 and reloads to the same 0. Corroborated independently in browser-saved-workflow.json, the artifact the prompt itself asks to be retained.",
+  "evidence_gaps": [
+    "Neither arm drove a browser. Both said so explicitly and honestly; all interaction and persistence evidence is post-run operator scoring against each arm's own Core, as in demofarm-21. No screen recording was made.",
+    "The browser scorer could not resolve a role for the play/pause, split-angle or resolution-match controls in EITHER arm, because both arms implemented them as canvas hit-regions inside one custom widget rather than as separately named widgets. Consequently paused_set and resumed_after_reload are null on both arms and the prompt's 'a paused workflow must remain paused after reload' is NOT proven for either side. The gap is symmetric and does not bias the comparison, but it is a rubric limitation and not a pass.",
+    "pixels_changed_with_node_stationary is true for every drag on both arms, but both packages were playing at the time, so advancing frames alone change pixels. That field therefore does not isolate the drag's effect on the boundary. The angle claim below rests on the serialized workflow value, not on this field.",
+    "The ledger's first_successful_write_tool_touching_custom_nodes is null on both arms because it matches only arguments mentioning custom_nodes, and both arms wrote to a staging path first and then called install_custom_node. The write ordering in comparison_validity was therefore taken from the Agent's own agent_tool_calls table, not from that field.",
+    "Tokens and cost are UNKNOWN. No raw private trace was committed.",
+    "cloud_compatible is not a rubric item. It is recorded because it happens to differ between the arms."
+  ],
+  "ecosystem": {
+    "pack": "rgthree-comfy (reference only; not installed, copied, executed or modified)",
+    "repository": "github.com/rgthree/rgthree-comfy",
+    "commit": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e",
+    "reference_path": "web/comfyui/image_comparer.js, src_web/comfyui/image_comparer.ts"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}
