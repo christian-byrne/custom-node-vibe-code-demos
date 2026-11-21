@@ -1,0 +1,118 @@
+{
+  "IndieSwitch_AnyIndexN1": {
+    "input": {
+      "required": {
+        "selector": [
+          "INT",
+          {
+            "tooltip": "Slot number to pass through (slot_<selector>); valid 1..32.",
+            "default": 1,
+            "min": -2147483648,
+            "max": 2147483647,
+            "step": 1
+          }
+        ],
+        "fallback_to_first_connected": [
+          "BOOLEAN",
+          {
+            "tooltip": "If the selected slot is out of range or disconnected: true = use the lowest-numbered connected slot; false = raise a bounded error.",
+            "default": false
+          }
+        ],
+        "values": [
+          "COMFY_AUTOGROW_V3",
+          {
+            "template": {
+              "input": {
+                "required": {},
+                "optional": {
+                  "slot": [
+                    "*",
+                    {
+                      "tooltip": "Candidate branch (any type).",
+                      "lazy": true
+                    }
+                  ]
+                }
+              },
+              "names": [
+                "slot_1",
+                "slot_2",
+                "slot_3",
+                "slot_4",
+                "slot_5",
+                "slot_6",
+                "slot_7",
+                "slot_8",
+                "slot_9",
+                "slot_10",
+                "slot_11",
+                "slot_12",
+                "slot_13",
+                "slot_14",
+                "slot_15",
+                "slot_16",
+                "slot_17",
+                "slot_18",
+                "slot_19",
+                "slot_20",
+                "slot_21",
+                "slot_22",
+                "slot_23",
+                "slot_24",
+                "slot_25",
+                "slot_26",
+                "slot_27",
+                "slot_28",
+                "slot_29",
+                "slot_30",
+                "slot_31",
+                "slot_32"
+              ],
+              "min": 2
+            }
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "selector",
+        "fallback_to_first_connected",
+        "values"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "*"
+    ],
+    "output_is_list": [
+      false
+    ],
+    "output_name": [
+      "value"
+    ],
+    "output_tooltips": [
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "IndieSwitch_AnyIndexN1",
+    "display_name": "Any Index Switch (N-to-1, lazy)",
+    "description": "Universal N-to-1 switch: passes through the slot whose number equals `selector` (2 -> slot_2). Any type, grows slots as you connect, evaluates only the selected branch, and raises a bounded error for out-of-range or disconnected selections.",
+    "python_module": "custom_nodes.indie_any_index_switch",
+    "category": "utils/indie_switch",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": [
+      "any switch",
+      "index switch",
+      "n to 1 switch"
+    ],
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

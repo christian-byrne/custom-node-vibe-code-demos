@@ -1,0 +1,281 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4311515612563075,
+  "links": [
+    [
+      243436854088741,
+      4311515612563075,
+      1,
+      3947070553528752,
+      0,
+      "INT"
+    ],
+    [
+      825776562378825,
+      4311515612563075,
+      0,
+      650628661326694,
+      0,
+      "*"
+    ],
+    [
+      3495785499461295,
+      3423110003488831,
+      0,
+      4311515612563075,
+      1,
+      "INT"
+    ],
+    [
+      4443309478920118,
+      1732061086547725,
+      0,
+      4311515612563075,
+      3,
+      "INT"
+    ],
+    [
+      4463854696153767,
+      1857404575423690,
+      0,
+      4311515612563075,
+      4,
+      "INT"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 650628661326694,
+      "inputs": [
+        {
+          "link": 825776562378825,
+          "name": "value",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [],
+      "pos": [
+        775.3999999999999,
+        178
+      ],
+      "properties": {},
+      "size": [
+        270,
+        118
+      ],
+      "title": "Report: output value",
+      "type": "UNSwitchProbe_Report",
+      "widgets_values": [
+        "r2_saved",
+        "B,C,D"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1732061086547725,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            4443309478920118
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        775.3999999999999,
+        336
+      ],
+      "properties": {},
+      "size": [
+        275.09999999999997,
+        142
+      ],
+      "title": "Branch C (slot 3, value 333)",
+      "type": "UNSwitchProbe_CountedInt",
+      "widgets_values": [
+        "r2_saved",
+        "C",
+        333
+      ]
+    },
+    {
+      "flags": {},
+      "id": 1857404575423690,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            4463854696153767
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        275.09999999999997,
+        142
+      ],
+      "title": "Branch D (slot 4, value 444)",
+      "type": "UNSwitchProbe_CountedInt",
+      "widgets_values": [
+        "r2_saved",
+        "D",
+        444
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3423110003488831,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3495785499461295
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        272
+      ],
+      "properties": {},
+      "size": [
+        275.09999999999997,
+        142
+      ],
+      "title": "Branch B (slot 2, value 222)",
+      "type": "UNSwitchProbe_CountedInt",
+      "widgets_values": [
+        "r2_saved",
+        "B",
+        222
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3947070553528752,
+      "inputs": [
+        {
+          "link": 243436854088741,
+          "name": "value",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [],
+      "pos": [
+        1130.4999999999998,
+        336
+      ],
+      "properties": {},
+      "size": [
+        270,
+        118
+      ],
+      "title": "Report: selected_index",
+      "type": "UNSwitchProbe_Report",
+      "widgets_values": [
+        "r2_saved",
+        "B,C,D"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4311515612563075,
+      "inputs": [
+        {
+          "link": null,
+          "name": "candidates",
+          "type": "COMFY_AUTOGROW_V3"
+        },
+        {
+          "grow_id": 3495785499461295,
+          "link": 3495785499461295,
+          "name": "candidates.input_2",
+          "type": "*"
+        },
+        {
+          "grow_id": 4340649348190995,
+          "link": null,
+          "name": "candidates.input_1",
+          "type": "*"
+        },
+        {
+          "grow_id": 4443309478920118,
+          "link": 4443309478920118,
+          "name": "candidates.input_3",
+          "type": "*"
+        },
+        {
+          "grow_id": 4463854696153767,
+          "link": 4463854696153767,
+          "name": "candidates.input_4",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            825776562378825
+          ],
+          "name": "output",
+          "type": "*"
+        },
+        {
+          "links": [
+            243436854088741
+          ],
+          "name": "selected_index",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        395.09999999999997,
+        180
+      ],
+      "properties": {},
+      "size": [
+        300.29999999999995,
+        114
+      ],
+      "type": "UniversalNSwitchDraft_AnySwitchN",
+      "widgets_values": [
+        1,
+        true
+      ]
+    }
+  ],
+  "version": 0.4
+}

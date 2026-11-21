@@ -1,0 +1,129 @@
+{
+  "UniversalNSwitchDraft_AnySwitchN": {
+    "input": {
+      "required": {
+        "select": [
+          "INT",
+          {
+            "tooltip": "1-based slot number (1..32). Selects input_<select>.",
+            "default": 1,
+            "min": -1000000,
+            "max": 1000000,
+            "step": 1
+          }
+        ],
+        "fallback_to_first_connected": [
+          "BOOLEAN",
+          {
+            "tooltip": "When the selected slot is out of range or disconnected: on = use the lowest-numbered connected input (no other branch is evaluated); off = stop with an explicit error.",
+            "default": false,
+            "label_on": "fallback: first connected",
+            "label_off": "fallback: error"
+          }
+        ]
+      },
+      "optional": {
+        "candidates": [
+          "COMFY_AUTOGROW_V3",
+          {
+            "template": {
+              "input": {
+                "required": {},
+                "optional": {
+                  "candidate": [
+                    "*",
+                    {
+                      "tooltip": "Any Comfy type. Only the selected slot is evaluated.",
+                      "lazy": true
+                    }
+                  ]
+                }
+              },
+              "names": [
+                "input_1",
+                "input_2",
+                "input_3",
+                "input_4",
+                "input_5",
+                "input_6",
+                "input_7",
+                "input_8",
+                "input_9",
+                "input_10",
+                "input_11",
+                "input_12",
+                "input_13",
+                "input_14",
+                "input_15",
+                "input_16",
+                "input_17",
+                "input_18",
+                "input_19",
+                "input_20",
+                "input_21",
+                "input_22",
+                "input_23",
+                "input_24",
+                "input_25",
+                "input_26",
+                "input_27",
+                "input_28",
+                "input_29",
+                "input_30",
+                "input_31",
+                "input_32"
+              ],
+              "min": 2
+            }
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "select",
+        "fallback_to_first_connected"
+      ],
+      "optional": [
+        "candidates"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "*",
+      "INT"
+    ],
+    "output_is_list": [
+      false,
+      false
+    ],
+    "output_name": [
+      "output",
+      "selected_index"
+    ],
+    "output_tooltips": [
+      null,
+      "Slot number actually used (differs from select when fallback applied)."
+    ],
+    "output_matchtypes": null,
+    "name": "UniversalNSwitchDraft_AnySwitchN",
+    "display_name": "Universal N-to-1 Switch (draft)",
+    "description": "Passes through exactly one of N inputs of any type, chosen by a 1-based integer selector. Slots grow as you connect them. Unselected branches are never evaluated. Out-of-range or disconnected selections fail with a short explicit diagnostic, or - with fallback_to_first_connected on - use the lowest-numbered connected input.",
+    "python_module": "custom_nodes.universal_n_switch_draft",
+    "category": "utils/universal_n_switch_draft",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": [
+      "any switch",
+      "index switch",
+      "n to 1 switch",
+      "selector"
+    ],
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

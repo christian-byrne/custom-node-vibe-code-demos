@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 4,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "WASasquatch/was-node-suite-comfyui",
+      "query_argument": "AnyIndexSwitch",
+      "other_argument_keys": [],
+      "result_bytes": 1879,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-21 20:43:22.500961041 +0000 UTC m=+22.640036454",
+      "pinned_commit": "44aec45c569849f6cb0415e143ecbdc4a19b16ec",
+      "result_mentions_pinned_commit": true,
+      "preregistered_repo": "WASasquatch/was-node-suite-comfyui",
+      "result_mentions_preregistered_repo": true,
+      "result_mentions_pinned_paths": [
+        "nodes/logic/switch/any_index_switch.py",
+        "web/was_growing_sockets.js"
+      ],
+      "result_mentions_contract_details": [
+        "AnyIndexSwitch",
+        "WASAnyIndexSwitch",
+        "any_index_switch",
+        "INDEX_SWITCH_SLOTS"
+      ],
+      "global_call_index": 3,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-11-21 20:43:59.193133087 +0000 UTC m=+59.332208500",
+      "pinned_commit": "44aec45c569849f6cb0415e143ecbdc4a19b16ec",
+      "result_mentions_pinned_commit": false,
+      "preregistered_repo": "WASasquatch/was-node-suite-comfyui",
+      "result_mentions_preregistered_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 13,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "WASasquatch/was-node-suite-comfyui",
+      "query_argument": "AnyIndexSwitch",
+      "other_argument_keys": [],
+      "result_bytes": 1879,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-21 20:52:23.112521729 +0000 UTC m=+563.251597142",
+      "pinned_commit": "44aec45c569849f6cb0415e143ecbdc4a19b16ec",
+      "result_mentions_pinned_commit": true,
+      "preregistered_repo": "WASasquatch/was-node-suite-comfyui",
+      "result_mentions_preregistered_repo": true,
+      "result_mentions_pinned_paths": [
+        "nodes/logic/switch/any_index_switch.py",
+        "web/was_growing_sockets.js"
+      ],
+      "result_mentions_contract_details": [
+        "AnyIndexSwitch",
+        "WASAnyIndexSwitch",
+        "any_index_switch",
+        "INDEX_SWITCH_SLOTS"
+      ],
+      "global_call_index": 134,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-11-21 20:52:24.589207566 +0000 UTC m=+564.728282969",
+      "pinned_commit": "44aec45c569849f6cb0415e143ecbdc4a19b16ec",
+      "result_mentions_pinned_commit": false,
+      "preregistered_repo": "WASasquatch/was-node-suite-comfyui",
+      "result_mentions_preregistered_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 135,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": false,
+  "first_grounding_call_index": null
+}

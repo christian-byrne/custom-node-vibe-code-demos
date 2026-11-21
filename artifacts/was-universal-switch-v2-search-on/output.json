@@ -1,0 +1,32 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (512.8 s): 122 calls. Loaded skills, issued the required scoped search at index 3, read Core's own _io.py and nodes_logic.py, wrote indie_any_index_switch at index 38 plus a probe fixture pack, installed, answered 2 restart cards with real restarts, rediscovered its class and proved selection and laziness through its own probes. It recorded that it tried Autogrow TemplatePrefix first and replaced it with TemplateNames because prefix names start at 0, so selector 2 would not have meant the second slot.",
+    "turn_2": "complete (361.0 s): 128 calls. Re-ran the same scoped search at index 134, added fallback_to_first_connected after the existing selector, revalidated, restarted, rediscovered the same class id and proved both flag states.",
+    "search": "enabled. 4 search_code calls: the preregistered scoped query at indices 3 and 134, both returning the pinned paths at 44aec45c, and the R-510/CSG-1 fixed KJNodes write-gate anchor at 13 and 135, which the Agent itself labelled 'Tool-gate search (not a grounding source)'. No bad_args. The preregistered detail OUT_OF_RANGE never arrived; see R-595.",
+    "mechanism_chosen": "core io.Autogrow TemplateNames slot_1..slot_32 min 2, lazy check_lazy_status requesting only the resolved slot, bounded ValueError on an unusable selection -- the same mechanism the control reached without a reference.",
+    "honesty": "exemplary. It separated the grounding search from the tool-gate anchor, stated that only previews were visible and that no logic was read, listed adopted details with the line that justified each and how it was verified, and named what it declined to adopt."
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core and frontend; package bytes exactly as the Agent left them; probe fixture pack deliberately not loaded",
+    "discovery": {
+      "class_id": "IndieSwitch_AnyIndexN1",
+      "stable": true,
+      "exactly_one_class": true,
+      "collision_free": true,
+      "dynamic_slots": 32,
+      "static_wildcards": 0
+    },
+    "dynamic_slots": {
+      "before": 3,
+      "after_connect": 4,
+      "after_disconnect": 3
+    },
+    "laziness": "selector 1 -> [5,1,2,5,6] N2-A, B unevaluated; selector 2 -> [5,3,4,5,6] N3-B, A unevaluated; no branch served from cache",
+    "bounded_diagnostics": "out-of-range 99 and disconnected slot_2 both bounded, zero branches executed, unbounded_error_signature null",
+    "turn2_fallback": "flag false -> bounded diagnostic, nothing executed; flag true -> slot_1, only [5,1,2,5,6] -> N6-A",
+    "persistence": "selector=1 and fallback_to_first_connected=true survive save and full reload with stable widget order",
+    "page_errors": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (474.8 s): 117 calls. Read Core's own dynamic-input and lazy-evaluation sources, authored universal_n_switch_draft plus a separate probe fixture pack to make branch evaluation observable, validated, answered 2 restart cards with real restarts, rediscovered its class and drove five validate/run cycles through its own probes -- including the (value, key) correction its own fixture caught.",
+    "turn_2": "complete (424.9 s): 129 calls. Added the boolean fallback_to_first_connected after the existing selector, keeping widget order append-only so positional widgets_values in older saved workflows still map; revalidated, restarted, rediscovered the same class id and re-proved both flag states through its probes.",
+    "search": "disabled. Zero search_code calls. The Agent named the absence and declined to claim grounding in either turn.",
+    "mechanism_chosen": "core io.Autogrow TemplateNames with names input_1..input_32 and min 2; lazy request of exactly one resolved slot via check_lazy_status; selection rules in a runtime-free selector.py.",
+    "honesty": "accurate throughout. It recorded that no .git existed in the Core root so no commit hash was available and took the version from the running server's system stats instead, and it logged its own wrong assumption and the line that corrected it."
+  },
+  "post_run_operator_score": {
+    "scope": "same frozen Core and frontend; package bytes exactly as the Agent left them; the probe fixture pack deliberately NOT loaded, so the rubric scores the package alone",
+    "discovery": {
+      "class_id": "UniversalNSwitchDraft_AnySwitchN",
+      "stable": true,
+      "exactly_one_class": true,
+      "collision_free": true,
+      "dynamic_slots": 32,
+      "static_wildcards": 0
+    },
+    "dynamic_slots": {
+      "before": 3,
+      "after_connect": 4,
+      "after_disconnect": 3
+    },
+    "laziness": "selector 1 -> [5,1,2,5,6] N2-A, B unevaluated; selector 2 -> [5,3,4,5,6] N3-B, A unevaluated; no branch served from cache",
+    "bounded_diagnostics": "out-of-range 99 and disconnected slot 2 both raise a bounded SelectionError with zero branches executed",
+    "turn2_fallback": "flag false -> bounded diagnostic, nothing executed; flag true -> lowest connected input, only [5,1,2,5,6] -> N6-A",
+    "persistence": "select=1 and flag=true survive save and full reload, widget order [select, fallback_to_first_connected] stable",
+    "page_errors": 0
+  }
+}

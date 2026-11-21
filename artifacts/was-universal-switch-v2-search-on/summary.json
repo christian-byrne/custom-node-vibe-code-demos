@@ -1,0 +1,41 @@
+{
+  "run_id": "was-universal-switch-v2-search-on",
+  "pair_id": "was-universal-switch-v2-pair-1",
+  "arm": "search_on",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "Delivered and honestly cited, and NOT load-bearing -- for a reason this pair can measure. The Agent's own scoped call at index 3 returned the pinned commit 44aec45c, both pinned paths and three identifier previews: 'class AnyIndexSwitch(io.ComfyNode):', 'node_id=\"WASAnyIndexSwitch\"' and 'WASAnyIndexSwitch: INDEX_SWITCH_SLOTS,'. It preserved them verbatim with lines, named exactly what it took, and verified each behaviourally: the V3 io.ComfyNode base (confirmed by the class registering after restart) and WASAnyIndexSwitch treated as a COLLISION to avoid (confirmed absent from the catalog before the write and exactly one match after). It explicitly did NOT adopt the reference's growing-socket JS, and said why in its own words: 'only line previews were visible, no logic was read'. That sentence is the Agent-side corroboration of R-595 -- the arm's comfy-cli predates pinned source context, so no reference LOGIC could reach it. Both arms then converged independently on the same mechanism from Core's own sources, so on this task search changed the citations and not the artifact.",
+  "api_style": "V3 io.ComfyNode with comfy_entrypoint; core io.Autogrow with TemplateNames(slot_1..slot_32, min 2), every candidate io.AnyType and lazy; a 1-based io.Int selector plus a boolean fallback_to_first_connected appended after it; bounded diagnostics capped at 240 chars; selection logic inline in nodes.py rather than a separate module.",
+  "compatibility": {
+    "local": "post-run: syntax clean; exactly one stable collision-free class IndieSwitch_AnyIndexN1 before and after a real restart; whole behavioural rubric passed on both revisions; zero page errors; browser_exit 0. local_valid is FAIL on the same LOCAL-005 static-extraction false positive as the control (R-596).",
+    "cloud": "cloud_compatible fail; not a rubric item"
+  },
+  "metrics": {
+    "elapsed_seconds": 873.8,
+    "retries": 0,
+    "tool_calls": 250,
+    "failed_tool_calls": 11,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Accepted on attempt 1, no retry. Both turns complete (512.8 s and 361.0 s), 250 tool calls, 11 failed, 57 asks answered -- 54 third-party Allow cards and 3 restart cards -- every one 202 with the measured wait excluded from the deadline. Post-run real browser: slots grew 3 -> 4 on a real connect and trimmed 4 -> 3 on a real disconnect; selector 1 executed [5,1,2,5,6] -> N2-A with B unevaluated and selector 2 executed [5,3,4,5,6] -> N3-B with A unevaluated, no branch served from cache; selector 99 produced the bounded '[IndieSwitch_AnyIndexN1] selector 99 is out of range; valid slots are 1..32 (connected: slot_1,slot_2).' with zero branches executed and unbounded_error_signature null. Turn 2's flag=false kept the bounded diagnostic on a disconnected slot and ran nothing; flag=true chose slot_1 and executed only [5,1,2,5,6] -> N6-A; save and full reload preserved selector=1, fallback_to_first_connected=true and the widget order. Every rubric item matches the control's result, including the executed node sets and the returned strings.",
+  "evidence_gaps": [
+    "Neither arm drove a browser, and both said so: /health reports shell disabled with reason 'no sandbox mechanism on this platform'. Every interaction, laziness and persistence measurement is post-run operator scoring against each arm's own Core, run strictly sequentially. No screen recording was made.",
+    "grounding_reached_agent is FALSE on the enabled arm even though its scoped call was correct, timely and returned the pinned source. The preregistered detail OUT_OF_RANGE exists only in a pinned snippet that the arm's comfy-cli (4f2b2a7f, predating comfy-cli #1017) does not return, while the gate's CLI (aae234e0) does. This pair therefore cannot test whether reference LOGIC helps -- the Agent received identifiers and line numbers, not source. Recorded as R-595 and guarded by scripts/demo-farm-search-delivery-check.py; the spec was not re-authored after admission to make the clause pass.",
+    "local_valid is FAIL on all four scored packages, on both arms, and the single finding is identical: LOCAL-005 'no stable node id could be statically extracted from the package'. This is a static-analysis false positive, not a package defect -- validator.py:341 accepts node_id only as an ast.Constant, and both arms wrote node_id=NODE_ID with a module-level constant. The dynamic evidence contradicts it on every package: exactly one class, byte-identical before and after a real restart, collision-free against the frozen baseline. It is a rubric item, so it is reported as failed on both arms rather than excused; the gap is symmetric and does not bias the comparison. Recorded as R-596. Do NOT compare this against demofarm-21's and demofarm-22's 'validator 0 errors' as a quality regression -- those pairs wrote the id inline and so did not trip the same limitation.",
+    "cloud_compatible is fail on both arms and is not a rubric item, as in demofarm-21 and -22.",
+    "The two arms are 61 hours apart rather than minutes, because the disabled arm is the retained 2026-11-19 attempt and was deliberately not re-run. Every hashed identity is asserted equal across the gap and the Agent's own prompt and skill-registry digests match, but the staging proxy's served model weights cannot be verified identical across two days from this host.",
+    "The browser scorer could not resolve an `out_of_range` widget role on either arm (roles.out_of_range is null on all four packages), because neither arm exposed the out-of-range policy as a named widget -- both chose to raise instead. The requirement is still proven, by queueing an out-of-range selector and retaining the engine's verbatim reply, so this is a role-detection gap rather than an unproven rubric item.",
+    "Tokens and cost are UNKNOWN. No raw private trace was committed."
+  ],
+  "ecosystem": {
+    "pack": "WAS Node Suite (reference only; not installed, copied, executed or modified)",
+    "repository": "github.com/WASasquatch/was-node-suite-comfyui",
+    "commit": "44aec45c569849f6cb0415e143ecbdc4a19b16ec",
+    "reference_path": "nodes/logic/switch/any_index_switch.py, web/was_growing_sockets.js"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4417800240793261,
+  "links": [
+    [
+      80885552888194,
+      2823152774300344,
+      0,
+      4373041161769047,
+      1,
+      "INT"
+    ],
+    [
+      1375605301565264,
+      3662815665012817,
+      0,
+      4373041161769047,
+      3,
+      "INT"
+    ],
+    [
+      2688399717877519,
+      4417800240793261,
+      0,
+      4373041161769047,
+      2,
+      "INT"
+    ],
+    [
+      3451537937740340,
+      4373041161769047,
+      0,
+      177687756047964,
+      0,
+      "*"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 177687756047964,
+      "inputs": [
+        {
+          "link": 3451537937740340,
+          "name": "value",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [],
+          "name": "report",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        825.8,
+        178
+      ],
+      "properties": {},
+      "size": [
+        325.49999999999994,
+        118
+      ],
+      "type": "IndieSwitchFixture_ProbeReport",
+      "widgets_values": [
+        "r2_saved",
+        "A,B,C"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2823152774300344,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            80885552888194
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        272
+      ],
+      "properties": {},
+      "size": [
+        325.49999999999994,
+        142
+      ],
+      "title": "Branch B (222) -> slot_2",
+      "type": "IndieSwitchFixture_ScalarProbe",
+      "widgets_values": [
+        "B",
+        222,
+        "r2_saved"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3662815665012817,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1375605301565264
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        454
+      ],
+      "properties": {},
+      "size": [
+        325.49999999999994,
+        142
+      ],
+      "title": "Branch C (333) -> slot_3",
+      "type": "IndieSwitchFixture_ScalarProbe",
+      "widgets_values": [
+        "C",
+        333,
+        "r2_saved"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4373041161769047,
+      "inputs": [
+        {
+          "link": null,
+          "name": "values",
+          "type": "COMFY_AUTOGROW_V3"
+        },
+        {
+          "grow_id": 2264120360756596,
+          "link": 80885552888194,
+          "name": "values.slot_2",
+          "type": "*"
+        },
+        {
+          "grow_id": 3379830709744178,
+          "link": 2688399717877519,
+          "name": "values.slot_1",
+          "type": "*"
+        },
+        {
+          "grow_id": 4105362360745223,
+          "link": 1375605301565264,
+          "name": "values.slot_3",
+          "type": "*"
+        },
+        {
+          "grow_id": 3194355507183285,
+          "link": null,
+          "name": "values.slot_4",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3451537937740340
+          ],
+          "name": "value",
+          "type": "*"
+        }
+      ],
+      "pos": [
+        445.49999999999994,
+        190
+      ],
+      "properties": {},
+      "size": [
+        300.29999999999995,
+        94
+      ],
+      "type": "IndieSwitch_AnyIndexN1",
+      "widgets_values": [
+        4,
+        true
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4417800240793261,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2688399717877519
+          ],
+          "name": "value",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        325.49999999999994,
+        142
+      ],
+      "title": "Branch A (111) -> slot_1",
+      "type": "IndieSwitchFixture_ScalarProbe",
+      "widgets_values": [
+        "A",
+        111,
+        "r2_saved"
+      ]
+    }
+  ],
+  "version": 0.4
+}
