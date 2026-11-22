@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 4,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "cubiq/ComfyUI_essentials",
+      "query_argument": "ImageUntile",
+      "other_argument_keys": [],
+      "result_bytes": 1118,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-22 12:40:37.660895434 +0000 UTC m=+24.058574816",
+      "pinned_commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_pinned_repo": true,
+      "result_mentions_pinned_paths": [
+        "image.py"
+      ],
+      "result_mentions_contract_details": [
+        "class ImageUntile",
+        "ImageUntile+"
+      ],
+      "global_call_index": 1,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-11-22 12:40:56.759364142 +0000 UTC m=+43.157043524",
+      "pinned_commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+      "result_mentions_pinned_commit": false,
+      "result_mentions_pinned_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 5,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "cubiq/ComfyUI_essentials",
+      "query_argument": "ImageUntile",
+      "other_argument_keys": [],
+      "result_bytes": 1118,
+      "is_r510_fixed_anchor": false,
+      "is_preregistered_query": true,
+      "started_at": "2026-11-22 12:51:54.926095493 +0000 UTC m=+701.323774875",
+      "pinned_commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+      "result_mentions_pinned_commit": true,
+      "result_mentions_pinned_repo": true,
+      "result_mentions_pinned_paths": [
+        "image.py"
+      ],
+      "result_mentions_contract_details": [
+        "class ImageUntile",
+        "ImageUntile+"
+      ],
+      "global_call_index": 116,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "is_preregistered_query": false,
+      "started_at": "2026-11-22 12:54:25.905769729 +0000 UTC m=+852.303449101",
+      "pinned_commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+      "result_mentions_pinned_commit": false,
+      "result_mentions_pinned_repo": false,
+      "result_mentions_pinned_paths": [],
+      "result_mentions_contract_details": [],
+      "global_call_index": 133,
+      "result_contains_preregistered_detail": false,
+      "error_code": null
+    }
+  ],
+  "grounding_reached_agent": false,
+  "first_grounding_call_index": null
+}

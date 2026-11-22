@@ -1,0 +1,155 @@
+{
+  "config": {},
+  "extra": {},
+  "groups": [],
+  "last_link_id": 0,
+  "last_node_id": 4311967832215603,
+  "links": [
+    [
+      87600623868582,
+      3311531244021967,
+      1,
+      1075009830344000,
+      1,
+      "INT"
+    ],
+    [
+      135844349591658,
+      3311531244021967,
+      3,
+      1075009830344000,
+      3,
+      "INT"
+    ],
+    [
+      399884788467758,
+      3311531244021967,
+      2,
+      1075009830344000,
+      2,
+      "INT"
+    ],
+    [
+      3047420125033894,
+      3311531244021967,
+      0,
+      1075009830344000,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1075009830344000,
+      "inputs": [
+        {
+          "link": 3047420125033894,
+          "name": "tiles",
+          "type": "IMAGE"
+        },
+        {
+          "link": 87600623868582,
+          "name": "original_width",
+          "type": "INT"
+        },
+        {
+          "link": 399884788467758,
+          "name": "original_height",
+          "type": "INT"
+        },
+        {
+          "link": 135844349591658,
+          "name": "source_batch_size",
+          "type": "INT"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [],
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        390,
+        60
+      ],
+      "properties": {},
+      "size": [
+        270,
+        250
+      ],
+      "type": "DraftGridTiler_ImageGridUntile",
+      "widgets_values": [
+        3,
+        4,
+        4,
+        3,
+        "cosine"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3311531244021967,
+      "inputs": [
+        {
+          "link": null,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3047420125033894
+          ],
+          "name": "tiles",
+          "type": "IMAGE"
+        },
+        {
+          "links": [
+            87600623868582
+          ],
+          "name": "original_width",
+          "type": "INT"
+        },
+        {
+          "links": [
+            399884788467758
+          ],
+          "name": "original_height",
+          "type": "INT"
+        },
+        {
+          "links": [
+            135844349591658
+          ],
+          "name": "source_batch_size",
+          "type": "INT"
+        }
+      ],
+      "pos": [
+        40,
+        60
+      ],
+      "properties": {},
+      "size": [
+        270,
+        226
+      ],
+      "type": "DraftGridTiler_ImageGridTile",
+      "widgets_values": [
+        3,
+        4,
+        4,
+        3
+      ]
+    }
+  ],
+  "version": 0.4
+}

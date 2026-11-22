@@ -1,0 +1,225 @@
+{
+  "TileGridKit_ImageGridTile": {
+    "input": {
+      "required": {
+        "image": [
+          "IMAGE",
+          {}
+        ],
+        "rows": [
+          "INT",
+          {
+            "default": 2,
+            "min": 1,
+            "max": 1024,
+            "step": 1
+          }
+        ],
+        "columns": [
+          "INT",
+          {
+            "default": 2,
+            "min": 1,
+            "max": 1024,
+            "step": 1
+          }
+        ],
+        "overlap_x": [
+          "INT",
+          {
+            "tooltip": "Pixels shared by horizontally neighbouring tiles.",
+            "default": 0,
+            "min": 0,
+            "max": 4096,
+            "step": 1
+          }
+        ],
+        "overlap_y": [
+          "INT",
+          {
+            "tooltip": "Pixels shared by vertically neighbouring tiles.",
+            "default": 0,
+            "min": 0,
+            "max": 4096,
+            "step": 1
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "image",
+        "rows",
+        "columns",
+        "overlap_x",
+        "overlap_y"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "IMAGE",
+      "INT",
+      "INT",
+      "INT"
+    ],
+    "output_is_list": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "output_name": [
+      "tiles",
+      "original_width",
+      "original_height",
+      "source_batch_size"
+    ],
+    "output_tooltips": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "TileGridKit_ImageGridTile",
+    "display_name": "Image Grid Tile (TileGrid Kit)",
+    "description": "Splits every image of a BHWC batch into rows x columns equal tiles. Neighbouring tiles share `overlap_x` pixels horizontally and `overlap_y` pixels vertically. Output order: source batch, then row-major. Requires extent*count - overlap*(count-1) == dimension on each axis.",
+    "python_module": "custom_nodes.tilegrid_kit",
+    "category": "image/tilegrid_kit",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  },
+  "TileGridKit_ImageGridUntile": {
+    "input": {
+      "required": {
+        "tiles": [
+          "IMAGE",
+          {}
+        ],
+        "original_width": [
+          "INT",
+          {
+            "default": 64,
+            "min": 1,
+            "max": 16384,
+            "step": 1
+          }
+        ],
+        "original_height": [
+          "INT",
+          {
+            "default": 64,
+            "min": 1,
+            "max": 16384,
+            "step": 1
+          }
+        ],
+        "source_batch_size": [
+          "INT",
+          {
+            "default": 1,
+            "min": 1,
+            "max": 4096,
+            "step": 1
+          }
+        ],
+        "rows": [
+          "INT",
+          {
+            "default": 2,
+            "min": 1,
+            "max": 1024,
+            "step": 1
+          }
+        ],
+        "columns": [
+          "INT",
+          {
+            "default": 2,
+            "min": 1,
+            "max": 1024,
+            "step": 1
+          }
+        ],
+        "overlap_x": [
+          "INT",
+          {
+            "default": 0,
+            "min": 0,
+            "max": 4096,
+            "step": 1
+          }
+        ],
+        "overlap_y": [
+          "INT",
+          {
+            "default": 0,
+            "min": 0,
+            "max": 4096,
+            "step": 1
+          }
+        ],
+        "blend": [
+          "COMBO",
+          {
+            "tooltip": "Edge ramp used inside overlap bands.",
+            "default": "cosine",
+            "multiselect": false,
+            "options": [
+              "linear",
+              "cosine"
+            ]
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "tiles",
+        "original_width",
+        "original_height",
+        "source_batch_size",
+        "rows",
+        "columns",
+        "overlap_x",
+        "overlap_y",
+        "blend"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "IMAGE"
+    ],
+    "output_is_list": [
+      false
+    ],
+    "output_name": [
+      "image"
+    ],
+    "output_tooltips": [
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "TileGridKit_ImageGridUntile",
+    "display_name": "Image Grid Untile (TileGrid Kit)",
+    "description": "Rebuilds the original BHWC batch from Image Grid Tile output. Validates the exact tile count and tile size. Overlap pixels are blended with separable per-axis edge ramps (linear or half-cosine) normalised by the accumulated weight; with no overlap the rebuild is an exact copy.",
+    "python_module": "custom_nodes.tilegrid_kit",
+    "category": "image/tilegrid_kit",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

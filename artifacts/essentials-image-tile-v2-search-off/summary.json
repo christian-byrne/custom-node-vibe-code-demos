@@ -1,0 +1,45 @@
+{
+  "run_id": "essentials-image-tile-v2-search-off",
+  "pair_id": "essentials-image-tile-v2-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "Not available, as the treatment intends. search_code_calls is 0 and the one code-search attempt was refused with error_code experiment_route_disabled. The Agent named the absence rather than papering over it: 'there's no search_code tool here. The only code-search route (comfy code-search) returned an error, experiment_route_disabled: no commit, path or lines.' It then grounded itself in the running engine it could read locally, which is the honest fallback and is what the enabled arm's reference turned out not to improve on.",
+  "api_style": "V3 io.ComfyNode with comfy_entrypoint; a dependency-free tilegrid_core.py plus a unit-test file written but never run (no shell on this build, which the Agent stated); two classes TileGridKit_ImageGridTile and TileGridKit_ImageGridUntile; the three metadata values exposed as leading widgets with defaults on the untile node.",
+  "compatibility": {
+    "local": "post-run: syntax clean; local_valid PASS with 0 errors on both turns; exactly two stable collision-free class ids before and after a real Core restart; 27 of 27 then 43 of 43 independent checks pass; 18 real /api/prompt executions; zero page errors; browser_exit 0 on both turns.",
+    "cloud": "cloud_compatible fail; not a rubric item"
+  },
+  "metrics": {
+    "elapsed_seconds": 1580.3,
+    "retries": 0,
+    "tool_calls": 215,
+    "failed_tool_calls": 22,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Accepted on attempt 1, no retry. Both turns complete (798.8 s and 781.5 s) inside the 1200 s budget, 215 tool calls, 22 failed, 2 asks \u2014 both restart cards answered with a real Core restart and nothing else. Post-run operator proof, the Agent's modules never imported: exactly two class ids TileGridKit_ImageGridTile and TileGridKit_ImageGridUntile, stable across a real restart and collision-free against the frozen baseline, measured with the Agent's package as the only extra custom_nodes root \u2014 the gate demofarm-6 failed with a third GridTiles_SelfTest class. Turn 1 passes all 27 checks: tiles (12,16,16,3) and (24,16,16,3), 4-D BHWC float32, every tile byte-identical to its source-batch-major row-major crop, range inside [0,1], BYTE-EXACT no-overlap reconstruction by sha256 of the float32 bytes, and five bounded rejections. Turn 2 passes all 43: tile extent (18,19) derived from extent*count - overlap*(count-1) == dimension at overlap_x=4 overlap_y=3 on both fixtures in both blend modes, every overlapped tile byte-identical to its expected crop, reconstruction within 1e-6 of the independently computed expectation. Real served Chromium with a FULL page reload preserved widget order [rows, columns, overlap_x, overlap_y] on the tile node and [original_width, original_height, source_batch_size, rows, columns, overlap_x, overlap_y, blend] on the untile node, values 3/4/4/3 and 64/64/1/3/4/4/3/cosine, with node and link counts intact and zero page errors.",
+  "evidence_gaps": [
+    "Neither arm drove a browser, and both said so: /health reports shell disabled with reason 'no sandbox mechanism on this platform'. Every discovery, invocation and persistence measurement is post-run operator scoring against each arm's own Core, run strictly sequentially one arm and one turn at a time, with the Agent's modules never imported and its helpers never called. No screen recording was made.",
+    "grounding_reached_agent is FALSE on the enabled arm even though its scoped call was correct, early and honestly cited. The preregistered detail MAX_RESOLUTION//2 exists only in a pinned snippet that the arm's comfy-cli (4f2b2a7f, predating comfy-cli #1017) does not return, while the gate's CLI (aae234e0) does. This pair therefore cannot test whether reference LOGIC helps \u2014 the Agent received a commit, a path, line numbers and three identifier previews, not source. Recorded as R-595, second measured instance, and guarded by scripts/demo-farm-search-delivery-check.py; the spec was not re-authored after admission to make the clause pass.",
+    "local_valid is FAIL on both of the ENABLED arm's scored packages and PASS with 0 errors on both of the disabled arm's, and the enabled arm's single finding is LOCAL-005 'no stable node id could be statically extracted from the package'. This is a static-analysis limitation, not a package defect: validator.py accepts node_id only as an ast.Constant, and the enabled arm wrote node_id=TILE_NODE_ID / UNTILE_NODE_ID through module constants while the control wrote both ids inline. The dynamic evidence contradicts the finding on every package \u2014 exactly two class ids, byte-identical before and after a real Core restart, collision-free against the frozen baseline. It is a frozen rubric item, so it is reported as failed rather than excused. CRITICALLY, unlike demofarm-23 where it fired on both arms, here it fires on ONE arm only, so it is the only scored difference between the two packages in this pair and a reader will misread it as 'search produced a worse package'. Recorded as R-596 with that asymmetric shape as its second measured instance.",
+    "cloud_compatible is fail on both arms and is not a rubric item, as in demofarm-6, -21, -22 and -23.",
+    "tool-ledger.json publishes error_code null for 4 of the disabled arm's 22 failures and 3 of the enabled arm's 13 \u2014 three and two conflict rows respectively, plus one unknown_skill each \u2014 because the evidence collector derives the code from the result payload, which carries none for those shapes, while the Agent's own agent_tool_calls.error_code column names every one. The conflict rows are the canvas-edit refusal both arms described in prose, so the blank lands on exactly the field that carried the product signal. The true codes are published beside the ledger in failure-codes.json and the defect is recorded as R-597 with a guard at scripts/tests/local-demo-farm-failure-code-fidelity.test.py; the pinned collector was deliberately not edited.",
+    "Both arms independently hit the same local-Agent behaviour in turn 2 and both disclosed it: once a node class's input schema changed, canvas edits to the already-placed nodes of that class were refused as conflict, so each arm's editor round trip went through the workflow store rather than a re-rendered page. It is symmetric and therefore not a comparison threat, but neither arm proves the canvas-edit path across a schema change, and the frozen rubric's edit stage is satisfied by the package revision and the saved-workflow round trip instead.",
+    "The two arms are about 5.4 hours apart within one session. Every hashed identity is asserted equal across the gap, but the staging proxy's served model weights cannot be verified identical twice in one day from this host, and host load1 differed (5.90 vs 1.21), so per-turn wall clock is not comparable across the arms.",
+    "The enabled arm accidentally overwrote its own turn-1 test source and rebuilt its fixtures by executing turn 1's compiled bytecode, which it disclosed. The operator proof computes its fixtures independently with numpy and never calls the Agent's helpers, so no scored result depends on that recovery.",
+    "'invalid image rank' from the frozen rubric is not independently exercised on either arm: an IMAGE link in a served graph is always a 4-D BHWC tensor, so a non-4-D input is unreachable through the engine without calling the Agent's functions directly, which the operator harness deliberately does not do.",
+    "Identical-source overlap contributions cannot distinguish a linear ramp from a cosine one. Both must reconstruct the source exactly, so the proof establishes that each selected mode reconstructs correctly and that the mode is selectable, not that the two ramp shapes differ.",
+    "Tokens and cost are UNKNOWN. No raw private trace was committed."
+  ],
+  "ecosystem": {
+    "pack": "ComfyUI_essentials (reference only; not installed, copied or modified)",
+    "repository": "github.com/cubiq/ComfyUI_essentials",
+    "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+    "reference_path": "image.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}
