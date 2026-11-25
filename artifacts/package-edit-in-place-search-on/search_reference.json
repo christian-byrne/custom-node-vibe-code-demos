@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "arm": "search_on",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=enabled",
+  "search_code_calls": 2,
+  "calls": [
+    {
+      "turn": "turn1",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "mentions_seed_class_id": false,
+      "started_at": "2026-11-25 04:39:25.050219598 +0000 UTC m=+33.869235001",
+      "global_call_index": 12,
+      "error_code": null,
+      "route_reading": "R-510 write-gate anchor: runtime behaviour of the experiment gate, not grounding and not a treatment effect"
+    },
+    {
+      "turn": "turn2",
+      "status": "ok",
+      "repo_argument": "kijai/ComfyUI-KJNodes",
+      "query_argument": "ImageTransformByNormalizedAmplitude",
+      "other_argument_keys": [],
+      "result_bytes": 1569,
+      "is_r510_fixed_anchor": true,
+      "mentions_seed_class_id": false,
+      "started_at": "2026-11-25 04:40:19.583426087 +0000 UTC m=+88.402441480",
+      "global_call_index": 24,
+      "error_code": null,
+      "route_reading": "R-510 write-gate anchor: runtime behaviour of the experiment gate, not grounding and not a treatment effect"
+    }
+  ],
+  "grounding_reached_agent": null,
+  "grounding_verdict_withheld_because": "search-avoid control: the pre-admission gate returned exempt_search_avoid and there is NO preregistered query, so no grounding was expected in either arm and emitting false would read as 'grounding was expected and did not arrive'. A search call here is evidence about the route the Agent chose.",
+  "first_grounding_call_index": null
+}

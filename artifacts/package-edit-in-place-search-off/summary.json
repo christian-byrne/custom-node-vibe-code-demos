@@ -1,0 +1,44 @@
+{
+  "run_id": "package-edit-in-place-search-off",
+  "pair_id": "package-edit-in-place-pair-1",
+  "arm": "search_off",
+  "status": {
+    "outcome": "accepted",
+    "failure_stage": null
+  },
+  "search_value": "Not applicable by route, not merely unavailable. This is a search-avoid control: the only package in scope is local and operator-authored, so a code-search call could not have supplied grounding and would have been the wrong route. The disabled arm made ZERO search_code calls and, unlike demofarm-24's control, did not even attempt one \u2014 it went straight to the local filesystem and the running engine, which is the correct route here. search-reference.json therefore publishes grounding_reached_agent as NULL with a stated reason rather than as false, because false would read as 'grounding was expected and did not arrive'.",
+  "api_style": "The seed package revised in place: one file, one class, V3 io.ComfyNode with comfy_entrypoint, node_id DF27ImageStatsText unchanged. Turn one appended io.Combo.Input('output_format', options ['sentence','json'], default 'sentence') and channel means over the whole batch, keyed r/g/b (a for 4 channels, c<i> beyond). Turn two appended per-channel min and max additively, keeping the existing JSON keys batch/height/width/channels/mean and adding only 'min' and 'max'. The operator's seed docstring was left in place, which is a small honesty signal in itself: the Agent edited the file rather than replacing it with its own.",
+  "compatibility": {
+    "local": "post-run, on a separate scoring Core: syntax clean; local_valid PASS with 0 errors on both turns; exactly ONE collision-free class id, DF27ImageStatsText, identical before and after a real Core restart, measured with the Agent's package as the only extra custom_nodes root against a bare-Core baseline measured in the same harness; 14 of 14 then 19 of 19 independent checks pass; 6 real /api/prompt executions across the two turns, all success; a real served Chromium switched the format control, saved, fully reloaded and reopened with the selection and widget order intact and zero page errors, browser_exit 0 on both turns.",
+    "cloud": "cloud_compatible fail; not a rubric item"
+  },
+  "metrics": {
+    "elapsed_seconds": 117.9,
+    "retries": 0,
+    "tool_calls": 29,
+    "failed_tool_calls": 3,
+    "tokens_and_cost": "UNKNOWN"
+  },
+  "verdict": "Accepted on attempt 1, no retry, no harness repair. Both turns complete (82.6 s and 35.3 s) inside the 1200 s budget, 29 tool calls, 3 failed, 3 asks \u2014 all three restart cards answered with a real Core restart and nothing else. ROUTE: revised the seed package in place on both turns. Exactly one package directory in custom_nodes after each turn and it is the seed directory; the run-owned authoring tree stayed empty; zero new /object_info classes against its own pre-turn baseline. Post-run operator proof, the Agent's module never imported: exactly one class id DF27ImageStatsText, stable across a real restart and collision-free against a bare-Core baseline. Turn 1 passes all 14 checks and turn 2 all 19. The numbers are independently recomputed with numpy from the freeze's pinned tensor definition and the harness's own computation is additionally cross-checked against the freeze's listed values: channel means 0.2627/0.2667/0.2706, min 0.0000/0.0039/0.0078, max 0.5255/0.5294/0.5333, all at 4 decimals, agreeing between the plain and the JSON output. JSON key stability holds mechanically \u2014 turn one's key set {batch, channels, height, mean, width} gains exactly {max, min} in turn two with nothing removed or renamed. Real served Chromium preserved widget order ['output_format'] and the switched value 'json' across a FULL page reload on both turns, with node and link counts intact and zero page errors. ONE SELF-INFLICTED FAULT, recovered and disclosed: two `edit` calls in the same turn-one batch left the file with an unclosed parenthesis, Core's own log records SyntaxError and IMPORT FAILED at that restart, and the three failed tool calls (show_node node_not_found twice, validate workflow_unknown_nodes) are that fault surfacing. The Agent re-read the file, rewrote it in full, restarted again, and said so unprompted. Recorded as R-599.",
+  "evidence_gaps": [
+    "comparison_validity is FALSE BY CONSTRUCTION and the pair is Diagnostics-only. There is no admitted query and no preregistered detail, so this pair cannot support any claim about whether code search helps, in either direction. An accepted control is not a positive search result.",
+    "Neither arm drove a browser, and both said so: /health reports shell disabled with reason 'no sandbox mechanism on this platform'. Every discovery, invocation and persistence measurement is post-run operator scoring against a separate scoring Core worktree, run strictly sequentially one arm and one turn at a time, with the Agent's module never imported and its functions never called. No screen recording was made.",
+    "The control's informative failure mode did not occur: NEITHER arm authored a second package. That makes the row an accepted control and a negative result for the failure it was built to detect, on one build, one model, one seed package and one pair of prompts. It is not evidence that the Agent revises in place in general, and a single seed package whose whole content is one small class is the easiest possible case for choosing revision.",
+    "Both arms reduced over the WHOLE BATCH rather than per image, and the harness scores either reduction as correct because the prompts never prescribed one. So the pair establishes that the reported statistics are right under the reduction each arm chose; it does not establish that a per-image reduction would also have been computed correctly.",
+    "Neither arm ran the workflow, and both disclosed it in those words ('I haven't run it, so the output format below comes from the code, not from a result'). Every number in this pair's scoring was produced by the operator's own Core through /api/prompt, not by the Agent.",
+    "cloud_compatible is `fail` on all four scored packages and is not a rubric item, as in demofarm-6, -21, -22, -23 and -24.",
+    "The `edit` stage is satisfied by the in-place package revision plus a real-browser save and full reload of the persisted workflow. Neither arm's canvas-edit path across a schema change is exercised here: the enabled arm used two `set_widget` calls on the already-placed node and the disabled arm changed no widget at all, so this pair adds nothing to the turn-2 canvas-edit `conflict` behaviour demofarm-24 measured.",
+    "Tokens and cost are UNKNOWN; no token accounting is available from this build's API. No raw private trace was committed.",
+    "The two arms are 54 seconds apart on one host and every hashed identity is asserted equal across that gap, but the staging proxy's served model weights cannot be verified identical twice from this host, and host load1 differed (2.60 against 6.60), so per-turn wall clock is not comparable across the arms.",
+    "Three of this arm's tool failures are its OWN broken edit surfacing, not a product defect in the tools that reported them: show_node node_not_found twice and validate workflow_unknown_nodes, all after a restart that could not import the file two colliding `edit` calls had left with an unclosed parenthesis. Corroborated by Core's own log (SyntaxError, IMPORT FAILED), recovered inside the same turn, and disclosed by the Agent. Recorded as R-599. A failed-tool-call count read without this context overstates the arm's difficulty by three."
+  ],
+  "ecosystem": {
+    "pack": "none: the only package in scope is operator-authored fixture code (demofarm27-seed-package), installed byte-identically into both arms before turn one. No third-party pack is installed, copied, fetched or referenced.",
+    "repository": "github.com/Comfy-Org/ComfyUI",
+    "commit": "e8665ca8e4089ab917567cdb491308e1397663d4",
+    "reference_path": "reports/local-demo-farm/fixtures/demofarm27-seed-package/__init__.py"
+  },
+  "trace": {
+    "kind": "local_agent_redacted_tool_ledger"
+  }
+}

@@ -27,7 +27,8 @@
     "cloud_compatible is fail on both arms and is not a rubric item, as in demofarm-21 and -22.",
     "The two arms are 61 hours apart rather than minutes, because the disabled arm is the retained 2026-11-19 attempt and was deliberately not re-run. Every hashed identity is asserted equal across the gap and the Agent's own prompt and skill-registry digests match, but the staging proxy's served model weights cannot be verified identical across two days from this host.",
     "The browser scorer could not resolve an `out_of_range` widget role on either arm (roles.out_of_range is null on all four packages), because neither arm exposed the out-of-range policy as a named widget -- both chose to raise instead. The requirement is still proven, by queueing an out-of-range selector and retaining the engine's verbatim reply, so this is a role-detection gap rather than an unproven rubric item.",
-    "Tokens and cost are UNKNOWN. No raw private trace was committed."
+    "Tokens and cost are UNKNOWN. No raw private trace was committed.",
+    "R-598 addendum (2026-11-24): search_gate (scripts/demo-farm-search-preflight.py) re-hashed from sha256 fa4caab...c976/12801 bytes to sha256 96cece9...9024/13586 bytes. The file gained the schema-v2 comfy-cli parity check after this pair published; shared infra scripts are pinned for at-the-time provenance, not forever-byte-identity, unlike the per-pair collectors. See R-598 closing addendum in logs/RISK-REGISTER.md."
   ],
   "ecosystem": {
     "pack": "WAS Node Suite (reference only; not installed, copied, executed or modified)",

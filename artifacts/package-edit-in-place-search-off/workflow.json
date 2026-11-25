@@ -1,0 +1,134 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    }
+  },
+  "groups": [],
+  "last_link_id": 2,
+  "last_node_id": 3,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "STRING"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        40,
+        160
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "size": [
+        315,
+        130
+      ],
+      "type": "EmptyImage",
+      "widgets_values": [
+        5,
+        4,
+        2,
+        3368601
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        420,
+        160
+      ],
+      "properties": {
+        "Node name for S&R": "DF27ImageStatsText"
+      },
+      "size": [
+        280,
+        46
+      ],
+      "type": "DF27ImageStatsText",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 2,
+          "name": "source",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [],
+      "pos": [
+        760,
+        160
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "size": [
+        320,
+        120
+      ],
+      "type": "PreviewAny",
+      "widgets_values": []
+    }
+  ],
+  "version": 0.4
+}

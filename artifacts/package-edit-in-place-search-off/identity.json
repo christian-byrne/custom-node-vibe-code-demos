@@ -1,0 +1,58 @@
+{
+  "DF27ImageStatsText": {
+    "input": {
+      "required": {
+        "image": [
+          "IMAGE",
+          {}
+        ],
+        "output_format": [
+          "COMBO",
+          {
+            "tooltip": "Plain sentence or JSON for the stats text.",
+            "default": "sentence",
+            "multiselect": false,
+            "options": [
+              "sentence",
+              "json"
+            ]
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "image",
+        "output_format"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "STRING"
+    ],
+    "output_is_list": [
+      false
+    ],
+    "output_name": [
+      "STRING"
+    ],
+    "output_tooltips": [
+      null
+    ],
+    "output_matchtypes": null,
+    "name": "DF27ImageStatsText",
+    "display_name": "Image Stats (Text)",
+    "description": "",
+    "python_module": "custom_nodes.demofarm27_image_stats",
+    "category": "demofarm27",
+    "output_node": false,
+    "deprecated": false,
+    "experimental": false,
+    "dev_only": false,
+    "api_node": false,
+    "price_badge": null,
+    "search_aliases": null,
+    "essentials_category": null,
+    "has_intermediate_output": false
+  }
+}

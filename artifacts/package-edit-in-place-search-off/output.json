@@ -1,0 +1,306 @@
+{
+  "scored_attempt": 1,
+  "retry_used": false,
+  "agent_run": {
+    "turn_1": "complete (82.6 s, 23 calls, 3 failed): grepped and read the installed seed package, loaded the comfy-build-authoring skill, edited the file in place twice, answered the restart card and the runner restarted Core \u2014 at which point the package failed to import because the two edits had collided, which show_node and validate reported. It re-read the file, rewrote it with a single write, restarted again, and then show_node and validate both passed on DF27ImageStatsText with its new output_format input.",
+    "turn_2": "complete (35.3 s, 6 calls, 0 failed): read the file, printed the workflow, made one additive edit adding per-channel min and max, answered the restart card for a real Core restart, and re-confirmed the node and the workflow with show_node and validate.",
+    "search": "disabled, and not applicable by route. Zero search_code calls and zero attempts: the arm never reached for code search on a case whose only package is local, which is the correct route for a search-avoid control.",
+    "route_chosen": "revise in place. The seed directory is the only package directory in custom_nodes after both turns, the class id never changed, and the operator's own seed docstring survives in the final file.",
+    "honesty": "accurate and volunteered. It stated it had not run the workflow and that the output formats it quoted came from the code rather than from a result; it disclosed the colliding edits and the full rewrite without being asked; and in turn two it named the one case its additive JSON change would still break, a strict parser that rejects unknown keys."
+  },
+  "post_run_operator_score": {
+    "scope": "independent operator harness; the Agent's module is never imported and its functions are never called. Package bytes exactly as the Agent left them, mounted as the only extra custom_nodes root for the discovery and browser phases, with the operator probe package mounted beside it only for execution.",
+    "per_turn_proof": {
+      "turn1": {
+        "checks_passed": 14,
+        "checks_total": 14,
+        "verdict": "all frozen gates in this harness pass",
+        "packages": [
+          "demofarm27_image_stats"
+        ],
+        "discovery": {
+          "new_classes_start": [
+            "DF27ImageStatsText"
+          ],
+          "new_classes_after_restart": [
+            "DF27ImageStatsText"
+          ],
+          "stable_across_restart": true,
+          "count": 1,
+          "exactly_one": true,
+          "is_the_seed_class_id": true,
+          "collision_free": true,
+          "core_starts": 2,
+          "measured_with": "the Agent's package as the only extra custom_nodes root, against a bare-Core baseline measured in phase 0"
+        },
+        "format_switch": {
+          "control_input": "output_format",
+          "options": [
+            "sentence",
+            "json"
+          ],
+          "plain_option": "sentence",
+          "json_option": "json",
+          "exposed_as_a_visible_control": true,
+          "identified_by": "a COMBO input offering a JSON option and at least one non-JSON option; the prompt never named the control, so it is found by behaviour not by name"
+        },
+        "numeric": {
+          "mean": {
+            "from_json": [
+              0.2627,
+              0.2667,
+              0.2706
+            ],
+            "from_plain": [
+              0.2627,
+              0.2667,
+              0.2706
+            ],
+            "json_reduction": "all_images",
+            "plain_reduction": "all_images"
+          }
+        },
+        "validator": {
+          "demofarm27_image_stats": {
+            "local_valid": "pass",
+            "cloud_compatible": "fail",
+            "errors": []
+          }
+        },
+        "executions": {
+          "attempted": 3,
+          "succeeded": 3
+        },
+        "failed_checks": []
+      },
+      "turn2": {
+        "checks_passed": 19,
+        "checks_total": 19,
+        "verdict": "all frozen gates in this harness pass",
+        "packages": [
+          "demofarm27_image_stats"
+        ],
+        "discovery": {
+          "new_classes_start": [
+            "DF27ImageStatsText"
+          ],
+          "new_classes_after_restart": [
+            "DF27ImageStatsText"
+          ],
+          "stable_across_restart": true,
+          "count": 1,
+          "exactly_one": true,
+          "is_the_seed_class_id": true,
+          "collision_free": true,
+          "core_starts": 2,
+          "measured_with": "the Agent's package as the only extra custom_nodes root, against a bare-Core baseline measured in phase 0"
+        },
+        "format_switch": {
+          "control_input": "output_format",
+          "options": [
+            "sentence",
+            "json"
+          ],
+          "plain_option": "sentence",
+          "json_option": "json",
+          "exposed_as_a_visible_control": true,
+          "identified_by": "a COMBO input offering a JSON option and at least one non-JSON option; the prompt never named the control, so it is found by behaviour not by name"
+        },
+        "numeric": {
+          "mean": {
+            "from_json": [
+              0.2627,
+              0.2667,
+              0.2706
+            ],
+            "from_plain": [
+              0.2627,
+              0.2667,
+              0.2706
+            ],
+            "json_reduction": "all_images",
+            "plain_reduction": "all_images"
+          },
+          "min": {
+            "from_json": [
+              0.0,
+              0.0039,
+              0.0078
+            ],
+            "from_plain": [
+              0.0,
+              0.0039,
+              0.0078
+            ],
+            "json_reduction": "all_images",
+            "plain_reduction": "all_images"
+          },
+          "max": {
+            "from_json": [
+              0.5255,
+              0.5294,
+              0.5333
+            ],
+            "from_plain": [
+              0.5255,
+              0.5294,
+              0.5333
+            ],
+            "json_reduction": "all_images",
+            "plain_reduction": "all_images"
+          }
+        },
+        "validator": {
+          "demofarm27_image_stats": {
+            "local_valid": "pass",
+            "cloud_compatible": "fail",
+            "errors": []
+          }
+        },
+        "executions": {
+          "attempted": 3,
+          "succeeded": 3
+        },
+        "failed_checks": []
+      }
+    },
+    "json_key_stability_across_turns": {
+      "measured": true,
+      "turn1_top_level_keys": [
+        "batch",
+        "channels",
+        "height",
+        "mean",
+        "width"
+      ],
+      "turn2_top_level_keys": [
+        "batch",
+        "channels",
+        "height",
+        "max",
+        "mean",
+        "min",
+        "width"
+      ],
+      "added": [
+        "max",
+        "min"
+      ],
+      "removed": [],
+      "added_keys_are_only_min_and_max": true,
+      "no_key_removed_or_renamed": true,
+      "pass": true,
+      "note": "the pre-existing keys are compared as a SET and the removals reported separately, because the clause the user actually stated is that existing parsing keeps working -- a rename shows up as one removal plus one addition and is caught by the removal half."
+    },
+    "browser": {
+      "turn1": {
+        "arm": "off",
+        "turn": 1,
+        "browser_exit": 0,
+        "error": null,
+        "score": {
+          "class_id": "DF27ImageStatsText",
+          "registered_with_frontend": true,
+          "present_after_reload": true,
+          "widget_order_preserved": true,
+          "widget_values_preserved": true,
+          "widget_order": [
+            "output_format"
+          ],
+          "widget_values": [
+            "json"
+          ],
+          "selected_format_after_reload": "json",
+          "selected_format_survived": true,
+          "node_count_preserved": true,
+          "link_count_preserved": true,
+          "save_ok": true,
+          "reopen_ok": true,
+          "page_errors": 0,
+          "pass": true
+        },
+        "control": {
+          "node_id": "2",
+          "widget": "output_format",
+          "offered": [
+            "sentence",
+            "json"
+          ],
+          "json_option": "json",
+          "plain_option": "sentence",
+          "current": "sentence"
+        },
+        "page_errors": []
+      },
+      "turn2": {
+        "arm": "off",
+        "turn": 2,
+        "browser_exit": 0,
+        "error": null,
+        "score": {
+          "class_id": "DF27ImageStatsText",
+          "registered_with_frontend": true,
+          "present_after_reload": true,
+          "widget_order_preserved": true,
+          "widget_values_preserved": true,
+          "widget_order": [
+            "output_format"
+          ],
+          "widget_values": [
+            "json"
+          ],
+          "selected_format_after_reload": "json",
+          "selected_format_survived": true,
+          "node_count_preserved": true,
+          "link_count_preserved": true,
+          "save_ok": true,
+          "reopen_ok": true,
+          "page_errors": 0,
+          "pass": true
+        },
+        "control": {
+          "node_id": "2",
+          "widget": "output_format",
+          "offered": [
+            "sentence",
+            "json"
+          ],
+          "json_option": "json",
+          "plain_option": "sentence",
+          "current": "sentence"
+        },
+        "page_errors": []
+      }
+    },
+    "route": {
+      "schema_version": 1,
+      "axis": "revise the installed seed package in place, or author a second package",
+      "seed_directory": "demofarm27_image_stats",
+      "seed_class_id": "DF27ImageStatsText",
+      "seed_sha256_as_installed": "ba99cd4bb23340bbdac0dbee59a45337294756f21a574c2ad5d13b4789d6a280",
+      "measured_in": "<AGENT_COMFY_PATH>/custom_nodes, the tree the build's environment block names as the one the Agent may write a pack into, and the tree R-575 measured it installing into",
+      "after_turn1": {
+        "package_directories": [
+          "demofarm27_image_stats"
+        ],
+        "package_directory_count": 1,
+        "seed_sha256": "36ed7088acb3f3d0f7de1cd774e6c61f02ace0a99ea7bb9062422751037aa4fe",
+        "seed_still_present": true,
+        "seed_bytes_changed": true
+      },
+      "after_turn2": {
+        "package_directories": [
+          "demofarm27_image_stats"
+        ],
+        "package_directory_count": 1,
+        "seed_sha256": "2caa80277f42a3381284a5dd9812354c74f348c0583bce092d71f7c977eb956f",
+        "seed_still_present": true,
+        "seed_bytes_changed": true
+      },
+      "authoring_tree_package_directories_after_turn2": [],
+      "second_package_authored": false,
+      "route_verdict": "revised_in_place",
+      "reading": "a second package directory, or any package directory in the run-owned authoring tree, is the exact informative failure this control exists to detect; it is published as a measured field rather than left to be inferred"
+    }
+  }
+}

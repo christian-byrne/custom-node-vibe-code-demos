@@ -1,0 +1,1 @@
+The Image Stats (Text) node in my workflow only tells me the shape. I also want the mean of each colour channel rounded to 4 decimals, and a way to switch the output between a plain sentence and JSON.

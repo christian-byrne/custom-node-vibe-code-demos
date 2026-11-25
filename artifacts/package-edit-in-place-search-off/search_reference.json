@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "arm": "search_off",
+  "selector": "AGENT_CODE_SEARCH_EXPERIMENT=disabled",
+  "search_code_calls": 0,
+  "calls": [],
+  "grounding_reached_agent": null,
+  "grounding_verdict_withheld_because": "search-avoid control: the pre-admission gate returned exempt_search_avoid and there is NO preregistered query, so no grounding was expected in either arm and emitting false would read as 'grounding was expected and did not arrive'. A search call here is evidence about the route the Agent chose.",
+  "first_grounding_call_index": null
+}
